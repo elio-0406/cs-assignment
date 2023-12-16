@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS.ChucNangKhac
 {
-    internal class TaoMaTuDong
+    public class TaoMaTuDong
     {
     }
 }

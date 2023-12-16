@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BUS.ChucNangKhac
 {
-    internal class XuatExcel
+    public class XuatExcel
     {
+
     }
 }
