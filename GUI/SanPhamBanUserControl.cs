@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.FormChinh
+namespace GUI
 {
-    public partial class NhanVienForm : Form
+    public partial class SanPhamBanUserControl : UserControl
     {
-        public NhanVienForm()
+        public SanPhamBanUserControl()
         {
             InitializeComponent();
         }

@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             nguoiDungDataGridView = new DataGridView();
-            stt = new DataGridViewTextBoxColumn();
-            maNguoiDungColumn = new DataGridViewTextBoxColumn();
-            phanQuyenColumn = new DataGridViewTextBoxColumn();
-            hoTenColumn = new DataGridViewTextBoxColumn();
-            trangThaiColumn = new DataGridViewTextBoxColumn();
-            chiTietButtonColumn = new DataGridViewButtonColumn();
-            suaButtonColumn = new DataGridViewButtonColumn();
-            xoaButtonColumn = new DataGridViewButtonColumn();
             panel1 = new Panel();
             themButton = new Button();
             label3 = new Label();
@@ -49,6 +41,14 @@
             lamMoiButton = new Button();
             timKiemButton = new Button();
             timKiemTextBox = new TextBox();
+            stt = new DataGridViewTextBoxColumn();
+            maNguoiDungColumn = new DataGridViewTextBoxColumn();
+            phanQuyenColumn = new DataGridViewTextBoxColumn();
+            hoTenColumn = new DataGridViewTextBoxColumn();
+            trangThaiColumn = new DataGridViewTextBoxColumn();
+            chiTietButtonColumn = new DataGridViewButtonColumn();
+            suaButtonColumn = new DataGridViewButtonColumn();
+            xoaButtonColumn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)nguoiDungDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -68,75 +68,6 @@
             nguoiDungDataGridView.Size = new Size(1144, 490);
             nguoiDungDataGridView.TabIndex = 3;
             nguoiDungDataGridView.CellContentClick += NguoiDungDataGridView_CellContentClick;
-            // 
-            // stt
-            // 
-            stt.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            stt.HeaderText = "STT";
-            stt.MinimumWidth = 8;
-            stt.Name = "stt";
-            stt.Width = 76;
-            // 
-            // maNguoiDungColumn
-            // 
-            maNguoiDungColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            maNguoiDungColumn.HeaderText = "Mã người dùng";
-            maNguoiDungColumn.MinimumWidth = 8;
-            maNguoiDungColumn.Name = "maNguoiDungColumn";
-            maNguoiDungColumn.Width = 158;
-            // 
-            // phanQuyenColumn
-            // 
-            phanQuyenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            phanQuyenColumn.HeaderText = "Phân quyền";
-            phanQuyenColumn.MinimumWidth = 8;
-            phanQuyenColumn.Name = "phanQuyenColumn";
-            phanQuyenColumn.Width = 130;
-            // 
-            // hoTenColumn
-            // 
-            hoTenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            hoTenColumn.HeaderText = "Họ tên";
-            hoTenColumn.MinimumWidth = 8;
-            hoTenColumn.Name = "hoTenColumn";
-            // 
-            // trangThaiColumn
-            // 
-            trangThaiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            trangThaiColumn.HeaderText = "Trạng thái";
-            trangThaiColumn.MinimumWidth = 8;
-            trangThaiColumn.Name = "trangThaiColumn";
-            trangThaiColumn.Width = 116;
-            // 
-            // chiTietButtonColumn
-            // 
-            chiTietButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            chiTietButtonColumn.HeaderText = "Chi tiết";
-            chiTietButtonColumn.MinimumWidth = 8;
-            chiTietButtonColumn.Name = "chiTietButtonColumn";
-            chiTietButtonColumn.Text = "Chi tiết";
-            chiTietButtonColumn.UseColumnTextForButtonValue = true;
-            chiTietButtonColumn.Width = 43;
-            // 
-            // suaButtonColumn
-            // 
-            suaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            suaButtonColumn.HeaderText = "Sửa";
-            suaButtonColumn.MinimumWidth = 8;
-            suaButtonColumn.Name = "suaButtonColumn";
-            suaButtonColumn.Text = "Sửa";
-            suaButtonColumn.UseColumnTextForButtonValue = true;
-            suaButtonColumn.Width = 48;
-            // 
-            // xoaButtonColumn
-            // 
-            xoaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            xoaButtonColumn.HeaderText = "Xóa";
-            xoaButtonColumn.MinimumWidth = 8;
-            xoaButtonColumn.Name = "xoaButtonColumn";
-            xoaButtonColumn.Text = "Xóa";
-            xoaButtonColumn.UseColumnTextForButtonValue = true;
-            xoaButtonColumn.Width = 49;
             // 
             // panel1
             // 
@@ -273,6 +204,75 @@
             timKiemTextBox.TabIndex = 0;
             timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
             // 
+            // stt
+            // 
+            stt.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            stt.HeaderText = "STT";
+            stt.MinimumWidth = 8;
+            stt.Name = "stt";
+            stt.Width = 76;
+            // 
+            // maNguoiDungColumn
+            // 
+            maNguoiDungColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            maNguoiDungColumn.HeaderText = "Mã người dùng";
+            maNguoiDungColumn.MinimumWidth = 8;
+            maNguoiDungColumn.Name = "maNguoiDungColumn";
+            maNguoiDungColumn.Width = 172;
+            // 
+            // phanQuyenColumn
+            // 
+            phanQuyenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            phanQuyenColumn.HeaderText = "Phân quyền";
+            phanQuyenColumn.MinimumWidth = 8;
+            phanQuyenColumn.Name = "phanQuyenColumn";
+            phanQuyenColumn.Width = 141;
+            // 
+            // hoTenColumn
+            // 
+            hoTenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            hoTenColumn.HeaderText = "Họ tên";
+            hoTenColumn.MinimumWidth = 8;
+            hoTenColumn.Name = "hoTenColumn";
+            // 
+            // trangThaiColumn
+            // 
+            trangThaiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            trangThaiColumn.HeaderText = "Trạng thái";
+            trangThaiColumn.MinimumWidth = 8;
+            trangThaiColumn.Name = "trangThaiColumn";
+            trangThaiColumn.Width = 125;
+            // 
+            // chiTietButtonColumn
+            // 
+            chiTietButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            chiTietButtonColumn.HeaderText = "Chi tiết";
+            chiTietButtonColumn.MinimumWidth = 8;
+            chiTietButtonColumn.Name = "chiTietButtonColumn";
+            chiTietButtonColumn.Text = "Chi tiết";
+            chiTietButtonColumn.UseColumnTextForButtonValue = true;
+            chiTietButtonColumn.Width = 73;
+            // 
+            // suaButtonColumn
+            // 
+            suaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            suaButtonColumn.HeaderText = "Sửa";
+            suaButtonColumn.MinimumWidth = 8;
+            suaButtonColumn.Name = "suaButtonColumn";
+            suaButtonColumn.Text = "Sửa";
+            suaButtonColumn.UseColumnTextForButtonValue = true;
+            suaButtonColumn.Width = 48;
+            // 
+            // xoaButtonColumn
+            // 
+            xoaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            xoaButtonColumn.HeaderText = "Xóa";
+            xoaButtonColumn.MinimumWidth = 8;
+            xoaButtonColumn.Name = "xoaButtonColumn";
+            xoaButtonColumn.Text = "Xóa";
+            xoaButtonColumn.UseColumnTextForButtonValue = true;
+            xoaButtonColumn.Width = 49;
+            // 
             // NguoiDungForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -305,6 +305,7 @@
         private Button lamMoiButton;
         private Button timKiemButton;
         private TextBox timKiemTextBox;
+        private Button themButton;
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn maNguoiDungColumn;
         private DataGridViewTextBoxColumn phanQuyenColumn;
@@ -313,6 +314,5 @@
         private DataGridViewButtonColumn chiTietButtonColumn;
         private DataGridViewButtonColumn suaButtonColumn;
         private DataGridViewButtonColumn xoaButtonColumn;
-        private Button themButton;
     }
 }
