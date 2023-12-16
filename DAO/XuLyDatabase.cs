@@ -13,8 +13,12 @@ namespace DAO
     {
         static readonly string servername = "TRUNG-LAPTOP\\ELIO";
         static readonly string dbName = "cs-assignment";
+#pragma warning disable CS0414 // The field 'XuLyDatabase.username' is assigned but its value is never used
         static readonly string username = "";
+#pragma warning restore CS0414 // The field 'XuLyDatabase.username' is assigned but its value is never used
+#pragma warning disable CS0414 // The field 'XuLyDatabase.password' is assigned but its value is never used
         static readonly string password = "";
+#pragma warning restore CS0414 // The field 'XuLyDatabase.password' is assigned but its value is never used
         static readonly string connectionString = $"Data Source={servername};Initial Catalog={dbName};Integrated Security=True;Encrypt=False";
         //static readonly string connectionString = @"Data Source={servername};Initial Catalog={dbName};User ID={username};Password={password};Encrypt=True;Trust Server Certificate=True";
 
