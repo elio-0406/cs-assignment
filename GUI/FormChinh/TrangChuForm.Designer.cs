@@ -34,7 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1344, 712);
             MaximizeBox = false;
             Name = "TrangChuForm";
             StartPosition = FormStartPosition.CenterScreen;

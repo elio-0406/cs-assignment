@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class LoaiSanPham
+    public class LoaiSanPham
     {
+        public string MaLoaiSanPham {  get; set; }
+        public string TenLoaiSanPham { get; set; }
+        public string TrangThai {  get; set; }
+
+        public LoaiSanPham() 
+        { 
+            MaLoaiSanPham = string.Empty;
+            TenLoaiSanPham= string.Empty;
+            TrangThai = "Đang sử dụng";
+        }
+
+        public LoaiSanPham(string maLoaiSanPham, string tenLoaiSanPham, string trangThai)
+        {
+            MaLoaiSanPham = maLoaiSanPham;
+            TenLoaiSanPham = tenLoaiSanPham;
+            TrangThai = trangThai;
+        }
     }
 }
