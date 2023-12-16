@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
+            phanQuyenDataGridView = new DataGridView();
             stt = new DataGridViewTextBoxColumn();
             maPhanQuyenColumn = new DataGridViewTextBoxColumn();
             tenPhanQuyenColumn = new DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@
             lamMoiButton = new Button();
             xuatExcel = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)phanQuyenDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -50,23 +50,23 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1122, 87);
+            panel1.Size = new Size(1144, 87);
             panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // phanQuyenDataGridView
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { stt, maPhanQuyenColumn, tenPhanQuyenColumn });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 87);
-            dataGridView1.Margin = new Padding(0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1122, 517);
-            dataGridView1.TabIndex = 1;
+            phanQuyenDataGridView.AllowUserToAddRows = false;
+            phanQuyenDataGridView.AllowUserToDeleteRows = false;
+            phanQuyenDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            phanQuyenDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maPhanQuyenColumn, tenPhanQuyenColumn });
+            phanQuyenDataGridView.Dock = DockStyle.Fill;
+            phanQuyenDataGridView.Location = new Point(0, 87);
+            phanQuyenDataGridView.Margin = new Padding(0);
+            phanQuyenDataGridView.Name = "phanQuyenDataGridView";
+            phanQuyenDataGridView.RowHeadersVisible = false;
+            phanQuyenDataGridView.RowHeadersWidth = 62;
+            phanQuyenDataGridView.Size = new Size(1144, 573);
+            phanQuyenDataGridView.TabIndex = 1;
             // 
             // stt
             // 
@@ -137,8 +137,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1122, 604);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1144, 660);
+            Controls.Add(phanQuyenDataGridView);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PhanQuyenForm";
@@ -146,14 +146,14 @@
             Load += PhanQuyenForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)phanQuyenDataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
+        private DataGridView phanQuyenDataGridView;
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn maPhanQuyenColumn;
         private DataGridViewTextBoxColumn tenPhanQuyenColumn;
