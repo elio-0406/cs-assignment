@@ -19,7 +19,7 @@ namespace GUI.FormChinh
 
         private void DangNhapButton_Click(object sender, EventArgs e)
         {
-            new TrangChuForm().ShowDialog();
+            new TrangChuForm().Show();
             this.Hide();
         }
 
