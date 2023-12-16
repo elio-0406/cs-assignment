@@ -36,8 +36,8 @@
             timKiemTextBox = new TextBox();
             themButton = new Button();
             stt = new DataGridViewTextBoxColumn();
-            maPhanQuyenColumn = new DataGridViewTextBoxColumn();
-            tenPhanQuyenColumn = new DataGridViewTextBoxColumn();
+            maLoaiSanPhamColumn = new DataGridViewTextBoxColumn();
+            tenLoaiSanPhamColumn = new DataGridViewTextBoxColumn();
             trangThaiColumn = new DataGridViewTextBoxColumn();
             suaButtonColumn = new DataGridViewButtonColumn();
             xoaButtonColumn = new DataGridViewButtonColumn();
@@ -50,7 +50,7 @@
             loaiSanPhamDataGridView.AllowUserToAddRows = false;
             loaiSanPhamDataGridView.AllowUserToDeleteRows = false;
             loaiSanPhamDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            loaiSanPhamDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maPhanQuyenColumn, tenPhanQuyenColumn, trangThaiColumn, suaButtonColumn, xoaButtonColumn });
+            loaiSanPhamDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maLoaiSanPhamColumn, tenLoaiSanPhamColumn, trangThaiColumn, suaButtonColumn, xoaButtonColumn });
             loaiSanPhamDataGridView.Dock = DockStyle.Fill;
             loaiSanPhamDataGridView.Location = new Point(0, 87);
             loaiSanPhamDataGridView.Margin = new Padding(0);
@@ -135,19 +135,19 @@
             stt.Name = "stt";
             stt.Width = 76;
             // 
-            // maPhanQuyenColumn
+            // maLoaiSanPhamColumn
             // 
-            maPhanQuyenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            maPhanQuyenColumn.HeaderText = "Mã phân quyền";
-            maPhanQuyenColumn.MinimumWidth = 8;
-            maPhanQuyenColumn.Name = "maPhanQuyenColumn";
+            maLoaiSanPhamColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            maLoaiSanPhamColumn.HeaderText = "Mã loại sản phẩm";
+            maLoaiSanPhamColumn.MinimumWidth = 8;
+            maLoaiSanPhamColumn.Name = "maLoaiSanPhamColumn";
             // 
-            // tenPhanQuyenColumn
+            // tenLoaiSanPhamColumn
             // 
-            tenPhanQuyenColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            tenPhanQuyenColumn.HeaderText = "Tên phân quyền";
-            tenPhanQuyenColumn.MinimumWidth = 8;
-            tenPhanQuyenColumn.Name = "tenPhanQuyenColumn";
+            tenLoaiSanPhamColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tenLoaiSanPhamColumn.HeaderText = "Tên loại sản phẩm";
+            tenLoaiSanPhamColumn.MinimumWidth = 8;
+            tenLoaiSanPhamColumn.Name = "tenLoaiSanPhamColumn";
             // 
             // trangThaiColumn
             // 
@@ -200,17 +200,17 @@
         #endregion
 
         private DataGridView loaiSanPhamDataGridView;
-        private DataGridViewTextBoxColumn stt;
-        private DataGridViewTextBoxColumn maPhanQuyenColumn;
-        private DataGridViewTextBoxColumn tenPhanQuyenColumn;
-        private DataGridViewTextBoxColumn trangThaiColumn;
-        private DataGridViewButtonColumn suaButtonColumn;
-        private DataGridViewButtonColumn xoaButtonColumn;
         private Panel panel1;
         private Button themButton;
         private Button xuatExcel;
         private Button lamMoiButton;
         private Button timKiemButton;
         private TextBox timKiemTextBox;
+        private DataGridViewTextBoxColumn stt;
+        private DataGridViewTextBoxColumn maLoaiSanPhamColumn;
+        private DataGridViewTextBoxColumn tenLoaiSanPhamColumn;
+        private DataGridViewTextBoxColumn trangThaiColumn;
+        private DataGridViewButtonColumn suaButtonColumn;
+        private DataGridViewButtonColumn xoaButtonColumn;
     }
 }
