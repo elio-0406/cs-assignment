@@ -16,5 +16,21 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void GiaNhapTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void GiaNhapTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(giaNhapTextBox.Text))
+            {
+                giaNhapTextBox.Text = "0";
+            }
+        }
     }
 }

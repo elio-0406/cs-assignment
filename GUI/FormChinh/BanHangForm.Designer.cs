@@ -43,23 +43,23 @@
             label1 = new Label();
             hoanTatButton = new Button();
             panel5 = new Panel();
+            tenKhuyenMaiLabel = new Label();
+            label2 = new Label();
+            giamGiaLabel = new Label();
+            tienThuaLabel = new Label();
+            label10 = new Label();
+            tienNhanTextBox = new TextBox();
+            label9 = new Label();
+            thanhTienLabel = new Label();
+            label7 = new Label();
+            chonKhuyenMaiButton = new Button();
             panel4 = new Panel();
+            khuyenMaiThanhVienCheckBox = new CheckBox();
+            soDienThoaiLabel = new Label();
             panel3 = new Panel();
             timKiemSanPhamButton = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
-            chonKhuyenMaiButton = new Button();
-            soDienThoaiLabel = new Label();
-            khuyenMaiThanhVienCheckBox = new CheckBox();
-            label2 = new Label();
-            giamGiaLabel = new Label();
-            thanhTienLabel = new Label();
-            label7 = new Label();
-            label9 = new Label();
-            tienNhanTextBox = new TextBox();
-            tienThuaLabel = new Label();
-            label10 = new Label();
-            tenKhuyenMaiLabel = new Label();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -237,6 +237,119 @@
             panel5.Size = new Size(572, 187);
             panel5.TabIndex = 1;
             // 
+            // tenKhuyenMaiLabel
+            // 
+            tenKhuyenMaiLabel.BorderStyle = BorderStyle.FixedSingle;
+            tenKhuyenMaiLabel.Location = new Point(282, 71);
+            tenKhuyenMaiLabel.Name = "tenKhuyenMaiLabel";
+            tenKhuyenMaiLabel.Size = new Size(278, 54);
+            tenKhuyenMaiLabel.TabIndex = 12;
+            tenKhuyenMaiLabel.Text = "Chưa chọn khuyến mãi";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(12, 11);
+            label2.Margin = new Padding(0);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Giảm giá";
+            // 
+            // giamGiaLabel
+            // 
+            giamGiaLabel.AutoSize = true;
+            giamGiaLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            giamGiaLabel.Location = new Point(106, 11);
+            giamGiaLabel.Margin = new Padding(0);
+            giamGiaLabel.Name = "giamGiaLabel";
+            giamGiaLabel.Size = new Size(38, 25);
+            giamGiaLabel.TabIndex = 5;
+            giamGiaLabel.Text = "0 đ";
+            giamGiaLabel.TextChanged += GiamGiaLabel_TextChanged;
+            // 
+            // tienThuaLabel
+            // 
+            tienThuaLabel.AutoSize = true;
+            tienThuaLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tienThuaLabel.Location = new Point(106, 70);
+            tienThuaLabel.Margin = new Padding(0);
+            tienThuaLabel.Name = "tienThuaLabel";
+            tienThuaLabel.Size = new Size(38, 25);
+            tienThuaLabel.TabIndex = 11;
+            tienThuaLabel.Text = "0 đ";
+            tienThuaLabel.TextChanged += TienThuaLabel_TextChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(12, 70);
+            label10.Margin = new Padding(0);
+            label10.Name = "label10";
+            label10.Size = new Size(90, 25);
+            label10.TabIndex = 10;
+            label10.Text = "Tiền thừa";
+            // 
+            // tienNhanTextBox
+            // 
+            tienNhanTextBox.Location = new Point(106, 39);
+            tienNhanTextBox.Margin = new Padding(0);
+            tienNhanTextBox.Name = "tienNhanTextBox";
+            tienNhanTextBox.Size = new Size(150, 31);
+            tienNhanTextBox.TabIndex = 9;
+            tienNhanTextBox.Text = "0";
+            tienNhanTextBox.TextChanged += TienNhanTextBox_TextChanged;
+            tienNhanTextBox.KeyPress += TienNhanTextBox_KeyPress;
+            tienNhanTextBox.MouseLeave += TienNhanTextBox_MouseLeave;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 41);
+            label9.Margin = new Padding(0);
+            label9.Name = "label9";
+            label9.Size = new Size(94, 25);
+            label9.TabIndex = 8;
+            label9.Text = "Tiền nhận";
+            // 
+            // thanhTienLabel
+            // 
+            thanhTienLabel.AutoSize = true;
+            thanhTienLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thanhTienLabel.Location = new Point(382, 11);
+            thanhTienLabel.Margin = new Padding(0);
+            thanhTienLabel.Name = "thanhTienLabel";
+            thanhTienLabel.Size = new Size(38, 25);
+            thanhTienLabel.TabIndex = 7;
+            thanhTienLabel.Text = "0 đ";
+            thanhTienLabel.TextChanged += ThanhTienLabel_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(282, 11);
+            label7.Margin = new Padding(0);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 25);
+            label7.TabIndex = 6;
+            label7.Text = "Thành tiền";
+            // 
+            // chonKhuyenMaiButton
+            // 
+            chonKhuyenMaiButton.AutoSize = true;
+            chonKhuyenMaiButton.Location = new Point(282, 36);
+            chonKhuyenMaiButton.Margin = new Padding(0);
+            chonKhuyenMaiButton.Name = "chonKhuyenMaiButton";
+            chonKhuyenMaiButton.Size = new Size(160, 35);
+            chonKhuyenMaiButton.TabIndex = 3;
+            chonKhuyenMaiButton.Text = "Chọn khuyến mãi";
+            chonKhuyenMaiButton.UseVisualStyleBackColor = true;
+            chonKhuyenMaiButton.Click += ChonKhuyenMaiButton_Click;
+            // 
             // panel4
             // 
             panel4.Controls.Add(khuyenMaiThanhVienCheckBox);
@@ -252,6 +365,29 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(572, 120);
             panel4.TabIndex = 0;
+            // 
+            // khuyenMaiThanhVienCheckBox
+            // 
+            khuyenMaiThanhVienCheckBox.AutoSize = true;
+            khuyenMaiThanhVienCheckBox.Location = new Point(16, 82);
+            khuyenMaiThanhVienCheckBox.Margin = new Padding(0);
+            khuyenMaiThanhVienCheckBox.Name = "khuyenMaiThanhVienCheckBox";
+            khuyenMaiThanhVienCheckBox.Size = new Size(291, 29);
+            khuyenMaiThanhVienCheckBox.TabIndex = 7;
+            khuyenMaiThanhVienCheckBox.Text = "Áp dụng khuyến mãi thành viên";
+            khuyenMaiThanhVienCheckBox.UseVisualStyleBackColor = true;
+            khuyenMaiThanhVienCheckBox.CheckedChanged += KhuyenMaiThanhVienCheckBox_CheckedChanged;
+            // 
+            // soDienThoaiLabel
+            // 
+            soDienThoaiLabel.AutoSize = true;
+            soDienThoaiLabel.BorderStyle = BorderStyle.FixedSingle;
+            soDienThoaiLabel.Location = new Point(339, 45);
+            soDienThoaiLabel.Margin = new Padding(0);
+            soDienThoaiLabel.Name = "soDienThoaiLabel";
+            soDienThoaiLabel.Size = new Size(195, 27);
+            soDienThoaiLabel.TabIndex = 6;
+            soDienThoaiLabel.Text = "Chưa chọn khách hàng";
             // 
             // panel3
             // 
@@ -300,140 +436,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(572, 660);
             panel1.TabIndex = 2;
-            // 
-            // chonKhuyenMaiButton
-            // 
-            chonKhuyenMaiButton.AutoSize = true;
-            chonKhuyenMaiButton.Location = new Point(282, 36);
-            chonKhuyenMaiButton.Margin = new Padding(0);
-            chonKhuyenMaiButton.Name = "chonKhuyenMaiButton";
-            chonKhuyenMaiButton.Size = new Size(160, 35);
-            chonKhuyenMaiButton.TabIndex = 3;
-            chonKhuyenMaiButton.Text = "Chọn khuyến mãi";
-            chonKhuyenMaiButton.UseVisualStyleBackColor = true;
-            chonKhuyenMaiButton.Click += ChonKhuyenMaiButton_Click;
-            // 
-            // soDienThoaiLabel
-            // 
-            soDienThoaiLabel.AutoSize = true;
-            soDienThoaiLabel.BorderStyle = BorderStyle.FixedSingle;
-            soDienThoaiLabel.Location = new Point(339, 45);
-            soDienThoaiLabel.Margin = new Padding(0);
-            soDienThoaiLabel.Name = "soDienThoaiLabel";
-            soDienThoaiLabel.Size = new Size(195, 27);
-            soDienThoaiLabel.TabIndex = 6;
-            soDienThoaiLabel.Text = "Chưa chọn khách hàng";
-            // 
-            // khuyenMaiThanhVienCheckBox
-            // 
-            khuyenMaiThanhVienCheckBox.AutoSize = true;
-            khuyenMaiThanhVienCheckBox.Location = new Point(16, 82);
-            khuyenMaiThanhVienCheckBox.Margin = new Padding(0);
-            khuyenMaiThanhVienCheckBox.Name = "khuyenMaiThanhVienCheckBox";
-            khuyenMaiThanhVienCheckBox.Size = new Size(291, 29);
-            khuyenMaiThanhVienCheckBox.TabIndex = 7;
-            khuyenMaiThanhVienCheckBox.Text = "Áp dụng khuyến mãi thành viên";
-            khuyenMaiThanhVienCheckBox.UseVisualStyleBackColor = true;
-            khuyenMaiThanhVienCheckBox.CheckedChanged += KhuyenMaiThanhVienCheckBox_CheckedChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 11);
-            label2.Margin = new Padding(0);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 25);
-            label2.TabIndex = 4;
-            label2.Text = "Giảm giá";
-            // 
-            // giamGiaLabel
-            // 
-            giamGiaLabel.AutoSize = true;
-            giamGiaLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            giamGiaLabel.Location = new Point(106, 11);
-            giamGiaLabel.Margin = new Padding(0);
-            giamGiaLabel.Name = "giamGiaLabel";
-            giamGiaLabel.Size = new Size(38, 25);
-            giamGiaLabel.TabIndex = 5;
-            giamGiaLabel.Text = "0 đ";
-            giamGiaLabel.TextChanged += GiamGiaLabel_TextChanged;
-            // 
-            // thanhTienLabel
-            // 
-            thanhTienLabel.AutoSize = true;
-            thanhTienLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            thanhTienLabel.Location = new Point(382, 11);
-            thanhTienLabel.Margin = new Padding(0);
-            thanhTienLabel.Name = "thanhTienLabel";
-            thanhTienLabel.Size = new Size(38, 25);
-            thanhTienLabel.TabIndex = 7;
-            thanhTienLabel.Text = "0 đ";
-            thanhTienLabel.TextChanged += ThanhTienLabel_TextChanged;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(282, 11);
-            label7.Margin = new Padding(0);
-            label7.Name = "label7";
-            label7.Size = new Size(100, 25);
-            label7.TabIndex = 6;
-            label7.Text = "Thành tiền";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(12, 41);
-            label9.Margin = new Padding(0);
-            label9.Name = "label9";
-            label9.Size = new Size(94, 25);
-            label9.TabIndex = 8;
-            label9.Text = "Tiền nhận";
-            // 
-            // tienNhanTextBox
-            // 
-            tienNhanTextBox.Location = new Point(106, 39);
-            tienNhanTextBox.Margin = new Padding(0);
-            tienNhanTextBox.Name = "tienNhanTextBox";
-            tienNhanTextBox.Size = new Size(150, 31);
-            tienNhanTextBox.TabIndex = 9;
-            tienNhanTextBox.Text = "0";
-            tienNhanTextBox.TextChanged += TienNhanTextBox_TextChanged;
-            // 
-            // tienThuaLabel
-            // 
-            tienThuaLabel.AutoSize = true;
-            tienThuaLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tienThuaLabel.Location = new Point(106, 70);
-            tienThuaLabel.Margin = new Padding(0);
-            tienThuaLabel.Name = "tienThuaLabel";
-            tienThuaLabel.Size = new Size(38, 25);
-            tienThuaLabel.TabIndex = 11;
-            tienThuaLabel.Text = "0 đ";
-            tienThuaLabel.TextChanged += TienThuaLabel_TextChanged;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(12, 70);
-            label10.Margin = new Padding(0);
-            label10.Name = "label10";
-            label10.Size = new Size(90, 25);
-            label10.TabIndex = 10;
-            label10.Text = "Tiền thừa";
-            // 
-            // tenKhuyenMaiLabel
-            // 
-            tenKhuyenMaiLabel.BorderStyle = BorderStyle.FixedSingle;
-            tenKhuyenMaiLabel.Location = new Point(282, 71);
-            tenKhuyenMaiLabel.Name = "tenKhuyenMaiLabel";
-            tenKhuyenMaiLabel.Size = new Size(278, 54);
-            tenKhuyenMaiLabel.TabIndex = 12;
-            tenKhuyenMaiLabel.Text = "Chưa chọn khuyến mãi";
             // 
             // BanHangForm
             // 

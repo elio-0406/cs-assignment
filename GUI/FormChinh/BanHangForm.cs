@@ -86,5 +86,21 @@ namespace GUI.FormChinh
         {
 
         }
+
+        private void TienNhanTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TienNhanTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tienNhanTextBox.Text))
+            {
+                tienNhanTextBox.Text = "0";
+            }
+        }
     }
 }
