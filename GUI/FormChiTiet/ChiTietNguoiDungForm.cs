@@ -16,5 +16,10 @@ namespace GUI.FormChiTiet
         {
             InitializeComponent();
         }
+
+        private void trangThaiComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace GUI.FormChiTiet
         {
             InitializeComponent();
         }
+
+        private void giaTriTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace GUI.FormChiTiet
         {
             InitializeComponent();
         }
+
+        private void luuButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
