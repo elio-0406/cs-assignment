@@ -103,11 +103,10 @@
         }
 
         #endregion
-
-        private TextBox tenDangNhapTextBox;
-        private TextBox matKhauTextBox;
         private Button dangNhapButton;
         private Label label1;
         private Label label2;
+        internal TextBox tenDangNhapTextBox;
+        internal TextBox matKhauTextBox;
     }
 }

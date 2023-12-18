@@ -15,7 +15,7 @@ namespace GUI.FormChinh
     public partial class DangNhapForm : Form
     {
         NguoiDungBUS nguoiDungBUS;
-        public NguoiDung? nguoiDung;
+        public static NguoiDung? nguoiDung;
 
         public DangNhapForm()
         {
