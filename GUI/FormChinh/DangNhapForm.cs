@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace GUI.FormChinh
 {
     public partial class DangNhapForm : Form
     {
+        public NguoiDung? nguoiDung;
+
         public DangNhapForm()
         {
             InitializeComponent();
