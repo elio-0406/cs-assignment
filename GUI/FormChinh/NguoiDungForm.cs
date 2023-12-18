@@ -32,7 +32,7 @@ namespace GUI.FormChinh
 
         private void NguoiDungForm_Load(object sender, EventArgs e)
         {
-            List<PhanQuyen> listPhanQuyen = new();
+            List<PhanQuyen> listPhanQuyen = [];
             if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
                 listPhanQuyen = new PhanQuyenBUS().LayTatCaPhanQuyen().Where(phanQuyen => (phanQuyen.MaPhanQuyen.Equals("PQ03") || phanQuyen.MaPhanQuyen.Equals("PQ04"))).ToList();
             else
@@ -174,7 +174,7 @@ namespace GUI.FormChinh
 
                 if (columnName.Equals("xoaButtonColumn"))
                 {
-                    DialogResult result = MessageBox.Show("Bạn có muốn xóa người dùng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Bạn có muốn xóa người dùng đã chọn không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
                     {

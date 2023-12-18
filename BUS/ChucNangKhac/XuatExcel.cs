@@ -83,5 +83,32 @@ namespace BUS.ChucNangKhac
 
             workbook.SaveAs(filePath);
         }
+
+        public void XuatExcelLoaiSanPham(List<LoaiSanPham> listLoaiSanPham)
+        {
+            using var workbook = new XLWorkbook();
+            var worksheet = workbook.Worksheets.Add("DataSheet");
+
+            worksheet.Cell(1, 1).Value = "Mã loại sản phẩm";
+            worksheet.Cell(1, 2).Value = "Tên loại sản phẩm";
+            worksheet.Cell(1, 3).Value = "Trạng thái";
+
+            int row = 2;
+            foreach (LoaiSanPham loaiSanPham in listLoaiSanPham)
+            {
+                worksheet.Cell(row, 1).Value = loaiSanPham.MaLoaiSanPham;
+                worksheet.Cell(row, 2).Value = loaiSanPham.TenLoaiSanPham;
+                worksheet.Cell(row, 3).Value = loaiSanPham.TrangThai;
+
+                row++;
+            }
+
+            foreach (var item in worksheet.ColumnsUsed())
+            {
+                item.AdjustToContents();
+            }
+
+            workbook.SaveAs(filePath);
+        }
     }
 }

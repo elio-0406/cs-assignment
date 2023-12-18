@@ -70,7 +70,7 @@
             // trangThaiComboBox
             // 
             trangThaiComboBox.FormattingEnabled = true;
-            trangThaiComboBox.Items.AddRange(new object[] { "Đang sử dụng", "Đã xóa" });
+            trangThaiComboBox.Items.AddRange(new object[] { "Đang sử dụng", "Ngừng sử dụng" });
             trangThaiComboBox.Location = new Point(219, 165);
             trangThaiComboBox.Name = "trangThaiComboBox";
             trangThaiComboBox.Size = new Size(182, 33);
@@ -107,6 +107,7 @@
             huyBoButton.TabIndex = 7;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
             // luuButton
             // 
@@ -116,6 +117,7 @@
             luuButton.TabIndex = 8;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // ChiTietLoaiSanPhamForm
             // 
@@ -136,6 +138,7 @@
             Name = "ChiTietLoaiSanPhamForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết loại sản phẩm";
+            Load += ChiTietLoaiSanPhamForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

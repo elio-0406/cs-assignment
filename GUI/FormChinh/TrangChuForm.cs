@@ -89,7 +89,7 @@ namespace GUI.FormChinh
 
         private void DangXuatButton_Click(object sender, EventArgs e)
         {
-            List<Form> formsToClose = new List<Form>();
+            List<Form> formsToClose = [];
             foreach (Form form in Application.OpenForms)
             {
                 if (form is DangNhapForm form1 && !form.Visible)

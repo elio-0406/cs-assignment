@@ -155,7 +155,8 @@ namespace GUI.FormChiTiet
 
                     maNguoiDungTextBox.ReadOnly = true;
                     phanQuyenComboBox.Enabled = false;
-                    trangThaiComboBox.Enabled = false;
+                    if (!trangThaiComboBox.SelectedItem.ToString().Equals("Ngừng hoạt động"))
+                        trangThaiComboBox.Enabled = false;
                     break;
             }
         }
@@ -191,6 +192,14 @@ namespace GUI.FormChiTiet
                     soDienThoaiTextBox.Text = nguoiDung.SoDienThoai;
                     emailTextBox.Text = nguoiDung.Email;
                     diaChiTextBox.Text = nguoiDung.DiaChi;
+                    foreach (var item in trangThaiComboBox.Items)
+                    {
+                        if (item.ToString().Equals(nguoiDung.TrangThai))
+                        {
+                            trangThaiComboBox.SelectedItem = item;
+                            break;
+                        }
+                    }
                 }
 
                 if (context.Equals("Thêm"))

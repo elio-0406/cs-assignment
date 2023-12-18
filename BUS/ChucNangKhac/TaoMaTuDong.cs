@@ -34,5 +34,12 @@ namespace BUS.ChucNangKhac
 
             return maNguoiDung;
         }
+
+        public static string TaoMaLoaiSanPham()
+        {
+            int soLoaiSanPham = new LoaiSanPhamBUS().DemLoaiSanPham();
+            string maLoaiSanPham = string.Format("LSP{0:D4}", ++soLoaiSanPham);
+            return maLoaiSanPham;
+        }
     }
 }
