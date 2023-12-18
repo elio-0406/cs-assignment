@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,10 +27,16 @@ namespace GUI.FormChinh
 
             tenNguoiDungLabel.Text = DangNhapForm.nguoiDung.HoTen;
             phanQuyenLabel.Text = new PhanQuyenBUS().TimKiemPhanQuyen("", DangNhapForm.nguoiDung.MaPhanQuyen)[0].TenPhanQuyen;
+
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
+            {
+                nguoiDungButton.Text = "Nhân viên";
+            }
         }
 
         private void HienThiTheoPhanQuyen()
         {
+            
             switch (DangNhapForm.nguoiDung.MaPhanQuyen)
             {
                 case "PQ01":
@@ -38,6 +45,7 @@ namespace GUI.FormChinh
                     break;
 
                 case "PQ02":
+                    nguoiDungButton.Visible = true;
                     sanPhamButton.Visible = true;
                     loaiSanPhamButton.Visible = true;
                     nhaCungCapButton.Visible = true;
@@ -81,18 +89,22 @@ namespace GUI.FormChinh
 
         private void DangXuatButton_Click(object sender, EventArgs e)
         {
-            FormCollection allForms = Application.OpenForms;
-
-            foreach (Form form in allForms)
+            List<Form> formsToClose = new List<Form>();
+            foreach (Form form in Application.OpenForms)
             {
                 if (form is DangNhapForm form1 && !form.Visible)
                 {
                     form1.tenDangNhapTextBox.Clear();
                     form1.matKhauTextBox.Clear();
-                    form1.Show();
-                    Close();
+                    formsToClose.Add(form1);
                 }
             }
+
+            foreach (Form form in formsToClose)
+            {
+                form.Show();
+            }
+            Close();
         }
 
         private void DongCacFormHienTai()
@@ -118,7 +130,10 @@ namespace GUI.FormChinh
         private void NguoiDungButton_Click(object sender, EventArgs e)
         {
             DongCacFormHienTai();
-            tieuDeFormLabel.Text = "Quản lý người dùng";
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
+                tieuDeFormLabel.Text = "Quản lý nhân viên";
+            else
+                tieuDeFormLabel.Text = "Quản lý người dùng";
             OpenChildForm(new NguoiDungForm());
         }
 

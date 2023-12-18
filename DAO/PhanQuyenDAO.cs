@@ -52,7 +52,7 @@ namespace DAO
                 new SqlParameter("@maPhanQuyen", SqlDbType.Char) { Value = maPhanQuyen }
             ];
 
-            DataTable dataTable = XuLyDatabase.ExecuteQuery(query);
+            DataTable dataTable = XuLyDatabase.ExecuteQuery(query, parameters);
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 foreach (DataRow row in dataTable.Rows)

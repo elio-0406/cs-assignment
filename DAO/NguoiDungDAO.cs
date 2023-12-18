@@ -172,5 +172,65 @@ namespace DAO
 
             return soNguoiDung;
         }
+
+        public bool ThemNguoiDung(NguoiDung nguoiDung)
+        {
+            string query = "insert into NguoiDung values (@maNguoiDung, @maPhanQuyen, @tenDangNhap, @matKhau, @hoTen, @gioiTinh, @ngaySinh, @soDienThoai, @email, @diaChi, @trangThai)";
+
+            SqlParameter[] parameters =
+            [
+                new SqlParameter("@maNguoiDung", SqlDbType.Char) { Value = nguoiDung.MaNguoiDung },
+                new SqlParameter("@maPhanQuyen", SqlDbType.Char) { Value = nguoiDung.MaPhanQuyen },
+                new SqlParameter("@tenDangNhap", SqlDbType.VarChar) { Value = nguoiDung.TenDangNhap },
+                new SqlParameter("@matKhau", SqlDbType.VarChar) { Value = nguoiDung.MatKhau },
+                new SqlParameter("@hoTen", SqlDbType.NVarChar) { Value = nguoiDung.HoTen },
+                new SqlParameter("@trangThai", SqlDbType.NVarChar) { Value = nguoiDung.TrangThai },
+
+                new SqlParameter("@gioiTinh", SqlDbType.NVarChar) { Value = string.IsNullOrEmpty(nguoiDung.GioiTinh) ? DBNull.Value : nguoiDung.GioiTinh },
+                new SqlParameter("@ngaySinh", SqlDbType.Date) { Value = nguoiDung.NgaySinh.HasValue ? nguoiDung.NgaySinh : DBNull.Value },
+                new SqlParameter("@soDienThoai", SqlDbType.VarChar) { Value = string.IsNullOrEmpty(nguoiDung.SoDienThoai) ? DBNull.Value : nguoiDung.SoDienThoai },
+                new SqlParameter("@email", SqlDbType.VarChar) { Value = string.IsNullOrEmpty(nguoiDung.Email) ? DBNull.Value : nguoiDung.Email },
+                new SqlParameter("@diaChi", SqlDbType.NVarChar) { Value = string.IsNullOrEmpty(nguoiDung.DiaChi) ? DBNull.Value : nguoiDung.DiaChi }
+            ];
+
+            int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
+            return rowsAffected > 0;
+        }
+
+        public bool XoaNguoiDung(string maNguoiDung)
+        {
+            string query = "update NguoiDung set trangThai = N'Ngừng hoạt động' where maNguoiDung = @maNguoiDung";
+
+            SqlParameter[] parameters =
+            [
+                new SqlParameter("@maNguoiDung", SqlDbType.Char) { Value = maNguoiDung }
+            ];
+
+            int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
+            return rowsAffected > 0;
+        }
+
+        public bool SuaNguoiDung(NguoiDung nguoiDung)
+        {
+            string query = "update NguoiDung set tenDangNhap = @tenDangNhap, matKhau = @matKhau, hoTen = @hoTen, gioiTinh = @gioiTinh, ngaySinh = @ngaySinh, soDienThoai = @soDienThoai, email = @email, diaChi = @diaChi, trangThai = @trangThai where maNguoiDung = @maNguoiDung";
+
+            SqlParameter[] parameters =
+            [
+                new SqlParameter("@maNguoiDung", SqlDbType.Char) { Value = nguoiDung.MaNguoiDung },
+                new SqlParameter("@tenDangNhap", SqlDbType.VarChar) { Value = nguoiDung.TenDangNhap },
+                new SqlParameter("@matKhau", SqlDbType.VarChar) { Value = nguoiDung.MatKhau },
+                new SqlParameter("@hoTen", SqlDbType.NVarChar) { Value = nguoiDung.HoTen },
+                new SqlParameter("@trangThai", SqlDbType.NVarChar) { Value = nguoiDung.TrangThai },
+
+                new SqlParameter("@gioiTinh", SqlDbType.NVarChar) { Value = string.IsNullOrEmpty(nguoiDung.GioiTinh) ? DBNull.Value : nguoiDung.GioiTinh },
+                new SqlParameter("@ngaySinh", SqlDbType.Date) { Value = nguoiDung.NgaySinh.HasValue ? nguoiDung.NgaySinh : DBNull.Value },
+                new SqlParameter("@soDienThoai", SqlDbType.VarChar) { Value = string.IsNullOrEmpty(nguoiDung.SoDienThoai) ? DBNull.Value : nguoiDung.SoDienThoai },
+                new SqlParameter("@email", SqlDbType.VarChar) { Value = string.IsNullOrEmpty(nguoiDung.Email) ? DBNull.Value : nguoiDung.Email },
+                new SqlParameter("@diaChi", SqlDbType.NVarChar) { Value = string.IsNullOrEmpty(nguoiDung.MaNguoiDung) ? DBNull.Value : nguoiDung.DiaChi }
+            ];
+
+            int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
+            return rowsAffected > 0;
+        }
     }
 }

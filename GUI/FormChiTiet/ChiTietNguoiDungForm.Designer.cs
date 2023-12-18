@@ -38,7 +38,7 @@
             label1 = new Label();
             luuButton = new Button();
             huyBoButton = new Button();
-            tenNguoiDungTextBox = new TextBox();
+            hoTenTextBox = new TextBox();
             maNguoiDungTextBox = new TextBox();
             label4 = new Label();
             trangThaiComboBox = new ComboBox();
@@ -53,13 +53,13 @@
             namRadioButton = new RadioButton();
             nuRadioButton = new RadioButton();
             label11 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            ngaySinhDateTimePicker = new DateTimePicker();
             SuspendLayout();
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(21, 148);
+            label7.Location = new Point(21, 111);
             label7.Name = "label7";
             label7.Size = new Size(105, 25);
             label7.TabIndex = 46;
@@ -68,10 +68,11 @@
             // phanQuyenComboBox
             // 
             phanQuyenComboBox.FormattingEnabled = true;
-            phanQuyenComboBox.Location = new Point(223, 148);
+            phanQuyenComboBox.Location = new Point(223, 111);
             phanQuyenComboBox.Name = "phanQuyenComboBox";
             phanQuyenComboBox.Size = new Size(182, 33);
             phanQuyenComboBox.TabIndex = 45;
+            phanQuyenComboBox.SelectionChangeCommitted += PhanQuyenComboBox_SelectionChangeCommitted;
             // 
             // diaChiTextBox
             // 
@@ -95,6 +96,7 @@
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(150, 31);
             emailTextBox.TabIndex = 42;
+            emailTextBox.KeyPress += EmailTextBox_KeyPress;
             // 
             // label5
             // 
@@ -111,6 +113,7 @@
             soDienThoaiTextBox.Name = "soDienThoaiTextBox";
             soDienThoaiTextBox.Size = new Size(150, 31);
             soDienThoaiTextBox.TabIndex = 40;
+            soDienThoaiTextBox.KeyPress += SoDienThoaiTextBox_KeyPress;
             // 
             // label1
             // 
@@ -129,6 +132,7 @@
             luuButton.TabIndex = 36;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -138,13 +142,14 @@
             huyBoButton.TabIndex = 35;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
-            // tenNguoiDungTextBox
+            // hoTenTextBox
             // 
-            tenNguoiDungTextBox.Location = new Point(223, 111);
-            tenNguoiDungTextBox.Name = "tenNguoiDungTextBox";
-            tenNguoiDungTextBox.Size = new Size(150, 31);
-            tenNguoiDungTextBox.TabIndex = 34;
+            hoTenTextBox.Location = new Point(223, 150);
+            hoTenTextBox.Name = "hoTenTextBox";
+            hoTenTextBox.Size = new Size(150, 31);
+            hoTenTextBox.TabIndex = 34;
             // 
             // maNguoiDungTextBox
             // 
@@ -161,26 +166,24 @@
             label4.Size = new Size(89, 25);
             label4.TabIndex = 32;
             label4.Text = "Trạng thái";
-            label4.Click += this.label4_Click;
             // 
             // trangThaiComboBox
             // 
             trangThaiComboBox.FormattingEnabled = true;
-            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Tạm đình chỉ", "Ngừng hoạt động" });
+            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Ngừng hoạt động" });
             trangThaiComboBox.Location = new Point(223, 265);
             trangThaiComboBox.Name = "trangThaiComboBox";
             trangThaiComboBox.Size = new Size(182, 33);
             trangThaiComboBox.TabIndex = 31;
-            trangThaiComboBox.SelectedIndexChanged += trangThaiComboBox_SelectedIndexChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 114);
+            label3.Location = new Point(21, 153);
             label3.Name = "label3";
-            label3.Size = new Size(137, 25);
+            label3.Size = new Size(66, 25);
             label3.TabIndex = 30;
-            label3.Text = "Tên người dùng";
+            label3.Text = "Họ tên";
             // 
             // label2
             // 
@@ -208,6 +211,9 @@
             matKhauTextBox.Size = new Size(150, 31);
             matKhauTextBox.TabIndex = 50;
             matKhauTextBox.UseSystemPasswordChar = true;
+            matKhauTextBox.KeyPress += MatKhauTextBox_KeyPress;
+            matKhauTextBox.MouseLeave += MatKhauTextBox_MouseLeave;
+            matKhauTextBox.MouseMove += MatKhauTextBox_MouseMove;
             // 
             // label8
             // 
@@ -224,6 +230,7 @@
             tenDangNhapTextBox.Name = "tenDangNhapTextBox";
             tenDangNhapTextBox.Size = new Size(150, 31);
             tenDangNhapTextBox.TabIndex = 48;
+            tenDangNhapTextBox.KeyPress += TenDangNhapTextBox_KeyPress;
             // 
             // label9
             // 
@@ -274,22 +281,22 @@
             label11.TabIndex = 54;
             label11.Text = "Ngày sinh";
             // 
-            // dateTimePicker1
+            // ngaySinhDateTimePicker
             // 
-            dateTimePicker1.Checked = false;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(648, 153);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.ShowCheckBox = true;
-            dateTimePicker1.Size = new Size(150, 31);
-            dateTimePicker1.TabIndex = 55;
+            ngaySinhDateTimePicker.Checked = false;
+            ngaySinhDateTimePicker.Format = DateTimePickerFormat.Short;
+            ngaySinhDateTimePicker.Location = new Point(648, 153);
+            ngaySinhDateTimePicker.Name = "ngaySinhDateTimePicker";
+            ngaySinhDateTimePicker.ShowCheckBox = true;
+            ngaySinhDateTimePicker.Size = new Size(150, 31);
+            ngaySinhDateTimePicker.TabIndex = 55;
             // 
             // ChiTietNguoiDungForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(818, 364);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(ngaySinhDateTimePicker);
             Controls.Add(label11);
             Controls.Add(nuRadioButton);
             Controls.Add(namRadioButton);
@@ -308,7 +315,7 @@
             Controls.Add(label1);
             Controls.Add(luuButton);
             Controls.Add(huyBoButton);
-            Controls.Add(tenNguoiDungTextBox);
+            Controls.Add(hoTenTextBox);
             Controls.Add(maNguoiDungTextBox);
             Controls.Add(label4);
             Controls.Add(trangThaiComboBox);
@@ -320,7 +327,7 @@
             Name = "ChiTietNguoiDungForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết người dùng";
-            Load += this.ChiTietNguoiDungForm_Load;
+            Load += ChiTietNguoiDungForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,7 +344,7 @@
         private Label label1;
         private Button luuButton;
         private Button huyBoButton;
-        private TextBox tenNguoiDungTextBox;
+        private TextBox hoTenTextBox;
         private TextBox maNguoiDungTextBox;
         private Label label4;
         private ComboBox trangThaiComboBox;
@@ -352,6 +359,6 @@
         private RadioButton namRadioButton;
         private RadioButton nuRadioButton;
         private Label label11;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker ngaySinhDateTimePicker;
     }
 }

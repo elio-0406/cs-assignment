@@ -67,7 +67,8 @@ namespace GUI.FormChinh
 
         private void DangNhapForm_KeyDown(object sender, KeyEventArgs e)
         {
-            DangNhapButton_Click(sender, e);
+            if (e.KeyCode == Keys.Enter)
+                DangNhapButton_Click(sender, e);
         }
     }
 }

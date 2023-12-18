@@ -84,12 +84,12 @@
             flowLayoutPanel1.Controls.Add(hoaDonButton);
             flowLayoutPanel1.Controls.Add(phieuNhapButton);
             flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 100);
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(200, 555);
             flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Visible = false;
             // 
             // phanQuyenButton
             // 

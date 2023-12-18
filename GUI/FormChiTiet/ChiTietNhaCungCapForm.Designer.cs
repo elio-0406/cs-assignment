@@ -111,7 +111,6 @@
             huyBoButton.TabIndex = 35;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
-            huyBoButton.Click += this.huyBoButton_Click;
             // 
             // tenNhaCungCapTextBox
             // 

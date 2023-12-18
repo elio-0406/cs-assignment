@@ -64,7 +64,6 @@
             label1.Size = new Size(58, 25);
             label1.TabIndex = 84;
             label1.Text = "Giá trị";
-            label1.Click += this.label1_Click;
             // 
             // luuButton
             // 
