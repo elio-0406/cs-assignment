@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +14,29 @@ namespace GUI.FormChinh
 {
     public partial class DangNhapForm : Form
     {
+        NguoiDungBUS nguoiDungBUS;
         public NguoiDung? nguoiDung;
 
         public DangNhapForm()
         {
             InitializeComponent();
+            nguoiDungBUS = new NguoiDungBUS();
         }
 
         private void DangNhapButton_Click(object sender, EventArgs e)
         {
-            new TrangChuForm().Show();
-            this.Hide();
+            string tenDangNhap = tenDangNhapTextBox.Text;
+            string matKhau = matKhauTextBox.Text;
+
+            string message = nguoiDungBUS.DangNhap(tenDangNhap, matKhau);
+            MessageBox.Show(message);
+
+            if (message.Equals("Đăng nhập thành công!"))
+            {
+                nguoiDung = nguoiDungBUS.TimKiemNguoiDung("", "", "", tenDangNhap, "", "")[0];
+                new TrangChuForm().Show();
+                Hide();
+            }
         }
 
         private void TenDangNhapTextBox_KeyPress(object sender, KeyPressEventArgs e)

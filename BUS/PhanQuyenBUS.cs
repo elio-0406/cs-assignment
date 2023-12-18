@@ -22,15 +22,10 @@ namespace BUS
             return phanQuyenDAO.LayTatCaPhanQuyen();
         }
 
-        public PhanQuyen LayPhanQuyenTheoMa(string maPhanQuyen)
-        {
-            return phanQuyenDAO.LayPhanQuyenTheoMa(maPhanQuyen);
-        }
-
-        public List<PhanQuyen> TimKiemPhanQuyen(string tuKhoa)
+        public List<PhanQuyen> TimKiemPhanQuyen(string tuKhoa, string maPhanQuyen)
         {
             tuKhoa = tuKhoa.Trim().ToLower();
-            return phanQuyenDAO.TimKiemPhanQuyen(tuKhoa);
+            return phanQuyenDAO.TimKiemPhanQuyen(tuKhoa, maPhanQuyen);
         }
     }
 }

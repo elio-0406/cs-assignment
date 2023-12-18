@@ -47,7 +47,7 @@ namespace GUI.FormChinh
         private void TimKiemButton_Click(object sender, EventArgs e)
         {
             string tuKhoa = timKiemTextBox.Text;
-            listPhanQuyen = phanQuyenBUS.TimKiemPhanQuyen(tuKhoa);
+            listPhanQuyen = phanQuyenBUS.TimKiemPhanQuyen(tuKhoa, "");
             LoadDataToDataGridView(listPhanQuyen);
         }
 
@@ -66,9 +66,11 @@ namespace GUI.FormChinh
 
         private void XuatExcel_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-            saveFileDialog.Title = "Chọn vị trí lưu file Excel";
+            SaveFileDialog saveFileDialog = new()
+            {
+                Filter = "Excel Files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                Title = "Chọn vị trí lưu file Excel"
+            };
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

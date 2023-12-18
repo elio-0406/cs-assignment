@@ -37,39 +37,19 @@ namespace DAO
             return listPhanQuyen;
         }
 
-        public PhanQuyen LayPhanQuyenTheoMa(string maPhanQuyen)
-        {
-            PhanQuyen phanQuyen = new();
-
-            string query = "select * from PhanQuyen where maPhanQuyen = @maPhanQuyen";
-
-            SqlParameter[] parameters =
-            [
-                new SqlParameter("@maPhanQuyen", SqlDbType.Char) { Value = maPhanQuyen }
-            ];
-
-            DataTable dataTable = XuLyDatabase.ExecuteQuery(query, parameters);
-
-            if (dataTable != null && dataTable.Rows.Count > 0)
-            {
-                phanQuyen.MaPhanQuyen = dataTable.Rows[0]["maPhanQuyen"].ToString();
-                phanQuyen.TenPhanQuyen = dataTable.Rows[0]["tenPhanQuyen"].ToString();
-            }
-
-            return phanQuyen;
-        }
-
-        public List<PhanQuyen> TimKiemPhanQuyen(string tuKhoa)
+        public List<PhanQuyen> TimKiemPhanQuyen(string tuKhoa, string maPhanQuyen)
         {
             List<PhanQuyen> listPhanQuyen = [];
 
             string query = "select * from PhanQuyen " +
-                           "where @tuKhoa = '' or maPhanQuyen like @tuKhoa " +
-                           "or tenPhanQuyen collate Latin1_General_CI_AI like @tuKhoa";
+                           "where (@tuKhoa = '' or maPhanQuyen like @tuKhoa " +
+                           "or tenPhanQuyen collate Latin1_General_CI_AI like @tuKhoa) " +
+                           "and (@maPhanQuyen = '' or maPhanQuyen = @maPhanQuyen)";
 
             SqlParameter[] parameters =
             [
-                new SqlParameter("@tuKhoa", SqlDbType.NVarChar) { Value = "%" + tuKhoa + "%" }
+                new SqlParameter("@tuKhoa", SqlDbType.NVarChar) { Value = "%" + tuKhoa + "%" },
+                new SqlParameter("@maPhanQuyen", SqlDbType.Char) { Value = maPhanQuyen }
             ];
 
             DataTable dataTable = XuLyDatabase.ExecuteQuery(query);
