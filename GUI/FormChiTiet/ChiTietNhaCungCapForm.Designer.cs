@@ -37,12 +37,12 @@
             luuButton = new Button();
             huyBoButton = new Button();
             tenNhaCungCapTextBox = new TextBox();
-            maNhaCungCapTextBox = new TextBox();
             label4 = new Label();
             trangThaiComboBox = new ComboBox();
             label3 = new Label();
             label2 = new Label();
             tieuDeFormLabel = new Label();
+            maNhaCungCapTextBox = new TextBox();
             SuspendLayout();
             // 
             // diaChiTextBox
@@ -67,6 +67,7 @@
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(150, 31);
             emailTextBox.TabIndex = 42;
+            emailTextBox.KeyPress += EmailTextBox_KeyPress;
             // 
             // label5
             // 
@@ -83,6 +84,7 @@
             soDienThoaiTextBox.Name = "soDienThoaiTextBox";
             soDienThoaiTextBox.Size = new Size(150, 31);
             soDienThoaiTextBox.TabIndex = 40;
+            soDienThoaiTextBox.KeyPress += SoDienThoaiTextBox_KeyPress;
             // 
             // label1
             // 
@@ -101,7 +103,7 @@
             luuButton.TabIndex = 36;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
-            luuButton.Click += luuButton_Click;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -111,6 +113,7 @@
             huyBoButton.TabIndex = 35;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenNhaCungCapTextBox
             // 
@@ -118,13 +121,6 @@
             tenNhaCungCapTextBox.Name = "tenNhaCungCapTextBox";
             tenNhaCungCapTextBox.Size = new Size(150, 31);
             tenNhaCungCapTextBox.TabIndex = 34;
-            // 
-            // maNhaCungCapTextBox
-            // 
-            maNhaCungCapTextBox.Location = new Point(219, 73);
-            maNhaCungCapTextBox.Name = "maNhaCungCapTextBox";
-            maNhaCungCapTextBox.Size = new Size(150, 31);
-            maNhaCungCapTextBox.TabIndex = 33;
             // 
             // label4
             // 
@@ -172,6 +168,13 @@
             tieuDeFormLabel.TabIndex = 28;
             tieuDeFormLabel.Text = "Chi tiết nhà cung cấp";
             // 
+            // maNhaCungCapTextBox
+            // 
+            maNhaCungCapTextBox.Location = new Point(219, 73);
+            maNhaCungCapTextBox.Name = "maNhaCungCapTextBox";
+            maNhaCungCapTextBox.Size = new Size(150, 31);
+            maNhaCungCapTextBox.TabIndex = 33;
+            // 
             // ChiTietNhaCungCapForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -197,6 +200,7 @@
             Name = "ChiTietNhaCungCapForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết nhà cung cấp";
+            Load += ChiTietNhaCungCapForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,11 +216,11 @@
         private Button luuButton;
         private Button huyBoButton;
         private TextBox tenNhaCungCapTextBox;
-        private TextBox maNhaCungCapTextBox;
         private Label label4;
         private ComboBox trangThaiComboBox;
         private Label label3;
         private Label label2;
         private Label tieuDeFormLabel;
+        private TextBox maNhaCungCapTextBox;
     }
 }

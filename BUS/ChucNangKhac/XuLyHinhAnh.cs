@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS.ChucNangKhac
 {
-    internal class XuLyHinhAnh
+    public class XuLyHinhAnh
     {
         public static Image DieuChinhKichThuoc(Image image, int maxWidth, int maxHeight)
         {

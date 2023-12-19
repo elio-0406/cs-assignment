@@ -30,10 +30,8 @@
         {
             khachHangDataGridView = new DataGridView();
             themButton = new Button();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            gioiTinhComboBox = new ComboBox();
             hangThanhVienComboBox = new ComboBox();
             trangThaiComboBox = new ComboBox();
             xuatExcel = new Button();
@@ -45,8 +43,8 @@
             maKhachHangColumn = new DataGridViewTextBoxColumn();
             hoTenColumn = new DataGridViewTextBoxColumn();
             soDienThoaiColumn = new DataGridViewTextBoxColumn();
-            trangThaiColumn = new DataGridViewTextBoxColumn();
             hangThanhVienColumn = new DataGridViewTextBoxColumn();
+            trangThaiColumn = new DataGridViewTextBoxColumn();
             chiTietButtonColumn = new DataGridViewButtonColumn();
             suaButtonColumn = new DataGridViewButtonColumn();
             xoaButtonColumn = new DataGridViewButtonColumn();
@@ -59,7 +57,7 @@
             khachHangDataGridView.AllowUserToAddRows = false;
             khachHangDataGridView.AllowUserToDeleteRows = false;
             khachHangDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            khachHangDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maKhachHangColumn, hoTenColumn, soDienThoaiColumn, trangThaiColumn, hangThanhVienColumn, chiTietButtonColumn, suaButtonColumn, xoaButtonColumn });
+            khachHangDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maKhachHangColumn, hoTenColumn, soDienThoaiColumn, hangThanhVienColumn, trangThaiColumn, chiTietButtonColumn, suaButtonColumn, xoaButtonColumn });
             khachHangDataGridView.Dock = DockStyle.Fill;
             khachHangDataGridView.Location = new Point(0, 170);
             khachHangDataGridView.Margin = new Padding(0);
@@ -81,16 +79,6 @@
             themButton.UseVisualStyleBackColor = true;
             themButton.Click += ThemButton_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(445, 30);
-            label3.Margin = new Padding(0);
-            label3.Name = "label3";
-            label3.Size = new Size(78, 25);
-            label3.TabIndex = 9;
-            label3.Text = "Giới tính";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -111,17 +99,6 @@
             label1.TabIndex = 7;
             label1.Text = "Trạng thái";
             // 
-            // gioiTinhComboBox
-            // 
-            gioiTinhComboBox.FormattingEnabled = true;
-            gioiTinhComboBox.Items.AddRange(new object[] { "Nam", "Nữ" });
-            gioiTinhComboBox.Location = new Point(445, 58);
-            gioiTinhComboBox.Margin = new Padding(0);
-            gioiTinhComboBox.Name = "gioiTinhComboBox";
-            gioiTinhComboBox.Size = new Size(182, 33);
-            gioiTinhComboBox.TabIndex = 6;
-            gioiTinhComboBox.SelectionChangeCommitted += GioiTinhComboBox_SelectionChangeCommitted;
-            // 
             // hangThanhVienComboBox
             // 
             hangThanhVienComboBox.FormattingEnabled = true;
@@ -136,7 +113,7 @@
             // trangThaiComboBox
             // 
             trangThaiComboBox.FormattingEnabled = true;
-            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Tạm đình chỉ", "Đã xóa" });
+            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Ngừng hoạt động" });
             trangThaiComboBox.Location = new Point(69, 58);
             trangThaiComboBox.Margin = new Padding(0);
             trangThaiComboBox.Name = "trangThaiComboBox";
@@ -190,10 +167,8 @@
             // panel1
             // 
             panel1.Controls.Add(themButton);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(gioiTinhComboBox);
             panel1.Controls.Add(hangThanhVienComboBox);
             panel1.Controls.Add(trangThaiComboBox);
             panel1.Controls.Add(xuatExcel);
@@ -237,14 +212,6 @@
             soDienThoaiColumn.Name = "soDienThoaiColumn";
             soDienThoaiColumn.Width = 153;
             // 
-            // trangThaiColumn
-            // 
-            trangThaiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            trangThaiColumn.HeaderText = "Trạng thái";
-            trangThaiColumn.MinimumWidth = 8;
-            trangThaiColumn.Name = "trangThaiColumn";
-            trangThaiColumn.Width = 125;
-            // 
             // hangThanhVienColumn
             // 
             hangThanhVienColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -253,9 +220,18 @@
             hangThanhVienColumn.Name = "hangThanhVienColumn";
             hangThanhVienColumn.Width = 178;
             // 
+            // trangThaiColumn
+            // 
+            trangThaiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            trangThaiColumn.HeaderText = "Trạng thái";
+            trangThaiColumn.MinimumWidth = 8;
+            trangThaiColumn.Name = "trangThaiColumn";
+            trangThaiColumn.Width = 125;
+            // 
             // chiTietButtonColumn
             // 
             chiTietButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            chiTietButtonColumn.FillWeight = 30F;
             chiTietButtonColumn.HeaderText = "Chi tiết";
             chiTietButtonColumn.MinimumWidth = 8;
             chiTietButtonColumn.Name = "chiTietButtonColumn";
@@ -266,6 +242,7 @@
             // suaButtonColumn
             // 
             suaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            suaButtonColumn.FillWeight = 30F;
             suaButtonColumn.HeaderText = "Sửa";
             suaButtonColumn.MinimumWidth = 8;
             suaButtonColumn.Name = "suaButtonColumn";
@@ -276,6 +253,7 @@
             // xoaButtonColumn
             // 
             xoaButtonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            xoaButtonColumn.FillWeight = 30F;
             xoaButtonColumn.HeaderText = "Xóa";
             xoaButtonColumn.MinimumWidth = 8;
             xoaButtonColumn.Name = "xoaButtonColumn";
@@ -304,10 +282,8 @@
 
         private DataGridView khachHangDataGridView;
         private Button themButton;
-        private Label label3;
         private Label label2;
         private Label label1;
-        private ComboBox gioiTinhComboBox;
         private ComboBox hangThanhVienComboBox;
         private ComboBox trangThaiComboBox;
         private Button xuatExcel;
@@ -319,8 +295,8 @@
         private DataGridViewTextBoxColumn maKhachHangColumn;
         private DataGridViewTextBoxColumn hoTenColumn;
         private DataGridViewTextBoxColumn soDienThoaiColumn;
-        private DataGridViewTextBoxColumn trangThaiColumn;
         private DataGridViewTextBoxColumn hangThanhVienColumn;
+        private DataGridViewTextBoxColumn trangThaiColumn;
         private DataGridViewButtonColumn chiTietButtonColumn;
         private DataGridViewButtonColumn suaButtonColumn;
         private DataGridViewButtonColumn xoaButtonColumn;

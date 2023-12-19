@@ -110,5 +110,110 @@ namespace BUS.ChucNangKhac
 
             workbook.SaveAs(filePath);
         }
+
+        public void XuatExcelSanPham(List<SanPham> listSanPham)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("DataSheet");
+
+                worksheet.Cell(1, 1).Value = "Mã sản phẩm";
+                worksheet.Cell(1, 2).Value = "Loại sản phẩm";
+                worksheet.Cell(1, 3).Value = "Tên sản phẩm";
+                worksheet.Cell(1, 4).Value = "Đơn vị tính";
+                worksheet.Cell(1, 5).Value = "Số lượng";
+                worksheet.Cell(1, 6).Value = "Giá bán";
+                worksheet.Cell(1, 7).Value = "Trạng thái";
+
+                int row = 2;
+                foreach (SanPham sanPham in listSanPham)
+                {
+                    worksheet.Cell(row, 1).Value = sanPham.MaSanPham;
+                    worksheet.Cell(row, 2).Value = new LoaiSanPhamBUS().TimKiemLoaiSanPham("",sanPham.MaLoaiSanPham, "")[0].TenLoaiSanPham;
+                    worksheet.Cell(row, 3).Value = sanPham.TenSanPham;
+                    worksheet.Cell(row, 4).Value = sanPham.DonViTinh;
+                    worksheet.Cell(row, 6).Value = sanPham.GiaBan;
+                    worksheet.Cell(row, 5).Value = sanPham.SoLuong;
+                    worksheet.Cell(row, 7).Value = sanPham.TrangThai;
+
+                    row++;
+                }
+
+                foreach (var item in worksheet.ColumnsUsed())
+                {
+                    item.AdjustToContents();
+                }
+
+                workbook.SaveAs(filePath);
+            }
+        }
+
+        public void XuatExcelNhaCungCap(List<NhaCungCap> listNhaCungCap)
+        {
+            using var workbook = new XLWorkbook();
+            var worksheet = workbook.Worksheets.Add("DataSheet");
+
+            worksheet.Cell(1, 1).Value = "Mã nhà cung cấp";
+            worksheet.Cell(1, 2).Value = "Tên nhà cung cấp";
+            worksheet.Cell(1, 3).Value = "Số điện thoại";
+            worksheet.Cell(1, 4).Value = "Email";
+            worksheet.Cell(1, 5).Value = "Địa chỉ";
+            worksheet.Cell(1, 6).Value = "Trạng thái";
+
+            int row = 2;
+            foreach (NhaCungCap nhaCungCap in listNhaCungCap)
+            {
+                worksheet.Cell(row, 1).Value = nhaCungCap.MaNhaCungCap;
+                worksheet.Cell(row, 2).Value = nhaCungCap.TenNhaCungCap;
+                worksheet.Cell(row, 3).Value = nhaCungCap.SoDienThoai;
+                worksheet.Cell(row, 4).Value = nhaCungCap.Email;
+                worksheet.Cell(row, 5).Value = nhaCungCap.DiaChi;
+                worksheet.Cell(row, 6).Value = nhaCungCap.TrangThai;
+
+                row++;
+            }
+
+            foreach (var item in worksheet.ColumnsUsed())
+            {
+                item.AdjustToContents();
+            }
+
+            workbook.SaveAs(filePath);
+        }
+
+        public void XuatExcelKhachHang(List<KhachHang> listKhachHang)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("DataSheet");
+
+                worksheet.Cell(1, 1).Value = "Mã khách hàng";
+                worksheet.Cell(1, 2).Value = "Tên khách hàng";
+                worksheet.Cell(1, 3).Value = "Số điện thoại";
+                worksheet.Cell(1, 4).Value = "Hạng thành viên";
+                worksheet.Cell(1, 5).Value = "Điểm thành viên";
+                worksheet.Cell(1, 6).Value = "Trạng thái";
+
+                int row = 2;
+                foreach (KhachHang khachHang in listKhachHang)
+                {
+                    worksheet.Cell(row, 1).Value = khachHang.MaKhachHang;
+                    worksheet.Cell(row, 2).Value = khachHang.HoTen;
+                    worksheet.Cell(row, 3).Value = khachHang.SoDienThoai;
+                    worksheet.Cell(row, 4).Value = khachHang.HangThanhVien;
+                    worksheet.Cell(row, 5).Value = khachHang.DiemThanhVien;
+                    worksheet.Cell(row, 6).Value = khachHang.TrangThai;
+
+                    row++;
+                }
+
+                foreach (var item in worksheet.ColumnsUsed())
+                {
+                    item.AdjustToContents();
+                }
+
+                workbook.SaveAs(filePath);
+            }
+        }
     }
 }

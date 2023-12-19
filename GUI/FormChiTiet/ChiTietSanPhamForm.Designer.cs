@@ -58,6 +58,7 @@
             luuButton.TabIndex = 17;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -67,6 +68,7 @@
             huyBoButton.TabIndex = 16;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenSanPhamTextBox
             // 
@@ -144,6 +146,7 @@
             chonAnhButton.TabIndex = 19;
             chonAnhButton.Text = "Chọn ảnh";
             chonAnhButton.UseVisualStyleBackColor = true;
+            chonAnhButton.Click += ChonAnhButton_Click;
             // 
             // donViTinhTextBox
             // 
@@ -167,6 +170,9 @@
             giaBanTextBox.Name = "giaBanTextBox";
             giaBanTextBox.Size = new Size(150, 31);
             giaBanTextBox.TabIndex = 23;
+            giaBanTextBox.Text = "0";
+            giaBanTextBox.KeyPress += GiaBanTextBox_KeyPress;
+            giaBanTextBox.MouseLeave += GiaBanTextBox_MouseLeave;
             // 
             // label5
             // 
@@ -183,6 +189,7 @@
             soLuongTextBox.Name = "soLuongTextBox";
             soLuongTextBox.Size = new Size(150, 31);
             soLuongTextBox.TabIndex = 25;
+            soLuongTextBox.Text = "0";
             // 
             // label6
             // 
@@ -239,6 +246,7 @@
             Name = "ChiTietSanPhamForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết sản phẩm";
+            Load += ChiTietSanPhamForm_Load;
             ((System.ComponentModel.ISupportInitialize)sanPhamPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

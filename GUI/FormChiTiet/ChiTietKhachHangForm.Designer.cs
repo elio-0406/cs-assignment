@@ -31,18 +31,18 @@
             diemThanhVienTextBox = new TextBox();
             label9 = new Label();
             label7 = new Label();
-            hangThanhVienComboBox = new ComboBox();
             soDienThoaiTextBox = new TextBox();
             label1 = new Label();
             luuButton = new Button();
             huyBoButton = new Button();
-            tenKhachHangTextBox = new TextBox();
+            hoTenTextBox = new TextBox();
             maKhachHangTextBox = new TextBox();
             label4 = new Label();
             trangThaiComboBox = new ComboBox();
             label3 = new Label();
             label2 = new Label();
             tieuDeFormLabel = new Label();
+            hangThanhVienTextBox = new TextBox();
             SuspendLayout();
             // 
             // diemThanhVienTextBox
@@ -71,21 +71,13 @@
             label7.TabIndex = 72;
             label7.Text = "Hạng thành viên";
             // 
-            // hangThanhVienComboBox
-            // 
-            hangThanhVienComboBox.FormattingEnabled = true;
-            hangThanhVienComboBox.Items.AddRange(new object[] { "Đồng", "Bạc", "Vàng" });
-            hangThanhVienComboBox.Location = new Point(224, 191);
-            hangThanhVienComboBox.Name = "hangThanhVienComboBox";
-            hangThanhVienComboBox.Size = new Size(182, 33);
-            hangThanhVienComboBox.TabIndex = 71;
-            // 
             // soDienThoaiTextBox
             // 
             soDienThoaiTextBox.Location = new Point(224, 154);
             soDienThoaiTextBox.Name = "soDienThoaiTextBox";
             soDienThoaiTextBox.Size = new Size(150, 31);
             soDienThoaiTextBox.TabIndex = 66;
+            soDienThoaiTextBox.KeyPress += SoDienThoaiTextBox_KeyPress;
             // 
             // label1
             // 
@@ -104,6 +96,7 @@
             luuButton.TabIndex = 64;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -113,13 +106,14 @@
             huyBoButton.TabIndex = 63;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
-            // tenKhachHangTextBox
+            // hoTenTextBox
             // 
-            tenKhachHangTextBox.Location = new Point(224, 117);
-            tenKhachHangTextBox.Name = "tenKhachHangTextBox";
-            tenKhachHangTextBox.Size = new Size(150, 31);
-            tenKhachHangTextBox.TabIndex = 62;
+            hoTenTextBox.Location = new Point(224, 117);
+            hoTenTextBox.Name = "hoTenTextBox";
+            hoTenTextBox.Size = new Size(150, 31);
+            hoTenTextBox.TabIndex = 62;
             // 
             // maKhachHangTextBox
             // 
@@ -140,7 +134,7 @@
             // trangThaiComboBox
             // 
             trangThaiComboBox.FormattingEnabled = true;
-            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Tạm đình chỉ", "Ngừng hoạt động" });
+            trangThaiComboBox.Items.AddRange(new object[] { "Đang hoạt động", "Ngừng hoạt động" });
             trangThaiComboBox.Location = new Point(224, 271);
             trangThaiComboBox.Name = "trangThaiComboBox";
             trangThaiComboBox.Size = new Size(182, 33);
@@ -174,20 +168,28 @@
             tieuDeFormLabel.TabIndex = 56;
             tieuDeFormLabel.Text = "Chi tiết khách hàng";
             // 
+            // hangThanhVienTextBox
+            // 
+            hangThanhVienTextBox.Location = new Point(224, 191);
+            hangThanhVienTextBox.Name = "hangThanhVienTextBox";
+            hangThanhVienTextBox.Size = new Size(150, 31);
+            hangThanhVienTextBox.TabIndex = 75;
+            hangThanhVienTextBox.Text = "Đồng";
+            // 
             // ChiTietKhachHangForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(428, 364);
+            Controls.Add(hangThanhVienTextBox);
             Controls.Add(diemThanhVienTextBox);
             Controls.Add(label9);
             Controls.Add(label7);
-            Controls.Add(hangThanhVienComboBox);
             Controls.Add(soDienThoaiTextBox);
             Controls.Add(label1);
             Controls.Add(luuButton);
             Controls.Add(huyBoButton);
-            Controls.Add(tenKhachHangTextBox);
+            Controls.Add(hoTenTextBox);
             Controls.Add(maKhachHangTextBox);
             Controls.Add(label4);
             Controls.Add(trangThaiComboBox);
@@ -199,6 +201,7 @@
             Name = "ChiTietKhachHangForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết khách hàng";
+            Load += ChiTietKhachHangForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,17 +210,17 @@
         private TextBox diemThanhVienTextBox;
         private Label label9;
         private Label label7;
-        private ComboBox hangThanhVienComboBox;
         private TextBox soDienThoaiTextBox;
         private Label label1;
         private Button luuButton;
         private Button huyBoButton;
-        private TextBox tenKhachHangTextBox;
+        private TextBox hoTenTextBox;
         private TextBox maKhachHangTextBox;
         private Label label4;
         private ComboBox trangThaiComboBox;
         private Label label3;
         private Label label2;
         private Label tieuDeFormLabel;
+        private TextBox hangThanhVienTextBox;
     }
 }

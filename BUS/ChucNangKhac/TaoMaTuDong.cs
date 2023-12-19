@@ -41,5 +41,30 @@ namespace BUS.ChucNangKhac
             string maLoaiSanPham = string.Format("LSP{0:D4}", ++soLoaiSanPham);
             return maLoaiSanPham;
         }
+
+        public static string TaoMaSanPham()
+        {
+            int soSanPham = new SanPhamBUS().DemSanPham();
+            string maSanPham = string.Format("SPH{0:D4}", ++soSanPham);
+            return maSanPham;
+        }
+
+        public static string TaoMaNhaCungCap()
+        {
+            int soNhaCungCap = new NhaCungCapBUS().DemNhaCungCap();
+
+            string maNhaCungCap = string.Format("NCC{0:D4}", ++soNhaCungCap);
+
+            return maNhaCungCap;
+        }
+
+        public static string TaoMaKhachHang()
+        {
+            int soKhachHang = new KhachHangBUS().DemKhachHang();
+
+            string maKhachHang = string.Format("KHH{0:D4}", ++soKhachHang);
+
+            return maKhachHang;
+        }
     }
 }
