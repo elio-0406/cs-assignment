@@ -215,5 +215,40 @@ namespace BUS.ChucNangKhac
                 workbook.SaveAs(filePath);
             }
         }
+
+        public void XuatExcelKhuyenMai(List<KhuyenMai> listKhuyenMai)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("DataSheet");
+
+                worksheet.Cell(1, 1).Value = "Mã khuyến mãi";
+                worksheet.Cell(1, 2).Value = "Tên khuyến mãi";
+                worksheet.Cell(1, 3).Value = "Loại giá trị";
+                worksheet.Cell(1, 4).Value = "Giá trị";
+                worksheet.Cell(1, 5).Value = "Thời gian bắt đầu";
+                worksheet.Cell(1, 6).Value = "Thời gian kết thúc";
+
+                int row = 2;
+                foreach (KhuyenMai khuyenMai in listKhuyenMai)
+                {
+                    worksheet.Cell(row, 1).Value = khuyenMai.MaKhuyenMai;
+                    worksheet.Cell(row, 2).Value = khuyenMai.TenKhuyenMai;
+                    worksheet.Cell(row, 3).Value = khuyenMai.LoaiGiaTri;
+                    worksheet.Cell(row, 4).Value = khuyenMai.GiaTri;
+                    worksheet.Cell(row, 5).Value = khuyenMai.ThoiGianBatDau.ToString("dd/MM/yyyy HH:mm:ss");
+                    worksheet.Cell(row, 6).Value = khuyenMai.ThoiGianKetThuc.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    row++;
+                }
+
+                foreach (var item in worksheet.ColumnsUsed())
+                {
+                    item.AdjustToContents();
+                }
+
+                workbook.SaveAs(filePath);
+            }
+        }
     }
 }

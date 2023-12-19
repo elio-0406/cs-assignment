@@ -42,10 +42,10 @@
             cuTheRadioButton = new RadioButton();
             label5 = new Label();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
+            ngayBatDauDateTimePicker = new DateTimePicker();
+            gioBatDauDateTimePicker = new DateTimePicker();
+            ngayKetThucDateTimePicker = new DateTimePicker();
+            gioKetThucDateTimePicker = new DateTimePicker();
             SuspendLayout();
             // 
             // giaTriTextBox
@@ -54,7 +54,9 @@
             giaTriTextBox.Name = "giaTriTextBox";
             giaTriTextBox.Size = new Size(150, 31);
             giaTriTextBox.TabIndex = 85;
-            giaTriTextBox.TextChanged += giaTriTextBox_TextChanged;
+            giaTriTextBox.Text = "0";
+            giaTriTextBox.KeyPress += GiaTriTextBox_KeyPress;
+            giaTriTextBox.MouseLeave += GiaTriTextBox_MouseLeave;
             // 
             // label1
             // 
@@ -73,6 +75,7 @@
             luuButton.TabIndex = 83;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -82,6 +85,7 @@
             huyBoButton.TabIndex = 82;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenKhuyenMaiTextBox
             // 
@@ -174,47 +178,47 @@
             label6.TabIndex = 90;
             label6.Text = "Thời gian kết thúc";
             // 
-            // dateTimePicker1
+            // ngayBatDauDateTimePicker
             // 
-            dateTimePicker1.Location = new Point(418, 112);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 91;
+            ngayBatDauDateTimePicker.Location = new Point(418, 112);
+            ngayBatDauDateTimePicker.Name = "ngayBatDauDateTimePicker";
+            ngayBatDauDateTimePicker.Size = new Size(300, 31);
+            ngayBatDauDateTimePicker.TabIndex = 91;
             // 
-            // dateTimePicker2
+            // gioBatDauDateTimePicker
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new Point(721, 112);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.ShowUpDown = true;
-            dateTimePicker2.Size = new Size(139, 31);
-            dateTimePicker2.TabIndex = 92;
+            gioBatDauDateTimePicker.Format = DateTimePickerFormat.Time;
+            gioBatDauDateTimePicker.Location = new Point(721, 112);
+            gioBatDauDateTimePicker.Name = "gioBatDauDateTimePicker";
+            gioBatDauDateTimePicker.ShowUpDown = true;
+            gioBatDauDateTimePicker.Size = new Size(139, 31);
+            gioBatDauDateTimePicker.TabIndex = 92;
             // 
-            // dateTimePicker3
+            // ngayKetThucDateTimePicker
             // 
-            dateTimePicker3.Location = new Point(418, 180);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(300, 31);
-            dateTimePicker3.TabIndex = 93;
+            ngayKetThucDateTimePicker.Location = new Point(418, 180);
+            ngayKetThucDateTimePicker.Name = "ngayKetThucDateTimePicker";
+            ngayKetThucDateTimePicker.Size = new Size(300, 31);
+            ngayKetThucDateTimePicker.TabIndex = 93;
             // 
-            // dateTimePicker4
+            // gioKetThucDateTimePicker
             // 
-            dateTimePicker4.Format = DateTimePickerFormat.Time;
-            dateTimePicker4.Location = new Point(721, 180);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.ShowUpDown = true;
-            dateTimePicker4.Size = new Size(139, 31);
-            dateTimePicker4.TabIndex = 94;
+            gioKetThucDateTimePicker.Format = DateTimePickerFormat.Time;
+            gioKetThucDateTimePicker.Location = new Point(721, 180);
+            gioKetThucDateTimePicker.Name = "gioKetThucDateTimePicker";
+            gioKetThucDateTimePicker.ShowUpDown = true;
+            gioKetThucDateTimePicker.Size = new Size(139, 31);
+            gioKetThucDateTimePicker.TabIndex = 94;
             // 
             // ChiTietKhuyenMaiForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(878, 314);
-            Controls.Add(dateTimePicker4);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(gioKetThucDateTimePicker);
+            Controls.Add(ngayKetThucDateTimePicker);
+            Controls.Add(gioBatDauDateTimePicker);
+            Controls.Add(ngayBatDauDateTimePicker);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(cuTheRadioButton);
@@ -234,6 +238,7 @@
             Name = "ChiTietKhuyenMaiForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết khuyến mãi";
+            Load += ChiTietKhuyenMaiForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,9 +259,9 @@
         private RadioButton cuTheRadioButton;
         private Label label5;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker ngayBatDauDateTimePicker;
+        private DateTimePicker gioBatDauDateTimePicker;
+        private DateTimePicker ngayKetThucDateTimePicker;
+        private DateTimePicker gioKetThucDateTimePicker;
     }
 }

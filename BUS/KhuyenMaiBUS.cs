@@ -22,7 +22,7 @@ namespace BUS
             return khuyenMaiDAO.LayTatCaKhuyenMai();
         }
 
-        public List<KhuyenMai> TimKiemKhuyenMai(string tuKhoa, string maKhuyenMai, string loaiGiaTri, string tuyChonThoiGian, DateTime thoiGian, string trangThai)
+        public List<KhuyenMai> TimKiemKhuyenMai(string tuKhoa, string maKhuyenMai, string loaiGiaTri, string tuyChonThoiGian, DateTime? thoiGian, string trangThai)
         {
             tuKhoa = tuKhoa.Trim().ToLower();
             return khuyenMaiDAO.TimKiemKhuyenMai(tuKhoa, maKhuyenMai, loaiGiaTri, tuyChonThoiGian, thoiGian, trangThai);
@@ -80,7 +80,14 @@ namespace BUS
             if (khuyenMai.ThoiGianBatDau >= khuyenMai.ThoiGianKetThuc)
                 return "Thời gian bắt đầu phải diễn ra trước thời gian kết thúc!";
 
-            if (khuyenMai.ThoiGianBatDau <= DateTime.Now && khuyenMai.ThoiGianKetThuc >= DateTime.Now)
+            KhuyenMai khuyenMaiBanDau = TimKiemKhuyenMai("", khuyenMai.MaKhuyenMai, "", "", null, "")[0];
+
+            //Nếu khuyến mãi đang diễn ra thì chỉ chỉnh sửa được thời gian kết thúc, kiểm tra thời gian kết thúc > hiện tại
+            if ((khuyenMaiBanDau.ThoiGianBatDau < DateTime.Now && khuyenMaiBanDau.ThoiGianKetThuc > DateTime.Now) && khuyenMai.ThoiGianKetThuc <= DateTime.Now)
+                return "Thời gian kết thúc không được diễn ra trước thời điểm hiện tại!";
+
+            //Nếu khuyến mãi chưa diễn ra thì chỉnh sửa được thời gian bắt đầu và kết thúc, kiểm tra thời gian bắt đầu > hiện tại
+            if ((khuyenMaiBanDau.ThoiGianBatDau > DateTime.Now && khuyenMaiBanDau.ThoiGianKetThuc > DateTime.Now) && khuyenMai.ThoiGianBatDau <= DateTime.Now)
                 return "Thời gian bắt đầu không được diễn ra trước thời điểm hiện tại!";
 
             if (khuyenMai.GiaTri <= 0)

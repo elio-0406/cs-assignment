@@ -66,5 +66,12 @@ namespace BUS.ChucNangKhac
 
             return maKhachHang;
         }
+
+        public static string TaoMaKhuyenMai()
+        {
+            int soKhuyenMai = new KhuyenMaiBUS().DemSoKhuyenMai();
+            string maKhuyenMai = string.Format("KHM{0:D4}", ++soKhuyenMai);
+            return maKhuyenMai;
+        }
     }
 }

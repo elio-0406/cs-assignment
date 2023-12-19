@@ -31,7 +31,7 @@ namespace DAO
                         MaKhuyenMai = row["maKhuyenMai"].ToString(),
                         TenKhuyenMai = row["tenKhuyenMai"].ToString(),
                         LoaiGiaTri = row["loaiGiaTri"].ToString(),
-                        GiaTri = (float)row["giaTri"],
+                        GiaTri = float.Parse(row["giaTri"].ToString()),
                         ThoiGianBatDau = (DateTime)row["thoiGianBatDau"],
                         ThoiGianKetThuc = (DateTime)row["thoiGianKetThuc"],
                     };
@@ -42,7 +42,7 @@ namespace DAO
             return listKhuyenMai;
         }
 
-        public List<KhuyenMai> TimKiemKhuyenMai(string tuKhoa, string maKhuyenMai, string loaiGiaTri, string tuyChonThoiGian, DateTime thoiGian, string trangThai)
+        public List<KhuyenMai> TimKiemKhuyenMai(string tuKhoa, string maKhuyenMai, string loaiGiaTri, string tuyChonThoiGian, DateTime? thoiGian, string trangThai)
         {
             List<KhuyenMai> listKhuyenMai = [];
 
@@ -65,18 +65,21 @@ namespace DAO
                     break;
             }
 
-            switch (tuyChonThoiGian)
+            if (thoiGian.HasValue)
             {
-                case "Ngày":
-                    query += " and date(thoiGianBatDau) = @ngay and date(thoiGianKetThuc) = @ngay";
-                    break;
-                case "Tháng":
-                    query += " and month(thoiGianBatDau) = @thang and year(thoiGianBatDau) = @nam " +
-                             "and month(thoiGianKetThuc) = @thang and year(thoiGianKetThuc) = @nam";
-                    break;
-                case "Năm":
-                    query += " and year(thoiGianBatDau) = @nam and year(thoiGianKetThuc) = @nam";
-                    break;
+                switch (tuyChonThoiGian)
+                {
+                    case "Ngày":
+                        query += " and cast(thoiGianBatDau as date) = @ngay and cast(thoiGianKetThuc as date) = @ngay";
+                        break;
+                    case "Tháng":
+                        query += " and month(thoiGianBatDau) = @thang and year(thoiGianBatDau) = @nam " +
+                                 "and month(thoiGianKetThuc) = @thang and year(thoiGianKetThuc) = @nam";
+                        break;
+                    case "Năm":
+                        query += " and year(thoiGianBatDau) = @nam and year(thoiGianKetThuc) = @nam";
+                        break;
+                }
             }
 
             SqlParameter[] parameters =
@@ -84,9 +87,9 @@ namespace DAO
                 new SqlParameter("@tuKhoa", SqlDbType.NVarChar) { Value = "%" + tuKhoa + "%" },
                 new SqlParameter("@maKhuyenMai", SqlDbType.Char) { Value = maKhuyenMai },
                 new SqlParameter("@loaiGiaTri", SqlDbType.NVarChar) { Value = loaiGiaTri },
-                new SqlParameter("@ngay", SqlDbType.Date) { Value = thoiGian.Date },
-                new SqlParameter("@thang", SqlDbType.Int) { Value = thoiGian.Month },
-                new SqlParameter("@nam", SqlDbType.Int) { Value = thoiGian.Year }
+                new SqlParameter("@ngay", SqlDbType.Date) { Value = thoiGian.HasValue ? thoiGian.Value.Date : DBNull.Value},
+                new SqlParameter("@thang", SqlDbType.Int) { Value = thoiGian.HasValue ? thoiGian.Value.Month : DBNull.Value },
+                new SqlParameter("@nam", SqlDbType.Int) { Value = thoiGian.HasValue ? thoiGian.Value.Year : DBNull.Value }
             ];
 
             DataTable dataTable = XuLyDatabase.ExecuteQuery(query, parameters);
@@ -99,7 +102,7 @@ namespace DAO
                         MaKhuyenMai = row["maKhuyenMai"].ToString(),
                         TenKhuyenMai = row["tenKhuyenMai"].ToString(),
                         LoaiGiaTri = row["loaiGiaTri"].ToString(),
-                        GiaTri = (float)row["giaTri"],
+                        GiaTri = float.Parse(row["giaTri"].ToString()),
                         ThoiGianBatDau = (DateTime)row["thoiGianBatDau"],
                         ThoiGianKetThuc = (DateTime)row["thoiGianKetThuc"],
                     };

@@ -32,6 +32,9 @@
             tuyChonThoiGianComboBox = new ComboBox();
             khuyenMaiDataGridView = new DataGridView();
             panel1 = new Panel();
+            label3 = new Label();
+            loaiGiaTriComboBox = new ComboBox();
+            themButton = new Button();
             thoiGianDateTimePicker = new DateTimePicker();
             label1 = new Label();
             trangThaiComboBox = new ComboBox();
@@ -39,13 +42,12 @@
             lamMoiButton = new Button();
             timKiemButton = new Button();
             timKiemTextBox = new TextBox();
-            themButton = new Button();
             stt = new DataGridViewTextBoxColumn();
             maKhuyenMaiColumn = new DataGridViewTextBoxColumn();
             tenKhuyenMaiColumn = new DataGridViewTextBoxColumn();
             loaiGiaTriColumn = new DataGridViewTextBoxColumn();
             giaTriColumn = new DataGridViewTextBoxColumn();
-            trangThaiColumn = new DataGridViewButtonColumn();
+            trangThaiColumn = new DataGridViewTextBoxColumn();
             chiTietButtonColumn = new DataGridViewButtonColumn();
             suaButtonColumn = new DataGridViewButtonColumn();
             xoaButtonColumn = new DataGridViewButtonColumn();
@@ -56,7 +58,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(254, 30);
+            label2.Location = new Point(457, 30);
             label2.Name = "label2";
             label2.Size = new Size(159, 25);
             label2.TabIndex = 10;
@@ -66,7 +68,7 @@
             // 
             tuyChonThoiGianComboBox.FormattingEnabled = true;
             tuyChonThoiGianComboBox.Items.AddRange(new object[] { "Ngày", "Tháng", "Năm" });
-            tuyChonThoiGianComboBox.Location = new Point(254, 58);
+            tuyChonThoiGianComboBox.Location = new Point(457, 58);
             tuyChonThoiGianComboBox.Name = "tuyChonThoiGianComboBox";
             tuyChonThoiGianComboBox.Size = new Size(182, 33);
             tuyChonThoiGianComboBox.TabIndex = 9;
@@ -90,6 +92,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(loaiGiaTriComboBox);
             panel1.Controls.Add(themButton);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(tuyChonThoiGianComboBox);
@@ -106,10 +110,41 @@
             panel1.Size = new Size(1144, 170);
             panel1.TabIndex = 6;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(262, 30);
+            label3.Margin = new Padding(0);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 25);
+            label3.TabIndex = 13;
+            label3.Text = "Loại giá trị";
+            // 
+            // loaiGiaTriComboBox
+            // 
+            loaiGiaTriComboBox.FormattingEnabled = true;
+            loaiGiaTriComboBox.Items.AddRange(new object[] { "Phần trăm", "Cụ thể" });
+            loaiGiaTriComboBox.Location = new Point(262, 58);
+            loaiGiaTriComboBox.Margin = new Padding(0);
+            loaiGiaTriComboBox.Name = "loaiGiaTriComboBox";
+            loaiGiaTriComboBox.Size = new Size(182, 33);
+            loaiGiaTriComboBox.TabIndex = 12;
+            loaiGiaTriComboBox.SelectionChangeCommitted += LoaiGiaTriComboBox_SelectionChangeCommitted;
+            // 
+            // themButton
+            // 
+            themButton.Location = new Point(854, 106);
+            themButton.Name = "themButton";
+            themButton.Size = new Size(112, 34);
+            themButton.TabIndex = 11;
+            themButton.Text = "Thêm";
+            themButton.UseVisualStyleBackColor = true;
+            themButton.Click += ThemButton_Click;
+            // 
             // thoiGianDateTimePicker
             // 
             thoiGianDateTimePicker.Checked = false;
-            thoiGianDateTimePicker.Location = new Point(439, 58);
+            thoiGianDateTimePicker.Location = new Point(642, 58);
             thoiGianDateTimePicker.Name = "thoiGianDateTimePicker";
             thoiGianDateTimePicker.ShowCheckBox = true;
             thoiGianDateTimePicker.Size = new Size(324, 31);
@@ -180,16 +215,6 @@
             timKiemTextBox.TabIndex = 0;
             timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
             // 
-            // themButton
-            // 
-            themButton.Location = new Point(854, 106);
-            themButton.Name = "themButton";
-            themButton.Size = new Size(112, 34);
-            themButton.TabIndex = 11;
-            themButton.Text = "Thêm";
-            themButton.UseVisualStyleBackColor = true;
-            themButton.Click += ThemButton_Click;
-            // 
             // stt
             // 
             stt.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -235,8 +260,8 @@
             trangThaiColumn.HeaderText = "Trạng thái";
             trangThaiColumn.MinimumWidth = 8;
             trangThaiColumn.Name = "trangThaiColumn";
-            trangThaiColumn.Text = "Chi tiết";
-            trangThaiColumn.UseColumnTextForButtonValue = true;
+            trangThaiColumn.Resizable = DataGridViewTriState.True;
+            trangThaiColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
             trangThaiColumn.Width = 95;
             // 
             // chiTietButtonColumn
@@ -274,6 +299,7 @@
             xoaButtonColumn.Name = "xoaButtonColumn";
             xoaButtonColumn.Resizable = DataGridViewTriState.True;
             xoaButtonColumn.SortMode = DataGridViewColumnSortMode.Automatic;
+            xoaButtonColumn.Text = "Xóa";
             xoaButtonColumn.UseColumnTextForButtonValue = true;
             xoaButtonColumn.Width = 79;
             // 
@@ -307,12 +333,14 @@
         private Button timKiemButton;
         private TextBox timKiemTextBox;
         private Button themButton;
+        private Label label3;
+        private ComboBox loaiGiaTriComboBox;
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn maKhuyenMaiColumn;
         private DataGridViewTextBoxColumn tenKhuyenMaiColumn;
         private DataGridViewTextBoxColumn loaiGiaTriColumn;
         private DataGridViewTextBoxColumn giaTriColumn;
-        private DataGridViewButtonColumn trangThaiColumn;
+        private DataGridViewTextBoxColumn trangThaiColumn;
         private DataGridViewButtonColumn chiTietButtonColumn;
         private DataGridViewButtonColumn suaButtonColumn;
         private DataGridViewButtonColumn xoaButtonColumn;
