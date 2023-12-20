@@ -44,6 +44,7 @@
             chonButton.TabIndex = 6;
             chonButton.Text = "Chọn";
             chonButton.UseVisualStyleBackColor = true;
+            chonButton.Click += ChonButton_Click;
             // 
             // tenSanPhamLabel
             // 
@@ -85,6 +86,7 @@
             Controls.Add(sanPhamPictureBox);
             Name = "SanPhamBanUserControl";
             Size = new Size(185, 186);
+            Load += SanPhamBanUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)sanPhamPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -45,6 +45,7 @@
             xoaButton.TabIndex = 0;
             xoaButton.Text = "X";
             xoaButton.UseVisualStyleBackColor = true;
+            xoaButton.Click += XoaButton_Click;
             // 
             // tenSanPhamLabel
             // 
@@ -61,9 +62,13 @@
             // 
             soLuongNumericUpDown.Location = new Point(180, 6);
             soLuongNumericUpDown.Margin = new Padding(0);
+            soLuongNumericUpDown.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            soLuongNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             soLuongNumericUpDown.Name = "soLuongNumericUpDown";
             soLuongNumericUpDown.Size = new Size(100, 31);
             soLuongNumericUpDown.TabIndex = 2;
+            soLuongNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            soLuongNumericUpDown.ValueChanged += SoLuongNumericUpDown_ValueChanged;
             // 
             // thanhTienLabel
             // 
@@ -99,6 +104,7 @@
             Name = "ChiTietBanUserControl";
             Padding = new Padding(5);
             Size = new Size(560, 85);
+            Load += ChiTietBanUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)soLuongNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -108,8 +114,8 @@
 
         private Button xoaButton;
         private Label tenSanPhamLabel;
-        private NumericUpDown soLuongNumericUpDown;
-        private Label thanhTienLabel;
         private Label label2;
+        internal NumericUpDown soLuongNumericUpDown;
+        internal Label thanhTienLabel;
     }
 }

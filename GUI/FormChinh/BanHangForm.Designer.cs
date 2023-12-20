@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel2 = new FlowLayoutPanel();
+            sanPhamFlowLayoutPanel = new FlowLayoutPanel();
             maKhachHangLabel = new Label();
             lamMoiKhachHangButton = new Button();
             label5 = new Label();
@@ -36,13 +36,14 @@
             chonKhachHangButton = new Button();
             label3 = new Label();
             loaiSanPhamComboBox = new ComboBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            chiTietFlowLayoutPanel = new FlowLayoutPanel();
             lamMoiSanPhamButton = new Button();
             timKiemSanPhamTextBox = new TextBox();
             tongTienLabel = new Label();
             label1 = new Label();
             hoanTatButton = new Button();
             panel5 = new Panel();
+            lamMoiKhuyenMaiButton = new Button();
             tenKhuyenMaiLabel = new Label();
             label2 = new Label();
             giamGiaLabel = new Label();
@@ -67,14 +68,14 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel2
+            // sanPhamFlowLayoutPanel
             // 
-            flowLayoutPanel2.Dock = DockStyle.Fill;
-            flowLayoutPanel2.Location = new Point(0, 120);
-            flowLayoutPanel2.Margin = new Padding(0);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(572, 540);
-            flowLayoutPanel2.TabIndex = 1;
+            sanPhamFlowLayoutPanel.Dock = DockStyle.Fill;
+            sanPhamFlowLayoutPanel.Location = new Point(0, 120);
+            sanPhamFlowLayoutPanel.Margin = new Padding(0);
+            sanPhamFlowLayoutPanel.Name = "sanPhamFlowLayoutPanel";
+            sanPhamFlowLayoutPanel.Size = new Size(572, 540);
+            sanPhamFlowLayoutPanel.TabIndex = 1;
             // 
             // maKhachHangLabel
             // 
@@ -150,14 +151,14 @@
             loaiSanPhamComboBox.TabIndex = 3;
             loaiSanPhamComboBox.SelectionChangeCommitted += LoaiSanPhamComboBox_SelectionChangeCommitted;
             // 
-            // flowLayoutPanel1
+            // chiTietFlowLayoutPanel
             // 
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 120);
-            flowLayoutPanel1.Margin = new Padding(0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(572, 353);
-            flowLayoutPanel1.TabIndex = 2;
+            chiTietFlowLayoutPanel.Dock = DockStyle.Fill;
+            chiTietFlowLayoutPanel.Location = new Point(0, 120);
+            chiTietFlowLayoutPanel.Margin = new Padding(0);
+            chiTietFlowLayoutPanel.Name = "chiTietFlowLayoutPanel";
+            chiTietFlowLayoutPanel.Size = new Size(572, 353);
+            chiTietFlowLayoutPanel.TabIndex = 2;
             // 
             // lamMoiSanPhamButton
             // 
@@ -217,6 +218,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(lamMoiKhuyenMaiButton);
             panel5.Controls.Add(tenKhuyenMaiLabel);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(giamGiaLabel);
@@ -236,6 +238,16 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(572, 187);
             panel5.TabIndex = 1;
+            // 
+            // lamMoiKhuyenMaiButton
+            // 
+            lamMoiKhuyenMaiButton.Location = new Point(445, 36);
+            lamMoiKhuyenMaiButton.Name = "lamMoiKhuyenMaiButton";
+            lamMoiKhuyenMaiButton.Size = new Size(112, 34);
+            lamMoiKhuyenMaiButton.TabIndex = 13;
+            lamMoiKhuyenMaiButton.Text = "Làm mới";
+            lamMoiKhuyenMaiButton.UseVisualStyleBackColor = true;
+            lamMoiKhuyenMaiButton.Click += LamMoiKhuyenMaiButton_Click;
             // 
             // tenKhuyenMaiLabel
             // 
@@ -279,7 +291,6 @@
             tienThuaLabel.Size = new Size(38, 25);
             tienThuaLabel.TabIndex = 11;
             tienThuaLabel.Text = "0 đ";
-            tienThuaLabel.TextChanged += TienThuaLabel_TextChanged;
             // 
             // label10
             // 
@@ -416,7 +427,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(flowLayoutPanel1);
+            panel2.Controls.Add(chiTietFlowLayoutPanel);
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Fill;
@@ -428,7 +439,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(flowLayoutPanel2);
+            panel1.Controls.Add(sanPhamFlowLayoutPanel);
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -461,15 +472,13 @@
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel2;
-        private Label maKhachHangLabel;
+        private FlowLayoutPanel sanPhamFlowLayoutPanel;
         private Button lamMoiKhachHangButton;
         private Label label5;
         private Label label4;
         private Button chonKhachHangButton;
         private Label label3;
         private ComboBox loaiSanPhamComboBox;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Button lamMoiSanPhamButton;
         private TextBox timKiemSanPhamTextBox;
         private Label tongTienLabel;
@@ -478,8 +487,6 @@
         private Panel panel5;
         private Button chonKhuyenMaiButton;
         private Panel panel4;
-        private CheckBox khuyenMaiThanhVienCheckBox;
-        private Label soDienThoaiLabel;
         private Panel panel3;
         private Button timKiemSanPhamButton;
         private Panel panel2;
@@ -488,10 +495,15 @@
         private Label label10;
         private TextBox tienNhanTextBox;
         private Label label9;
-        private Label thanhTienLabel;
         private Label label7;
-        private Label giamGiaLabel;
         private Label label2;
-        private Label tenKhuyenMaiLabel;
+        private Button lamMoiKhuyenMaiButton;
+        internal FlowLayoutPanel chiTietFlowLayoutPanel;
+        internal Label thanhTienLabel;
+        internal Label giamGiaLabel;
+        internal Label tenKhuyenMaiLabel;
+        internal Label maKhachHangLabel;
+        internal Label soDienThoaiLabel;
+        internal CheckBox khuyenMaiThanhVienCheckBox;
     }
 }

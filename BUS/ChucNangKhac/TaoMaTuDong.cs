@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,6 +80,15 @@ namespace BUS.ChucNangKhac
             int soPhieuNhap = new PhieuNhapBUS().DemPhieuNhapTheoNgay(DateTime.Now);
             string maPhieuNhap = string.Format("{0}-PN{1:D2}", DateTime.Now.ToString("dd/MM/yyyy"), ++soPhieuNhap);
             return maPhieuNhap;
+        }
+
+        public static string TaoMaHoaDon()
+        {
+            int soHoaDon = new HoaDonBUS().DemHoaDonTheoNgay(DateTime.Now);
+            Debug.WriteLine(soHoaDon);
+            string maHoaDon = string.Format("{0}-HD{1:D4}", DateTime.Now.ToString("dd/MM/yyyy"), ++soHoaDon);
+            Debug.WriteLine(maHoaDon);
+            return maHoaDon;
         }
     }
 }

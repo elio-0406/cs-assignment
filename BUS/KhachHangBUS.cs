@@ -92,5 +92,21 @@ namespace BUS
             else
                 return "Xóa khách hàng thất bại!";
         }
+
+        public decimal GiamGiaThanhVien(string maKhachHang, decimal thanhTien)
+        {
+            KhachHang khachHang = khachHangDAO.TimKiemKhachHang("", maKhachHang, "", "", "")[0];
+
+            decimal giamGia;
+
+            if (khachHang.HangThanhVien.Equals("Đồng"))
+                giamGia = thanhTien * 2 / 100;
+            else if (khachHang.HangThanhVien.Equals("Bạc"))
+                giamGia = thanhTien * 5 / 100;
+            else
+                giamGia = thanhTien * 7 / 100;
+
+            return giamGia;
+        }
     }
 }

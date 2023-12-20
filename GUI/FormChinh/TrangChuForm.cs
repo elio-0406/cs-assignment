@@ -32,6 +32,15 @@ namespace GUI.FormChinh
             {
                 nguoiDungButton.Text = "Nhân viên";
             }
+
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ01"))
+                PhanQuyenButton_Click(sender, e);
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
+                SanPhamButton_Click(sender, e);
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ03"))
+                BanHangButton_Click(sender, e);
+            if (DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ04"))
+                TaoPhieuNhapButton_Click(sender, e);
         }
 
         private void HienThiTheoPhanQuyen()

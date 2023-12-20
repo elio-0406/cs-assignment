@@ -76,6 +76,13 @@ namespace GUI.FormChiTiet
                 nhapHangButton.Visible = false;
             }
 
+            if (phieuNhap.TrangThai.Equals("Đã nhập hàng") || phieuNhap.TrangThai.Equals("Không duyệt"))
+            {
+                nhapHangButton.Visible = false;
+                duyetButton.Visible = false;
+                khongDuyetButton.Visible = false;
+            }
+
             LoadDataToDataGridView(listChiTietPhieuNhap);
         }
 

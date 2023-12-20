@@ -98,5 +98,20 @@ namespace BUS
             else
                 return "Chỉnh sửa thông tin khuyến mãi thất bại!";
         }
+
+        public decimal ApDungKhuyenMai(string maKhuyenMai, decimal thanhTien)
+        {
+            KhuyenMai khuyenMai = khuyenMaiDAO.TimKiemKhuyenMai("", maKhuyenMai, "", "", null, "")[0];
+
+            if (khuyenMai.LoaiGiaTri.Equals("Phần trăm"))
+                return thanhTien * decimal.Parse(khuyenMai.GiaTri.ToString()) / 100;
+            else
+            {
+                if (thanhTien - (thanhTien - decimal.Parse(khuyenMai.GiaTri.ToString())) > thanhTien * 70 / 100)
+                    return thanhTien * 70 / 100;
+                else
+                    return decimal.Parse(khuyenMai.GiaTri.ToString());
+            }
+        }
     }
 }

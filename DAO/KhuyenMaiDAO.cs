@@ -173,5 +173,7 @@ namespace DAO
             int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
             return rowsAffected > 0;
         }
+
+       
     }
 }
