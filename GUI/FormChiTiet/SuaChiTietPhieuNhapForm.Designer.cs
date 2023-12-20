@@ -30,15 +30,15 @@
         {
             luuButton = new Button();
             huyBoButton = new Button();
-            tenLoaiSanPhamTextBox = new TextBox();
-            maLoaiSanPhamTextBox = new TextBox();
+            donGiaTextBox = new TextBox();
+            maSanPhamTextBox = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            thanhTienLabel = new Label();
+            soLuongNumericUpDown = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)soLuongNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // luuButton
@@ -49,6 +49,7 @@
             luuButton.TabIndex = 17;
             luuButton.Text = "Lưu";
             luuButton.UseVisualStyleBackColor = true;
+            luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
@@ -58,21 +59,25 @@
             huyBoButton.TabIndex = 16;
             huyBoButton.Text = "Hủy bỏ";
             huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.Click += HuyBoButton_Click;
             // 
-            // tenLoaiSanPhamTextBox
+            // donGiaTextBox
             // 
-            tenLoaiSanPhamTextBox.Location = new Point(230, 66);
-            tenLoaiSanPhamTextBox.Name = "tenLoaiSanPhamTextBox";
-            tenLoaiSanPhamTextBox.Size = new Size(150, 31);
-            tenLoaiSanPhamTextBox.TabIndex = 15;
-            tenLoaiSanPhamTextBox.Text = "0";
+            donGiaTextBox.Location = new Point(230, 66);
+            donGiaTextBox.Name = "donGiaTextBox";
+            donGiaTextBox.Size = new Size(150, 31);
+            donGiaTextBox.TabIndex = 15;
+            donGiaTextBox.Text = "0";
+            donGiaTextBox.TextChanged += DonGiaTextBox_TextChanged;
+            donGiaTextBox.KeyPress += DonGiaTextBox_KeyPress;
+            donGiaTextBox.MouseLeave += DonGiaTextBox_MouseLeave;
             // 
-            // maLoaiSanPhamTextBox
+            // maSanPhamTextBox
             // 
-            maLoaiSanPhamTextBox.Location = new Point(230, 25);
-            maLoaiSanPhamTextBox.Name = "maLoaiSanPhamTextBox";
-            maLoaiSanPhamTextBox.Size = new Size(150, 31);
-            maLoaiSanPhamTextBox.TabIndex = 14;
+            maSanPhamTextBox.Location = new Point(230, 25);
+            maSanPhamTextBox.Name = "maSanPhamTextBox";
+            maSanPhamTextBox.Size = new Size(150, 31);
+            maSanPhamTextBox.TabIndex = 14;
             // 
             // label3
             // 
@@ -110,44 +115,46 @@
             label4.TabIndex = 20;
             label4.Text = "Thành tiền";
             // 
-            // label5
+            // thanhTienLabel
             // 
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(230, 143);
-            label5.Name = "label5";
-            label5.Size = new Size(150, 38);
-            label5.TabIndex = 21;
-            label5.Text = "0 đ";
+            thanhTienLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thanhTienLabel.Location = new Point(230, 143);
+            thanhTienLabel.Name = "thanhTienLabel";
+            thanhTienLabel.Size = new Size(150, 38);
+            thanhTienLabel.TabIndex = 21;
+            thanhTienLabel.Text = "0 đ";
             // 
-            // numericUpDown1
+            // soLuongNumericUpDown
             // 
-            numericUpDown1.Location = new Point(230, 109);
-            numericUpDown1.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 31);
-            numericUpDown1.TabIndex = 22;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            soLuongNumericUpDown.Location = new Point(230, 109);
+            soLuongNumericUpDown.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            soLuongNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            soLuongNumericUpDown.Name = "soLuongNumericUpDown";
+            soLuongNumericUpDown.Size = new Size(150, 31);
+            soLuongNumericUpDown.TabIndex = 22;
+            soLuongNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            soLuongNumericUpDown.ValueChanged += SoLuongNumericUpDown_ValueChanged;
             // 
             // SuaChiTietPhieuNhapForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(408, 244);
-            Controls.Add(numericUpDown1);
-            Controls.Add(label5);
+            Controls.Add(soLuongNumericUpDown);
+            Controls.Add(thanhTienLabel);
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(luuButton);
             Controls.Add(huyBoButton);
-            Controls.Add(tenLoaiSanPhamTextBox);
-            Controls.Add(maLoaiSanPhamTextBox);
+            Controls.Add(donGiaTextBox);
+            Controls.Add(maSanPhamTextBox);
             Controls.Add(label3);
             Controls.Add(label2);
             Name = "SuaChiTietPhieuNhapForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sửa chi tiết phiếu nhập";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += SuaChiTietPhieuNhapForm_Load;
+            ((System.ComponentModel.ISupportInitialize)soLuongNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,13 +163,13 @@
 
         private Button luuButton;
         private Button huyBoButton;
-        private TextBox tenLoaiSanPhamTextBox;
-        private TextBox maLoaiSanPhamTextBox;
+        private TextBox donGiaTextBox;
+        private TextBox maSanPhamTextBox;
         private Label label3;
         private Label label2;
         private Label label1;
         private Label label4;
-        private Label label5;
-        private NumericUpDown numericUpDown1;
+        private Label thanhTienLabel;
+        private NumericUpDown soLuongNumericUpDown;
     }
 }

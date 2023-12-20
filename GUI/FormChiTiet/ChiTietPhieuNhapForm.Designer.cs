@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            phieuNhapDataGridView = new DataGridView();
+            chiTietPhieuNhapDataGridView = new DataGridView();
             panel1 = new Panel();
             nhapHangButton = new Button();
             khongDuyetButton = new Button();
@@ -58,24 +58,25 @@
             soLuongColumn = new DataGridViewTextBoxColumn();
             thanhTienColumn = new DataGridViewTextBoxColumn();
             suaButtonColumn = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)phieuNhapDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chiTietPhieuNhapDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // phieuNhapDataGridView
+            // chiTietPhieuNhapDataGridView
             // 
-            phieuNhapDataGridView.AllowUserToAddRows = false;
-            phieuNhapDataGridView.AllowUserToDeleteRows = false;
-            phieuNhapDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            phieuNhapDataGridView.Columns.AddRange(new DataGridViewColumn[] { maSanPhamColumn, donGiaColumn, soLuongColumn, thanhTienColumn, suaButtonColumn });
-            phieuNhapDataGridView.Dock = DockStyle.Bottom;
-            phieuNhapDataGridView.Location = new Point(0, 272);
-            phieuNhapDataGridView.Margin = new Padding(0);
-            phieuNhapDataGridView.Name = "phieuNhapDataGridView";
-            phieuNhapDataGridView.RowHeadersVisible = false;
-            phieuNhapDataGridView.RowHeadersWidth = 62;
-            phieuNhapDataGridView.Size = new Size(878, 282);
-            phieuNhapDataGridView.TabIndex = 23;
+            chiTietPhieuNhapDataGridView.AllowUserToAddRows = false;
+            chiTietPhieuNhapDataGridView.AllowUserToDeleteRows = false;
+            chiTietPhieuNhapDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            chiTietPhieuNhapDataGridView.Columns.AddRange(new DataGridViewColumn[] { maSanPhamColumn, donGiaColumn, soLuongColumn, thanhTienColumn, suaButtonColumn });
+            chiTietPhieuNhapDataGridView.Dock = DockStyle.Bottom;
+            chiTietPhieuNhapDataGridView.Location = new Point(0, 272);
+            chiTietPhieuNhapDataGridView.Margin = new Padding(0);
+            chiTietPhieuNhapDataGridView.Name = "chiTietPhieuNhapDataGridView";
+            chiTietPhieuNhapDataGridView.RowHeadersVisible = false;
+            chiTietPhieuNhapDataGridView.RowHeadersWidth = 62;
+            chiTietPhieuNhapDataGridView.Size = new Size(878, 282);
+            chiTietPhieuNhapDataGridView.TabIndex = 23;
+            chiTietPhieuNhapDataGridView.CellContentClick += ChiTietPhieuNhapDataGridView_CellContentClick;
             // 
             // panel1
             // 
@@ -117,6 +118,7 @@
             nhapHangButton.TabIndex = 45;
             nhapHangButton.Text = "Nhập hàng";
             nhapHangButton.UseVisualStyleBackColor = true;
+            nhapHangButton.Click += NhapHangButton_Click;
             // 
             // khongDuyetButton
             // 
@@ -127,6 +129,7 @@
             khongDuyetButton.TabIndex = 44;
             khongDuyetButton.Text = "Không duyệt";
             khongDuyetButton.UseVisualStyleBackColor = true;
+            khongDuyetButton.Click += KhongDuyetButton_Click;
             // 
             // duyetButton
             // 
@@ -136,6 +139,7 @@
             duyetButton.TabIndex = 43;
             duyetButton.Text = "Duyệt";
             duyetButton.UseVisualStyleBackColor = true;
+            duyetButton.Click += DuyetButton_Click;
             // 
             // maNhaCungCapTextBox
             // 
@@ -332,6 +336,8 @@
             suaButtonColumn.HeaderText = "Sửa";
             suaButtonColumn.MinimumWidth = 8;
             suaButtonColumn.Name = "suaButtonColumn";
+            suaButtonColumn.Text = "Sửa";
+            suaButtonColumn.UseColumnTextForButtonValue = true;
             suaButtonColumn.Width = 48;
             // 
             // ChiTietPhieuNhapForm
@@ -340,13 +346,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(878, 554);
             Controls.Add(panel1);
-            Controls.Add(phieuNhapDataGridView);
+            Controls.Add(chiTietPhieuNhapDataGridView);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "ChiTietPhieuNhapForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết phiếu nhập";
-            ((System.ComponentModel.ISupportInitialize)phieuNhapDataGridView).EndInit();
+            Load += ChiTietPhieuNhapForm_Load;
+            ((System.ComponentModel.ISupportInitialize)chiTietPhieuNhapDataGridView).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -354,12 +361,7 @@
 
         #endregion
 
-        private DataGridView phieuNhapDataGridView;
-        private DataGridViewTextBoxColumn maSanPhamColumn;
-        private DataGridViewTextBoxColumn donGiaColumn;
-        private DataGridViewTextBoxColumn soLuongColumn;
-        private DataGridViewTextBoxColumn thanhTienColumn;
-        private DataGridViewButtonColumn suaButtonColumn;
+        private DataGridView chiTietPhieuNhapDataGridView;
         private Panel panel1;
         private Button nhapHangButton;
         private Button khongDuyetButton;
@@ -384,5 +386,10 @@
         private Label label2;
         private TextBox maPhieuNhapTextBox;
         private Label label1;
+        private DataGridViewTextBoxColumn maSanPhamColumn;
+        private DataGridViewTextBoxColumn donGiaColumn;
+        private DataGridViewTextBoxColumn soLuongColumn;
+        private DataGridViewTextBoxColumn thanhTienColumn;
+        private DataGridViewButtonColumn suaButtonColumn;
     }
 }

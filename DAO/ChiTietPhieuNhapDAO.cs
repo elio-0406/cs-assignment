@@ -35,7 +35,7 @@ namespace DAO
                     {
                         MaPhieuNhap = row["maPhieuNhap"].ToString(),
                         MaSanPham = row["maSanPham"].ToString(),
-                        DonGia = (int)row["donGia"],
+                        DonGia = (decimal)row["donGia"],
                         SoLuong = (int)row["soLuong"],
                         ThanhTien = (decimal)row["thanhTien"]
                     };
@@ -67,7 +67,7 @@ namespace DAO
                     chiTietPhieuNhap.MaPhieuNhap = dataTable.Rows[0]["maPhieuNhap"].ToString();
                     chiTietPhieuNhap.MaSanPham = dataTable.Rows[0]["maSanPham"].ToString();
                     chiTietPhieuNhap.SoLuong = (int)dataTable.Rows[0]["soLuong"];
-                    chiTietPhieuNhap.DonGia = (int)dataTable.Rows[0]["donGia"];
+                    chiTietPhieuNhap.DonGia = (decimal)dataTable.Rows[0]["donGia"];
                     chiTietPhieuNhap.ThanhTien = (decimal)dataTable.Rows[0]["thanhTien"];
                 }
             }
@@ -79,7 +79,7 @@ namespace DAO
         {
             PhieuNhapDAO phieuNhapDAO = new();
 
-            PhieuNhap phieuNhap = phieuNhapDAO.TimKiemPhieuNhap("", chiTietPhieuNhap.MaPhieuNhap, "")[0];
+            PhieuNhap phieuNhap = phieuNhapDAO.TimKiemPhieuNhap("", chiTietPhieuNhap.MaPhieuNhap, "", null, "")[0];
 
             phieuNhap.TongTien -= LayChiTietPhieuNhap(chiTietPhieuNhap.MaPhieuNhap, chiTietPhieuNhap.MaSanPham).ThanhTien;
 

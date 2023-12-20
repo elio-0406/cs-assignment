@@ -45,7 +45,7 @@ namespace DAO
             return listPhieuNhap;
         }
 
-        public List<PhieuNhap> TimKiemPhieuNhap(string tuKhoa, string maPhieuNhap, string trangThai)
+        public List<PhieuNhap> TimKiemPhieuNhap(string tuKhoa, string maPhieuNhap, string tuyChonThoiGian, DateTime? thoiGian, string trangThai)
         {
             List<PhieuNhap> listPhieuNhap = [];
 
@@ -53,13 +53,32 @@ namespace DAO
                            "where (@tuKhoa = '' or lower(maPhieuNhap) like @tuKhoa) " +
                            "and (@maPhieuNhap = '' or maPhieuNhap = @maPhieuNhap) " +
                            "and (@trangThai = '' or trangThai = @trangThai)";
-                           
+
+            if (thoiGian.HasValue)
+            {
+                switch (tuyChonThoiGian)
+                {
+                    case "Ngày":
+                        query += " and cast(thoiGianTao as date) = @ngay";
+                        break;
+                    case "Tháng":
+                        query += " and month(thoiGianTao) = @thang and year(thoiGianTao) = @nam";
+                        break;
+                    case "Năm":
+                        query += " and year(thoiGianTao) = @nam";
+                        break;
+                }
+            }
+
 
             SqlParameter[] parameters =
             [
                 new SqlParameter("@tuKhoa", SqlDbType.NVarChar) { Value = "%" + tuKhoa + "%" },
                 new SqlParameter("@maPhieuNhap", SqlDbType.Char) { Value = maPhieuNhap },
-                new SqlParameter("@trangThai", SqlDbType.NVarChar) { Value = trangThai }
+                new SqlParameter("@trangThai", SqlDbType.NVarChar) { Value = trangThai },
+                new SqlParameter("@ngay", SqlDbType.Date) { Value = thoiGian.HasValue ? thoiGian.Value.Date : DBNull.Value },
+                new SqlParameter("@thang", SqlDbType.Int) { Value = thoiGian.HasValue ? thoiGian.Value.Month : DBNull.Value },
+                new SqlParameter("@nam", SqlDbType.Int) { Value = thoiGian.HasValue ? thoiGian.Value.Year : DBNull.Value }
             ];
 
             DataTable dataTable = XuLyDatabase.ExecuteQuery(query, parameters);
@@ -148,7 +167,7 @@ namespace DAO
 
         public bool SuaPhieuNhap(PhieuNhap phieuNhap)
         {
-            string query = "update PhieuNhap set maNhaCungCap = @maNhaCungCap, thanhTien = @thanhTien, trangThai = @trangThai, thoiGianDuyet = @thoiGianDuyet, maNguoiDuyet = @maNguoiDuyet  where maPhieuNhap = @maPhieuNhap";
+            string query = "update PhieuNhap set maNhaCungCap = @maNhaCungCap, tongTien = @tongTien, trangThai = @trangThai, thoiGianDuyet = @thoiGianDuyet, maNguoiDuyet = @maNguoiDuyet  where maPhieuNhap = @maPhieuNhap";
 
             SqlParameter[] parameters =
             [

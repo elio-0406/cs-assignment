@@ -31,8 +31,8 @@ namespace DAO
                         MaSanPham = row["maSanPham"].ToString(),
                         MaLoaiSanPham = row["maLoaiSanPham"].ToString(),
                         TenSanPham = row["tenSanPham"].ToString(),
-                        DonViTinh = row["DonViTinh"].ToString(),
-                        SoLuong = (int)row["SoLuong"],
+                        DonViTinh = row["donViTinh"].ToString(),
+                        SoLuong = (int)row["soLuong"],
                         GiaBan = (decimal)row["giaBan"],
                         Anh = (byte[])row["anh"],
                         TrangThai = row["trangThai"].ToString()

@@ -27,10 +27,10 @@ namespace BUS
             return PhieuNhapDAO.DemPhieuNhapTheoNgay(dateTime);
         }
 
-        public List<PhieuNhap> TimKiemPhieuNhap(string tuKhoa, string maPhieuNhap, string trangThai)
+        public List<PhieuNhap> TimKiemPhieuNhap(string tuKhoa, string maPhieuNhap, string tuyChonThoiGian, DateTime? thoiGian, string trangThai)
         {
             tuKhoa = tuKhoa.Trim().ToLower();
-            return PhieuNhapDAO.TimKiemPhieuNhap(tuKhoa, maPhieuNhap, trangThai);
+            return PhieuNhapDAO.TimKiemPhieuNhap(tuKhoa, maPhieuNhap, tuyChonThoiGian, thoiGian, trangThai);
         }
 
         public string ThemPhieuNhap(PhieuNhap phieuNhap, List<ChiTietPhieuNhap> listChiTietPhieuNhap)

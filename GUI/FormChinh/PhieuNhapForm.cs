@@ -61,10 +61,10 @@ namespace GUI.FormChinh
             if (thoiGianDateTimePicker.Checked)
                 thoiGian = thoiGianDateTimePicker.Value;
 
-            if (!(tuKhoa == "" && trangThai == "" && string.IsNullOrEmpty(tuyChonThoiGian) && !thoiGianDateTimePicker.Checked)))
+            if (!(tuKhoa == "" && trangThai == "" && string.IsNullOrEmpty(tuyChonThoiGian) && !thoiGianDateTimePicker.Checked))
             {
 
-                listPhieuNhap = phieuNhapBUS.TimKiemPhieuNhap(tuKhoa, "", trangThai);
+                listPhieuNhap = phieuNhapBUS.TimKiemPhieuNhap(tuKhoa, "", tuyChonThoiGian, thoiGian, trangThai);
                 LoadDataToDataGridView(listPhieuNhap);
             }
         }
@@ -101,7 +101,7 @@ namespace GUI.FormChinh
             }
         }
 
-        private void LamMoiButton_Click(object sender, EventArgs e)
+        internal void LamMoiButton_Click(object sender, EventArgs e)
         {
             timKiemTextBox.Clear();
             trangThaiComboBox.SelectedIndex = -1;
@@ -129,7 +129,7 @@ namespace GUI.FormChinh
         {
             if (e.RowIndex >= 0)
             {
-                PhieuNhap phieuNhap = phieuNhapBUS.TimKiemPhieuNhap("", phieuNhapDataGridView["maPhieuNhapColumn", e.RowIndex].Value.ToString(), "")[0];
+                PhieuNhap phieuNhap = phieuNhapBUS.TimKiemPhieuNhap("", phieuNhapDataGridView["maPhieuNhapColumn", e.RowIndex].Value.ToString(), "", null, "")[0];
 
                 string columnName = phieuNhapDataGridView.Columns[e.ColumnIndex].Name;
 

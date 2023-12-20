@@ -55,8 +55,8 @@ namespace GUI.FormChinh
                 sanPhamDataGridView.Rows[i].Cells[1].Value = listSanPham[i].MaSanPham;
                 sanPhamDataGridView.Rows[i].Cells[2].Value = new LoaiSanPhamBUS().TimKiemLoaiSanPham("",listSanPham[i].MaLoaiSanPham, "")[0].TenLoaiSanPham;
                 sanPhamDataGridView.Rows[i].Cells[3].Value = listSanPham[i].TenSanPham;
-                sanPhamDataGridView.Rows[i].Cells[5].Value = listSanPham[i].GiaBan.ToString("0") + " đ";
-                sanPhamDataGridView.Rows[i].Cells[4].Value = listSanPham[i].SoLuong;
+                sanPhamDataGridView.Rows[i].Cells[4].Value = listSanPham[i].GiaBan.ToString("0") + " đ";
+                sanPhamDataGridView.Rows[i].Cells[5].Value = listSanPham[i].SoLuong;
                 sanPhamDataGridView.Rows[i].Cells[6].Value = listSanPham[i].TrangThai;
             }
         }
