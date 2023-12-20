@@ -312,7 +312,7 @@
             // 
             tienThuaLabel.AutoSize = true;
             tienThuaLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tienThuaLabel.Location = new Point(106, 70);
+            tienThuaLabel.Location = new Point(106, 72);
             tienThuaLabel.Margin = new Padding(0);
             tienThuaLabel.Name = "tienThuaLabel";
             tienThuaLabel.Size = new Size(38, 25);
@@ -323,7 +323,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(12, 70);
+            label10.Location = new Point(12, 72);
             label10.Margin = new Padding(0);
             label10.Name = "label10";
             label10.Size = new Size(90, 25);
