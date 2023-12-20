@@ -34,8 +34,8 @@ namespace GUI.FormChinh
 
             if (!DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
             {
-                loaiSanPhamDataGridView.Columns.RemoveAt(4);
-                loaiSanPhamDataGridView.Columns.RemoveAt(5);
+                loaiSanPhamDataGridView.Columns.Remove("xoaButtonColumn");
+                loaiSanPhamDataGridView.Columns.Remove("suaButtonColumn");
             }
         }
 

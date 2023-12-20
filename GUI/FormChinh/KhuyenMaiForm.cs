@@ -33,6 +33,12 @@ namespace GUI.FormChinh
 
             trangThaiComboBox.SelectedIndex = 0;
             loaiGiaTriComboBox.SelectedIndex = -1;
+
+            if (!DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
+            {
+                khuyenMaiDataGridView.Columns.Remove("xoaButtonColumn");
+                khuyenMaiDataGridView.Columns.Remove("suaButtonColumn");
+            }
         }
 
         private void LoadDataToDataGridView(List<KhuyenMai> listKhuyenMai)
@@ -51,7 +57,7 @@ namespace GUI.FormChinh
                     khuyenMaiDataGridView.Rows[i].Cells[5].Value = "Đang diễn ra";
                 if (listKhuyenMai[i].ThoiGianBatDau > DateTime.Now && listKhuyenMai[i].ThoiGianKetThuc > DateTime.Now)
                     khuyenMaiDataGridView.Rows[i].Cells[5].Value = "Chưa diễn ra";
-                if (listKhuyenMai[i].ThoiGianBatDau < DateTime.Now && listKhuyenMai[i].ThoiGianKetThuc < DateTime.Now)
+                if (listKhuyenMai[i].ThoiGianKetThuc < DateTime.Now)
                     khuyenMaiDataGridView.Rows[i].Cells[5].Value = "Đã kết thúc";
             }
         }
@@ -72,7 +78,7 @@ namespace GUI.FormChinh
             if (thoiGianDateTimePicker.Checked)
                 thoiGian = thoiGianDateTimePicker.Value;
 
-            if (!(string.IsNullOrEmpty(tuKhoa) && string.IsNullOrEmpty(trangThai) && string.IsNullOrEmpty(loaiGiaTri) && !thoiGianDateTimePicker.Checked)) 
+            if (!(string.IsNullOrEmpty(tuKhoa) && string.IsNullOrEmpty(trangThai) && string.IsNullOrEmpty(loaiGiaTri) && string.IsNullOrEmpty(tuyChonThoiGian) && !thoiGianDateTimePicker.Checked)) 
             {
                 listKhuyenMai = khuyenMaiBUS.TimKiemKhuyenMai(tuKhoa, "", loaiGiaTri, tuyChonThoiGian, thoiGian, trangThai);
                 LoadDataToDataGridView(listKhuyenMai);

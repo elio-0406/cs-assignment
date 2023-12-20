@@ -35,10 +35,6 @@
             timKiemButton = new Button();
             timKiemTextBox = new TextBox();
             phieuNhapDataGridView = new DataGridView();
-            panel1 = new Panel();
-            thoiGianTaoDateTimePicker = new DateTimePicker();
-            tuyChonThoiGianComboBox = new ComboBox();
-            label2 = new Label();
             stt = new DataGridViewTextBoxColumn();
             maPhieuNhapColumn = new DataGridViewTextBoxColumn();
             maNguoiTaoColumn = new DataGridViewTextBoxColumn();
@@ -47,6 +43,10 @@
             tongTienColumn = new DataGridViewTextBoxColumn();
             trangThaiColumn = new DataGridViewTextBoxColumn();
             chiTietButtonColumn = new DataGridViewButtonColumn();
+            panel1 = new Panel();
+            label2 = new Label();
+            tuyChonThoiGianComboBox = new ComboBox();
+            thoiGianDateTimePicker = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)phieuNhapDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -131,52 +131,6 @@
             phieuNhapDataGridView.TabIndex = 5;
             phieuNhapDataGridView.CellContentClick += PhieuNhapDataGridView_CellContentClick;
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(tuyChonThoiGianComboBox);
-            panel1.Controls.Add(thoiGianTaoDateTimePicker);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(trangThaiComboBox);
-            panel1.Controls.Add(xuatExcel);
-            panel1.Controls.Add(lamMoiButton);
-            panel1.Controls.Add(timKiemButton);
-            panel1.Controls.Add(timKiemTextBox);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1144, 170);
-            panel1.TabIndex = 4;
-            // 
-            // thoiGianTaoDateTimePicker
-            // 
-            thoiGianTaoDateTimePicker.Checked = false;
-            thoiGianTaoDateTimePicker.Location = new Point(439, 58);
-            thoiGianTaoDateTimePicker.Name = "thoiGianTaoDateTimePicker";
-            thoiGianTaoDateTimePicker.ShowCheckBox = true;
-            thoiGianTaoDateTimePicker.Size = new Size(324, 31);
-            thoiGianTaoDateTimePicker.TabIndex = 8;
-            thoiGianTaoDateTimePicker.ValueChanged += ThoiGianTaoDateTimePicker_ValueChanged;
-            // 
-            // tuyChonThoiGianComboBox
-            // 
-            tuyChonThoiGianComboBox.FormattingEnabled = true;
-            tuyChonThoiGianComboBox.Items.AddRange(new object[] { "Ngày", "Tháng", "Năm" });
-            tuyChonThoiGianComboBox.Location = new Point(254, 58);
-            tuyChonThoiGianComboBox.Name = "tuyChonThoiGianComboBox";
-            tuyChonThoiGianComboBox.Size = new Size(182, 33);
-            tuyChonThoiGianComboBox.TabIndex = 9;
-            tuyChonThoiGianComboBox.SelectionChangeCommitted += TuyChonThoiGianComboBox_SelectionChangeCommitted;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(254, 30);
-            label2.Name = "label2";
-            label2.Size = new Size(188, 25);
-            label2.TabIndex = 10;
-            label2.Text = "Tìm theo thời gian tạo";
-            // 
             // stt
             // 
             stt.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -219,7 +173,7 @@
             tongTienColumn.HeaderText = "Tổng tiền";
             tongTienColumn.MinimumWidth = 8;
             tongTienColumn.Name = "tongTienColumn";
-            tongTienColumn.Width = 123;
+            tongTienColumn.Width = 114;
             // 
             // trangThaiColumn
             // 
@@ -227,7 +181,7 @@
             trangThaiColumn.HeaderText = "Trạng thái";
             trangThaiColumn.MinimumWidth = 8;
             trangThaiColumn.Name = "trangThaiColumn";
-            trangThaiColumn.Width = 125;
+            trangThaiColumn.Width = 116;
             // 
             // chiTietButtonColumn
             // 
@@ -237,7 +191,53 @@
             chiTietButtonColumn.Name = "chiTietButtonColumn";
             chiTietButtonColumn.Text = "Chi tiết";
             chiTietButtonColumn.UseColumnTextForButtonValue = true;
-            chiTietButtonColumn.Width = 73;
+            chiTietButtonColumn.Width = 43;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(tuyChonThoiGianComboBox);
+            panel1.Controls.Add(thoiGianDateTimePicker);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(trangThaiComboBox);
+            panel1.Controls.Add(xuatExcel);
+            panel1.Controls.Add(lamMoiButton);
+            panel1.Controls.Add(timKiemButton);
+            panel1.Controls.Add(timKiemTextBox);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1144, 170);
+            panel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(254, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(188, 25);
+            label2.TabIndex = 10;
+            label2.Text = "Tìm theo thời gian tạo";
+            // 
+            // tuyChonThoiGianComboBox
+            // 
+            tuyChonThoiGianComboBox.FormattingEnabled = true;
+            tuyChonThoiGianComboBox.Items.AddRange(new object[] { "Ngày", "Tháng", "Năm" });
+            tuyChonThoiGianComboBox.Location = new Point(254, 58);
+            tuyChonThoiGianComboBox.Name = "tuyChonThoiGianComboBox";
+            tuyChonThoiGianComboBox.Size = new Size(182, 33);
+            tuyChonThoiGianComboBox.TabIndex = 9;
+            tuyChonThoiGianComboBox.SelectionChangeCommitted += TuyChonThoiGianComboBox_SelectionChangeCommitted;
+            // 
+            // thoiGianDateTimePicker
+            // 
+            thoiGianDateTimePicker.Checked = false;
+            thoiGianDateTimePicker.Location = new Point(439, 58);
+            thoiGianDateTimePicker.Name = "thoiGianDateTimePicker";
+            thoiGianDateTimePicker.ShowCheckBox = true;
+            thoiGianDateTimePicker.Size = new Size(324, 31);
+            thoiGianDateTimePicker.TabIndex = 8;
+            thoiGianDateTimePicker.ValueChanged += ThoiGianDateTimePicker_ValueChanged;
             // 
             // PhieuNhapForm
             // 
@@ -267,7 +267,7 @@
         private Panel panel1;
         private Label label2;
         private ComboBox tuyChonThoiGianComboBox;
-        private DateTimePicker thoiGianTaoDateTimePicker;
+        private DateTimePicker thoiGianDateTimePicker;
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn maPhieuNhapColumn;
         private DataGridViewTextBoxColumn maNguoiTaoColumn;

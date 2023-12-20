@@ -73,5 +73,12 @@ namespace BUS.ChucNangKhac
             string maKhuyenMai = string.Format("KHM{0:D4}", ++soKhuyenMai);
             return maKhuyenMai;
         }
+
+        public static string TaoMaPhieuNhap()
+        {
+            int soPhieuNhap = new PhieuNhapBUS().DemPhieuNhapTheoNgay(DateTime.Now);
+            string maPhieuNhap = string.Format("{0}-PN{1:D2}", DateTime.Now.ToString("dd/MM/yyyy"), ++soPhieuNhap);
+            return maPhieuNhap;
+        }
     }
 }

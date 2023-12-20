@@ -150,5 +150,21 @@ namespace DAO
             int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
             return rowsAffected > 0;
         }
+
+        public bool SuaSoLuong(SanPham sanPham)
+        {
+            string query = "update SanPham set soLuong = @soLuong where maSanPham = @maSanPham; " +
+                           "update SanPham set trangThai= N'Đang bán' where soLuong > 0 and maSanPham = @maSanPham; " +
+                           "update SanPham set trangThai= N'Hết hàng' where soLuong = 0 and maSanPham = @maSanPham";
+
+            SqlParameter[] parameters =
+            [
+                new SqlParameter("@maSanPham", SqlDbType.Char) { Value = sanPham.MaSanPham },
+                new SqlParameter("@soLuong", SqlDbType.Int) { Value = sanPham.SoLuong }
+            ];
+
+            int rowsAffected = XuLyDatabase.ExecuteNonQuery(query, parameters);
+            return rowsAffected > 0;
+        }
     }
 }

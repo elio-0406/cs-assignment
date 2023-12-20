@@ -63,6 +63,7 @@
             chonButton.TabIndex = 3;
             chonButton.Text = "Chọn";
             chonButton.UseVisualStyleBackColor = true;
+            chonButton.Click += ChonButton_Click;
             // 
             // SanPhamNhapUserControl
             // 
@@ -71,8 +72,10 @@
             Controls.Add(chonButton);
             Controls.Add(tenSanPhamLabel);
             Controls.Add(sanPhamPictureBox);
+            Margin = new Padding(0);
             Name = "SanPhamNhapUserControl";
-            Size = new Size(185, 167);
+            Size = new Size(185, 165);
+            Load += SanPhamNhapUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)sanPhamPictureBox).EndInit();
             ResumeLayout(false);
         }

@@ -70,7 +70,7 @@ namespace DAO
                 switch (tuyChonThoiGian)
                 {
                     case "Ngày":
-                        query += " and cast(thoiGianBatDau as date) = @ngay and cast(thoiGianKetThuc as date) = @ngay";
+                        query += " and cast(thoiGianBatDau as date) <= @ngay and cast(thoiGianKetThuc as date) >= @ngay";
                         break;
                     case "Tháng":
                         query += " and month(thoiGianBatDau) = @thang and year(thoiGianBatDau) = @nam " +

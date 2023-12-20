@@ -34,8 +34,8 @@ namespace GUI.FormChinh
 
             if (!DangNhapForm.nguoiDung.MaPhanQuyen.Equals("PQ02"))
             {
-                nhaCungCapDataGridView.Columns.RemoveAt(5);
-                nhaCungCapDataGridView.Columns.RemoveAt(6);
+                nhaCungCapDataGridView.Columns.Remove("xoaButtonColumn");
+                nhaCungCapDataGridView.Columns.Remove("suaButtonColumn");
             }
         }
 
