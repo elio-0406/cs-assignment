@@ -293,5 +293,50 @@ namespace BUS.ChucNangKhac
                 workbook.SaveAs(filePath);
             }
         }
+
+        public void XuatExcelHoaDon(List<HoaDon> listHoaDon)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("DataSheet");
+
+                worksheet.Cell(1, 1).Value = "Mã hóa đơn";
+                worksheet.Cell(1, 2).Value = "Mã nhân viên";
+                worksheet.Cell(1, 3).Value = "Mã khách hàng";
+                worksheet.Cell(1, 4).Value = "Mã khuyến mãi";
+                worksheet.Cell(1, 5).Value = "Tên khuyến mãi";
+                worksheet.Cell(1, 6).Value = "Thời gian tạo";
+                worksheet.Cell(1, 7).Value = "Thành tiền";
+                worksheet.Cell(1, 8).Value = "Giảm giá";
+                worksheet.Cell(1, 9).Value = "Tổng tiền";
+                worksheet.Cell(1, 10).Value = "Tiền nhận";
+                worksheet.Cell(1, 11).Value = "Tiền thừa";
+
+                int row = 2;
+                foreach (HoaDon hoaDon in listHoaDon)
+                {
+                    worksheet.Cell(row, 1).Value = hoaDon.MaHoaDon;
+                    worksheet.Cell(row, 2).Value = hoaDon.MaNguoiTao;
+                    worksheet.Cell(row, 3).Value = hoaDon.MaKhachHang;
+                    worksheet.Cell(row, 4).Value = hoaDon.MaKhuyenMai;
+                    worksheet.Cell(row, 5).Value = hoaDon.TenKhuyenMai;
+                    worksheet.Cell(row, 6).Value = hoaDon.ThoiGianTao.ToString("dd/MM/yyyy HH:mm:ss");
+                    worksheet.Cell(row, 7).Value = hoaDon.TongTien;
+                    worksheet.Cell(row, 8).Value = hoaDon.GiamGia;
+                    worksheet.Cell(row, 9).Value = hoaDon.ThanhTien;
+                    worksheet.Cell(row, 10).Value = hoaDon.TienNhan;
+                    worksheet.Cell(row, 11).Value = hoaDon.TienThua;
+
+                    row++;
+                }
+
+                foreach (var item in worksheet.ColumnsUsed())
+                {
+                    item.AdjustToContents();
+                }
+
+                workbook.SaveAs(filePath);
+            }
+        }
     }
 }

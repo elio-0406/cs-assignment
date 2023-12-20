@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            hoaDonDataGridView = new DataGridView();
+            chiTietHoaDonDataGridView = new DataGridView();
+            maSanPhamColumn = new DataGridViewTextBoxColumn();
+            donGiaColumn = new DataGridViewTextBoxColumn();
+            soLuongColumn = new DataGridViewTextBoxColumn();
+            thanhTienColumn = new DataGridViewTextBoxColumn();
             label1 = new Label();
             maHoaDonTextBox = new TextBox();
             label4 = new Label();
@@ -52,28 +56,53 @@
             label12 = new Label();
             tienNhanTextBox = new TextBox();
             panel1 = new Panel();
-            maSanPhamColumn = new DataGridViewTextBoxColumn();
-            donGiaColumn = new DataGridViewTextBoxColumn();
-            soLuongColumn = new DataGridViewTextBoxColumn();
-            thanhTienColumn = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)hoaDonDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chiTietHoaDonDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // hoaDonDataGridView
+            // chiTietHoaDonDataGridView
             // 
-            hoaDonDataGridView.AllowUserToAddRows = false;
-            hoaDonDataGridView.AllowUserToDeleteRows = false;
-            hoaDonDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            hoaDonDataGridView.Columns.AddRange(new DataGridViewColumn[] { maSanPhamColumn, donGiaColumn, soLuongColumn, thanhTienColumn });
-            hoaDonDataGridView.Dock = DockStyle.Bottom;
-            hoaDonDataGridView.Location = new Point(0, 272);
-            hoaDonDataGridView.Margin = new Padding(0);
-            hoaDonDataGridView.Name = "hoaDonDataGridView";
-            hoaDonDataGridView.RowHeadersVisible = false;
-            hoaDonDataGridView.RowHeadersWidth = 62;
-            hoaDonDataGridView.Size = new Size(878, 282);
-            hoaDonDataGridView.TabIndex = 25;
+            chiTietHoaDonDataGridView.AllowUserToAddRows = false;
+            chiTietHoaDonDataGridView.AllowUserToDeleteRows = false;
+            chiTietHoaDonDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            chiTietHoaDonDataGridView.Columns.AddRange(new DataGridViewColumn[] { maSanPhamColumn, donGiaColumn, soLuongColumn, thanhTienColumn });
+            chiTietHoaDonDataGridView.Dock = DockStyle.Bottom;
+            chiTietHoaDonDataGridView.Location = new Point(0, 272);
+            chiTietHoaDonDataGridView.Margin = new Padding(0);
+            chiTietHoaDonDataGridView.Name = "chiTietHoaDonDataGridView";
+            chiTietHoaDonDataGridView.RowHeadersVisible = false;
+            chiTietHoaDonDataGridView.RowHeadersWidth = 62;
+            chiTietHoaDonDataGridView.Size = new Size(878, 282);
+            chiTietHoaDonDataGridView.TabIndex = 25;
+            // 
+            // maSanPhamColumn
+            // 
+            maSanPhamColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            maSanPhamColumn.HeaderText = "Mã sản phẩm";
+            maSanPhamColumn.MinimumWidth = 8;
+            maSanPhamColumn.Name = "maSanPhamColumn";
+            maSanPhamColumn.Width = 156;
+            // 
+            // donGiaColumn
+            // 
+            donGiaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            donGiaColumn.HeaderText = "Đơn giá";
+            donGiaColumn.MinimumWidth = 8;
+            donGiaColumn.Name = "donGiaColumn";
+            // 
+            // soLuongColumn
+            // 
+            soLuongColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            soLuongColumn.HeaderText = "Số lượng";
+            soLuongColumn.MinimumWidth = 8;
+            soLuongColumn.Name = "soLuongColumn";
+            // 
+            // thanhTienColumn
+            // 
+            thanhTienColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            thanhTienColumn.HeaderText = "Thành tiền";
+            thanhTienColumn.MinimumWidth = 8;
+            thanhTienColumn.Name = "thanhTienColumn";
             // 
             // label1
             // 
@@ -282,54 +311,27 @@
             panel1.Size = new Size(878, 273);
             panel1.TabIndex = 26;
             // 
-            // maSanPhamColumn
-            // 
-            maSanPhamColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            maSanPhamColumn.HeaderText = "Mã sản phẩm";
-            maSanPhamColumn.MinimumWidth = 8;
-            maSanPhamColumn.Name = "maSanPhamColumn";
-            maSanPhamColumn.Width = 156;
-            // 
-            // donGiaColumn
-            // 
-            donGiaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            donGiaColumn.HeaderText = "Đơn giá";
-            donGiaColumn.MinimumWidth = 8;
-            donGiaColumn.Name = "donGiaColumn";
-            // 
-            // soLuongColumn
-            // 
-            soLuongColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            soLuongColumn.HeaderText = "Số lượng";
-            soLuongColumn.MinimumWidth = 8;
-            soLuongColumn.Name = "soLuongColumn";
-            // 
-            // thanhTienColumn
-            // 
-            thanhTienColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            thanhTienColumn.HeaderText = "Thành tiền";
-            thanhTienColumn.MinimumWidth = 8;
-            thanhTienColumn.Name = "thanhTienColumn";
-            // 
             // ChiTietHoaDonForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(878, 554);
             Controls.Add(panel1);
-            Controls.Add(hoaDonDataGridView);
+            Controls.Add(chiTietHoaDonDataGridView);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "ChiTietHoaDonForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Chi tiết hóa đơn";
-            ((System.ComponentModel.ISupportInitialize)hoaDonDataGridView).EndInit();
+            Load += ChiTietHoaDonForm_Load;
+            ((System.ComponentModel.ISupportInitialize)chiTietHoaDonDataGridView).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private DataGridView hoaDonDataGridView;
+        private DataGridView chiTietHoaDonDataGridView;
         private Label label1;
         private TextBox maHoaDonTextBox;
         private Label label4;
