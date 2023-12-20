@@ -36,6 +36,9 @@ namespace BUS
             if (hoaDon.TienNhan <= hoaDon.TongTien)
                 return "Khách hàng chưa thanh toán đủ!";
 
+            if (!string.IsNullOrEmpty(hoaDon.MaKhachHang))
+                new KhachHangBUS().TichDiem(hoaDon.MaKhachHang, hoaDon.ThanhTien);
+
             if (hoaDonDAO.ThemHoaDon(hoaDon, listChiTietHoaDon))
                 return "Tạo hóa đơn thành công!";
             else

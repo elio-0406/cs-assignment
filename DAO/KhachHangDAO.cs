@@ -158,5 +158,48 @@ namespace DAO
                 tonTai = true;
             return tonTai;
         }
+
+        public decimal TichDiem(KhachHang khachHang, decimal thanhTien)
+        {
+            int diemTichLuy = 0;
+
+            switch (khachHang.HangThanhVien)
+            {
+                case "Đồng":
+                    diemTichLuy = (int)(thanhTien * 0.5m / 100);
+                    khachHang.DiemThanhVien += diemTichLuy;
+
+                    if (khachHang.DiemThanhVien >= 5000 && khachHang.DiemThanhVien < 10000)
+                        khachHang.HangThanhVien = "Bạc";
+                    else if (khachHang.DiemThanhVien >= 10000)
+                        khachHang.HangThanhVien = "Vàng";
+
+                    break;
+
+                case "Bạc":
+                    diemTichLuy = (int)(thanhTien * 0.25m / 100);
+                    khachHang.DiemThanhVien += diemTichLuy;
+
+                    if (khachHang.DiemThanhVien >= 10000)
+                        khachHang.HangThanhVien = "Vàng";
+
+                    break;
+            }
+
+            string query = "update KhachHang set hangThanhVien = @hangThanhVien,  " +
+                           "diemThanhVien = case when diemThanhVien > 10000 then 10000 else @diemThanhVien end " +
+                           "where maKhachHang = @maKhachHang";
+
+            SqlParameter[] parameters =
+            [
+                new SqlParameter("@maKhachHang", SqlDbType.Char) { Value = khachHang.MaKhachHang },
+                new SqlParameter("@hangThanhVien", SqlDbType.NVarChar) { Value = khachHang.HangThanhVien },
+                new SqlParameter("@diemThanhVien", SqlDbType.Int) { Value = khachHang.DiemThanhVien },
+            ];
+
+            XuLyDatabase.ExecuteNonQuery(query);
+
+            return diemTichLuy;
+        }
     }
 }

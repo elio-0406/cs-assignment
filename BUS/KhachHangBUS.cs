@@ -93,6 +93,13 @@ namespace BUS
                 return "Xóa khách hàng thất bại!";
         }
 
+        public decimal TichDiem(string maKhachHang, decimal thanhTien)
+        {
+            KhachHang khachHang = khachHangDAO.TimKiemKhachHang("",maKhachHang, "", "", "")[0];
+
+            return khachHangDAO.TichDiem(khachHang, thanhTien);
+        }
+
         public decimal GiamGiaThanhVien(string maKhachHang, decimal thanhTien)
         {
             KhachHang khachHang = khachHangDAO.TimKiemKhachHang("", maKhachHang, "", "", "")[0];
