@@ -70,6 +70,7 @@
             // sanPhamFlowLayoutPanel
             // 
             sanPhamFlowLayoutPanel.AutoScroll = true;
+            sanPhamFlowLayoutPanel.BackColor = Color.PowderBlue;
             sanPhamFlowLayoutPanel.Dock = DockStyle.Fill;
             sanPhamFlowLayoutPanel.Location = new Point(0, 120);
             sanPhamFlowLayoutPanel.Margin = new Padding(0);
@@ -79,6 +80,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.FromArgb(223, 243, 252);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(loaiSanPhamComboBox);
             panel3.Controls.Add(lamMoiSanPhamButton);
@@ -94,43 +96,52 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(30, 28);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(127, 25);
+            label3.Size = new Size(130, 25);
             label3.TabIndex = 4;
             label3.Text = "Loại sản phẩm";
             // 
             // loaiSanPhamComboBox
             // 
             loaiSanPhamComboBox.FormattingEnabled = true;
-            loaiSanPhamComboBox.Location = new Point(157, 25);
+            loaiSanPhamComboBox.Location = new Point(160, 25);
             loaiSanPhamComboBox.Margin = new Padding(0);
             loaiSanPhamComboBox.Name = "loaiSanPhamComboBox";
-            loaiSanPhamComboBox.Size = new Size(274, 33);
+            loaiSanPhamComboBox.Size = new Size(192, 33);
             loaiSanPhamComboBox.TabIndex = 3;
             loaiSanPhamComboBox.SelectionChangeCommitted += LoaiSanPhamComboBox_SelectionChangeCommitted;
             // 
             // lamMoiSanPhamButton
             // 
-            lamMoiSanPhamButton.Location = new Point(431, 62);
+            lamMoiSanPhamButton.BackColor = Color.SkyBlue;
+            lamMoiSanPhamButton.FlatAppearance.BorderSize = 0;
+            lamMoiSanPhamButton.FlatStyle = FlatStyle.Flat;
+            lamMoiSanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lamMoiSanPhamButton.Location = new Point(441, 61);
             lamMoiSanPhamButton.Margin = new Padding(0);
             lamMoiSanPhamButton.Name = "lamMoiSanPhamButton";
             lamMoiSanPhamButton.Size = new Size(112, 34);
             lamMoiSanPhamButton.TabIndex = 2;
             lamMoiSanPhamButton.Text = "Làm mới";
-            lamMoiSanPhamButton.UseVisualStyleBackColor = true;
+            lamMoiSanPhamButton.UseVisualStyleBackColor = false;
             lamMoiSanPhamButton.Click += LamMoiSanPhamButton_Click;
             // 
             // timKiemSanPhamButton
             // 
+            timKiemSanPhamButton.BackColor = Color.Gold;
+            timKiemSanPhamButton.FlatAppearance.BorderSize = 0;
+            timKiemSanPhamButton.FlatStyle = FlatStyle.Flat;
+            timKiemSanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             timKiemSanPhamButton.Location = new Point(319, 62);
             timKiemSanPhamButton.Margin = new Padding(0);
             timKiemSanPhamButton.Name = "timKiemSanPhamButton";
             timKiemSanPhamButton.Size = new Size(112, 34);
             timKiemSanPhamButton.TabIndex = 1;
             timKiemSanPhamButton.Text = "Tìm kiếm";
-            timKiemSanPhamButton.UseVisualStyleBackColor = true;
+            timKiemSanPhamButton.UseVisualStyleBackColor = false;
             timKiemSanPhamButton.Click += TimKiemSanPhamButton_Click;
             // 
             // timKiemSanPhamTextBox
@@ -139,7 +150,7 @@
             timKiemSanPhamTextBox.Margin = new Padding(0);
             timKiemSanPhamTextBox.Name = "timKiemSanPhamTextBox";
             timKiemSanPhamTextBox.PlaceholderText = "Tìm kiếm";
-            timKiemSanPhamTextBox.Size = new Size(289, 31);
+            timKiemSanPhamTextBox.Size = new Size(278, 31);
             timKiemSanPhamTextBox.TabIndex = 0;
             timKiemSanPhamTextBox.TextChanged += TimKiemSanPhamTextBox_TextChanged;
             // 
@@ -158,6 +169,7 @@
             // chiTietDonFlowLayoutPanel
             // 
             chiTietDonFlowLayoutPanel.AutoScroll = true;
+            chiTietDonFlowLayoutPanel.BackColor = Color.PowderBlue;
             chiTietDonFlowLayoutPanel.Dock = DockStyle.Fill;
             chiTietDonFlowLayoutPanel.Location = new Point(0, 120);
             chiTietDonFlowLayoutPanel.Margin = new Padding(0);
@@ -167,6 +179,7 @@
             // 
             // panel5
             // 
+            panel5.BackColor = Color.FromArgb(223, 243, 252);
             panel5.Controls.Add(tongTienLabel);
             panel5.Controls.Add(label1);
             panel5.Controls.Add(hoanTatButton);
@@ -202,18 +215,23 @@
             // hoanTatButton
             // 
             hoanTatButton.AutoSize = true;
+            hoanTatButton.BackColor = Color.Teal;
+            hoanTatButton.FlatAppearance.BorderSize = 0;
+            hoanTatButton.FlatStyle = FlatStyle.Flat;
             hoanTatButton.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hoanTatButton.ForeColor = Color.White;
             hoanTatButton.Location = new Point(391, 26);
             hoanTatButton.Margin = new Padding(0);
             hoanTatButton.Name = "hoanTatButton";
-            hoanTatButton.Size = new Size(139, 48);
+            hoanTatButton.Size = new Size(141, 50);
             hoanTatButton.TabIndex = 0;
             hoanTatButton.Text = "Hoàn tất";
-            hoanTatButton.UseVisualStyleBackColor = true;
+            hoanTatButton.UseVisualStyleBackColor = false;
             hoanTatButton.Click += HoanTatButton_Click;
             // 
             // panel4
             // 
+            panel4.BackColor = Color.FromArgb(223, 243, 252);
             panel4.Controls.Add(tenNhaCungCapLabel);
             panel4.Controls.Add(maNhaCungCapLabel);
             panel4.Controls.Add(lamMoiNhaCungCapButton);
@@ -229,6 +247,7 @@
             // 
             // tenNhaCungCapLabel
             // 
+            tenNhaCungCapLabel.BackColor = Color.White;
             tenNhaCungCapLabel.BorderStyle = BorderStyle.FixedSingle;
             tenNhaCungCapLabel.Location = new Point(269, 45);
             tenNhaCungCapLabel.Margin = new Padding(0);
@@ -240,6 +259,7 @@
             // maNhaCungCapLabel
             // 
             maNhaCungCapLabel.AutoSize = true;
+            maNhaCungCapLabel.BackColor = Color.White;
             maNhaCungCapLabel.BorderStyle = BorderStyle.FixedSingle;
             maNhaCungCapLabel.Location = new Point(269, 6);
             maNhaCungCapLabel.Margin = new Padding(0);
@@ -250,45 +270,55 @@
             // 
             // lamMoiNhaCungCapButton
             // 
+            lamMoiNhaCungCapButton.BackColor = Color.SkyBlue;
+            lamMoiNhaCungCapButton.FlatAppearance.BorderSize = 0;
+            lamMoiNhaCungCapButton.FlatStyle = FlatStyle.Flat;
+            lamMoiNhaCungCapButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lamMoiNhaCungCapButton.Location = new Point(16, 66);
             lamMoiNhaCungCapButton.Margin = new Padding(0);
             lamMoiNhaCungCapButton.Name = "lamMoiNhaCungCapButton";
             lamMoiNhaCungCapButton.Size = new Size(112, 34);
             lamMoiNhaCungCapButton.TabIndex = 4;
             lamMoiNhaCungCapButton.Text = "Làm mới";
-            lamMoiNhaCungCapButton.UseVisualStyleBackColor = true;
+            lamMoiNhaCungCapButton.UseVisualStyleBackColor = false;
             lamMoiNhaCungCapButton.Click += LamMoiNhaCungCapButton_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(219, 45);
             label5.Margin = new Padding(0);
             label5.Name = "label5";
-            label5.Size = new Size(38, 25);
+            label5.Size = new Size(41, 25);
             label5.TabIndex = 2;
             label5.Text = "Tên";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(220, 6);
             label4.Margin = new Padding(0);
             label4.Name = "label4";
-            label4.Size = new Size(37, 25);
+            label4.Size = new Size(38, 25);
             label4.TabIndex = 1;
             label4.Text = "Mã";
             // 
             // chonNhaCungCapButton
             // 
             chonNhaCungCapButton.AutoSize = true;
+            chonNhaCungCapButton.BackColor = Color.FromArgb(0, 192, 192);
+            chonNhaCungCapButton.FlatAppearance.BorderSize = 0;
+            chonNhaCungCapButton.FlatStyle = FlatStyle.Flat;
+            chonNhaCungCapButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             chonNhaCungCapButton.Location = new Point(16, 23);
             chonNhaCungCapButton.Margin = new Padding(0);
             chonNhaCungCapButton.Name = "chonNhaCungCapButton";
-            chonNhaCungCapButton.Size = new Size(175, 35);
+            chonNhaCungCapButton.Size = new Size(179, 37);
             chonNhaCungCapButton.TabIndex = 0;
             chonNhaCungCapButton.Text = "Chọn nhà cung cấp";
-            chonNhaCungCapButton.UseVisualStyleBackColor = true;
+            chonNhaCungCapButton.UseVisualStyleBackColor = false;
             chonNhaCungCapButton.Click += ChonNhaCungCapButton_Click;
             // 
             // TaoPhieuNhapForm

@@ -61,37 +61,46 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(20, 221);
             label1.Name = "label1";
-            label1.Size = new Size(58, 25);
+            label1.Size = new Size(63, 25);
             label1.TabIndex = 84;
             label1.Text = "Giá trị";
             // 
             // luuButton
             // 
-            luuButton.Location = new Point(747, 261);
+            luuButton.BackColor = Color.FromArgb(0, 192, 0);
+            luuButton.FlatAppearance.BorderSize = 0;
+            luuButton.FlatStyle = FlatStyle.Flat;
+            luuButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            luuButton.Location = new Point(342, 418);
             luuButton.Name = "luuButton";
             luuButton.Size = new Size(112, 34);
             luuButton.TabIndex = 83;
             luuButton.Text = "Lưu";
-            luuButton.UseVisualStyleBackColor = true;
+            luuButton.UseVisualStyleBackColor = false;
             luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
-            huyBoButton.Location = new Point(619, 261);
+            huyBoButton.BackColor = Color.Red;
+            huyBoButton.FlatAppearance.BorderSize = 0;
+            huyBoButton.FlatStyle = FlatStyle.Flat;
+            huyBoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            huyBoButton.Location = new Point(214, 418);
             huyBoButton.Name = "huyBoButton";
             huyBoButton.Size = new Size(112, 34);
             huyBoButton.TabIndex = 82;
             huyBoButton.Text = "Hủy bỏ";
-            huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.UseVisualStyleBackColor = false;
             huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenKhuyenMaiTextBox
             // 
             tenKhuyenMaiTextBox.Location = new Point(222, 115);
             tenKhuyenMaiTextBox.Name = "tenKhuyenMaiTextBox";
-            tenKhuyenMaiTextBox.Size = new Size(150, 31);
+            tenKhuyenMaiTextBox.Size = new Size(232, 31);
             tenKhuyenMaiTextBox.TabIndex = 81;
             // 
             // maKhuyenMaiTextBox
@@ -104,18 +113,20 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(20, 118);
             label3.Name = "label3";
-            label3.Size = new Size(134, 25);
+            label3.Size = new Size(141, 25);
             label3.TabIndex = 77;
             label3.Text = "Tên khuyến mãi";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(20, 81);
             label2.Name = "label2";
-            label2.Size = new Size(133, 25);
+            label2.Size = new Size(138, 25);
             label2.TabIndex = 76;
             label2.Text = "Mã khuyến mãi";
             // 
@@ -132,18 +143,20 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(20, 152);
             label4.Name = "label4";
-            label4.Size = new Size(94, 25);
+            label4.Size = new Size(100, 25);
             label4.TabIndex = 86;
             label4.Text = "Loại giá trị";
             // 
             // phanTramRadioButton
             // 
             phanTramRadioButton.AutoSize = true;
+            phanTramRadioButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             phanTramRadioButton.Location = new Point(20, 182);
             phanTramRadioButton.Name = "phanTramRadioButton";
-            phanTramRadioButton.Size = new Size(118, 29);
+            phanTramRadioButton.Size = new Size(122, 29);
             phanTramRadioButton.TabIndex = 87;
             phanTramRadioButton.TabStop = true;
             phanTramRadioButton.Text = "Phần trăm";
@@ -152,9 +165,10 @@
             // cuTheRadioButton
             // 
             cuTheRadioButton.AutoSize = true;
+            cuTheRadioButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             cuTheRadioButton.Location = new Point(164, 183);
             cuTheRadioButton.Name = "cuTheRadioButton";
-            cuTheRadioButton.Size = new Size(88, 29);
+            cuTheRadioButton.Size = new Size(91, 29);
             cuTheRadioButton.TabIndex = 88;
             cuTheRadioButton.TabStop = true;
             cuTheRadioButton.Text = "Cụ thể";
@@ -163,16 +177,17 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(418, 81);
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label5.Location = new Point(12, 269);
             label5.Name = "label5";
-            label5.Size = new Size(151, 25);
+            label5.Size = new Size(157, 25);
             label5.TabIndex = 89;
             label5.Text = "Thời gian bắt đầu";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(418, 152);
+            label6.Location = new Point(12, 340);
             label6.Name = "label6";
             label6.Size = new Size(153, 25);
             label6.TabIndex = 90;
@@ -180,7 +195,7 @@
             // 
             // ngayBatDauDateTimePicker
             // 
-            ngayBatDauDateTimePicker.Location = new Point(418, 112);
+            ngayBatDauDateTimePicker.Location = new Point(12, 300);
             ngayBatDauDateTimePicker.Name = "ngayBatDauDateTimePicker";
             ngayBatDauDateTimePicker.Size = new Size(300, 31);
             ngayBatDauDateTimePicker.TabIndex = 91;
@@ -188,7 +203,7 @@
             // gioBatDauDateTimePicker
             // 
             gioBatDauDateTimePicker.Format = DateTimePickerFormat.Time;
-            gioBatDauDateTimePicker.Location = new Point(721, 112);
+            gioBatDauDateTimePicker.Location = new Point(315, 300);
             gioBatDauDateTimePicker.Name = "gioBatDauDateTimePicker";
             gioBatDauDateTimePicker.ShowUpDown = true;
             gioBatDauDateTimePicker.Size = new Size(139, 31);
@@ -196,7 +211,7 @@
             // 
             // ngayKetThucDateTimePicker
             // 
-            ngayKetThucDateTimePicker.Location = new Point(418, 180);
+            ngayKetThucDateTimePicker.Location = new Point(12, 368);
             ngayKetThucDateTimePicker.Name = "ngayKetThucDateTimePicker";
             ngayKetThucDateTimePicker.Size = new Size(300, 31);
             ngayKetThucDateTimePicker.TabIndex = 93;
@@ -204,7 +219,7 @@
             // gioKetThucDateTimePicker
             // 
             gioKetThucDateTimePicker.Format = DateTimePickerFormat.Time;
-            gioKetThucDateTimePicker.Location = new Point(721, 180);
+            gioKetThucDateTimePicker.Location = new Point(315, 368);
             gioKetThucDateTimePicker.Name = "gioKetThucDateTimePicker";
             gioKetThucDateTimePicker.ShowUpDown = true;
             gioKetThucDateTimePicker.Size = new Size(139, 31);
@@ -214,7 +229,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 314);
+            BackColor = Color.FromArgb(223, 243, 252);
+            ClientSize = new Size(470, 464);
             Controls.Add(gioKetThucDateTimePicker);
             Controls.Add(ngayKetThucDateTimePicker);
             Controls.Add(gioBatDauDateTimePicker);

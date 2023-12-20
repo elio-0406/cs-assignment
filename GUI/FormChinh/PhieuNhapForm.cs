@@ -43,7 +43,7 @@ namespace GUI.FormChinh
                 phieuNhapDataGridView.Rows[i].Cells[2].Value = listPhieuNhap[i].MaNhaCungCap;
                 phieuNhapDataGridView.Rows[i].Cells[3].Value = listPhieuNhap[i].MaNguoiTao;
                 phieuNhapDataGridView.Rows[i].Cells[4].Value = listPhieuNhap[i].ThoiGianTao.ToString("dd/MM/yyyy HH:mm:ss");
-                phieuNhapDataGridView.Rows[i].Cells[5].Value = listPhieuNhap[i].TongTien.ToString() + " đ";
+                phieuNhapDataGridView.Rows[i].Cells[5].Value = listPhieuNhap[i].TongTien.ToString("0") + " đ";
                 phieuNhapDataGridView.Rows[i].Cells[6].Value = listPhieuNhap[i].TrangThai;
             }
         }

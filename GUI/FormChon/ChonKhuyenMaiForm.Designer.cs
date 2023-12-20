@@ -42,12 +42,16 @@
             // 
             // timKiemButton
             // 
+            timKiemButton.BackColor = Color.Gold;
+            timKiemButton.FlatAppearance.BorderSize = 0;
+            timKiemButton.FlatStyle = FlatStyle.Flat;
+            timKiemButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             timKiemButton.Location = new Point(558, 15);
             timKiemButton.Name = "timKiemButton";
             timKiemButton.Size = new Size(112, 34);
             timKiemButton.TabIndex = 6;
             timKiemButton.Text = "Tìm kiếm";
-            timKiemButton.UseVisualStyleBackColor = true;
+            timKiemButton.UseVisualStyleBackColor = false;
             timKiemButton.Click += TimKiemButton_Click;
             // 
             // timKiemTextBox
@@ -63,6 +67,7 @@
             // 
             khuyenMaiDataGridView.AllowUserToAddRows = false;
             khuyenMaiDataGridView.AllowUserToDeleteRows = false;
+            khuyenMaiDataGridView.BackgroundColor = SystemColors.ActiveCaption;
             khuyenMaiDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             khuyenMaiDataGridView.Columns.AddRange(new DataGridViewColumn[] { maKhuyenMaiColumn, tenKhuyenMaiColumn, loaiGiaTriColumn, giaTriColumn, chonButtonColumn });
             khuyenMaiDataGridView.Dock = DockStyle.Bottom;
@@ -117,18 +122,23 @@
             // 
             // lamMoiButton
             // 
+            lamMoiButton.BackColor = Color.SkyBlue;
+            lamMoiButton.FlatAppearance.BorderSize = 0;
+            lamMoiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lamMoiButton.Location = new Point(676, 15);
             lamMoiButton.Name = "lamMoiButton";
             lamMoiButton.Size = new Size(112, 34);
             lamMoiButton.TabIndex = 7;
             lamMoiButton.Text = "Làm mới";
-            lamMoiButton.UseVisualStyleBackColor = true;
+            lamMoiButton.UseVisualStyleBackColor = false;
             lamMoiButton.Click += LamMoiButton_Click;
             // 
             // ChonKhuyenMaiForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 243, 252);
             ClientSize = new Size(800, 291);
             Controls.Add(lamMoiButton);
             Controls.Add(timKiemButton);

@@ -40,22 +40,30 @@
             // 
             // lamMoiButton
             // 
+            lamMoiButton.BackColor = Color.SkyBlue;
+            lamMoiButton.FlatAppearance.BorderSize = 0;
+            lamMoiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lamMoiButton.Location = new Point(451, 8);
             lamMoiButton.Name = "lamMoiButton";
             lamMoiButton.Size = new Size(112, 34);
             lamMoiButton.TabIndex = 11;
             lamMoiButton.Text = "Làm mới";
-            lamMoiButton.UseVisualStyleBackColor = true;
+            lamMoiButton.UseVisualStyleBackColor = false;
             lamMoiButton.Click += LamMoiButton_Click;
             // 
             // timKiemButton
             // 
+            timKiemButton.BackColor = Color.Gold;
+            timKiemButton.FlatAppearance.BorderSize = 0;
+            timKiemButton.FlatStyle = FlatStyle.Flat;
+            timKiemButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             timKiemButton.Location = new Point(333, 8);
             timKiemButton.Name = "timKiemButton";
             timKiemButton.Size = new Size(112, 34);
             timKiemButton.TabIndex = 10;
             timKiemButton.Text = "Tìm kiếm";
-            timKiemButton.UseVisualStyleBackColor = true;
+            timKiemButton.UseVisualStyleBackColor = false;
             timKiemButton.Click += TimKiemButton_Click;
             // 
             // timKiemTextBox
@@ -71,6 +79,7 @@
             // 
             khachHangDataGridView.AllowUserToAddRows = false;
             khachHangDataGridView.AllowUserToDeleteRows = false;
+            khachHangDataGridView.BackgroundColor = SystemColors.ActiveCaption;
             khachHangDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             khachHangDataGridView.Columns.AddRange(new DataGridViewColumn[] { maKhachHangColumn, soDienThoaiColumn, chonButtonColumn });
             khachHangDataGridView.Dock = DockStyle.Bottom;
@@ -111,6 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 243, 252);
             ClientSize = new Size(576, 284);
             Controls.Add(lamMoiButton);
             Controls.Add(timKiemButton);

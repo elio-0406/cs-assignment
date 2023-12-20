@@ -52,71 +52,87 @@
             // 
             // luuButton
             // 
+            luuButton.BackColor = Color.FromArgb(0, 192, 0);
+            luuButton.FlatAppearance.BorderSize = 0;
+            luuButton.FlatStyle = FlatStyle.Flat;
+            luuButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            luuButton.ForeColor = Color.White;
             luuButton.Location = new Point(522, 342);
             luuButton.Name = "luuButton";
             luuButton.Size = new Size(112, 34);
             luuButton.TabIndex = 17;
             luuButton.Text = "Lưu";
-            luuButton.UseVisualStyleBackColor = true;
+            luuButton.UseVisualStyleBackColor = false;
             luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
+            huyBoButton.BackColor = Color.Red;
+            huyBoButton.FlatAppearance.BorderSize = 0;
+            huyBoButton.FlatStyle = FlatStyle.Flat;
+            huyBoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            huyBoButton.ForeColor = Color.White;
             huyBoButton.Location = new Point(394, 342);
             huyBoButton.Name = "huyBoButton";
             huyBoButton.Size = new Size(112, 34);
             huyBoButton.TabIndex = 16;
             huyBoButton.Text = "Hủy bỏ";
-            huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.UseVisualStyleBackColor = false;
             huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenSanPhamTextBox
             // 
-            tenSanPhamTextBox.Location = new Point(450, 108);
+            tenSanPhamTextBox.Font = new Font("Segoe UI", 9F);
+            tenSanPhamTextBox.Location = new Point(394, 108);
             tenSanPhamTextBox.Name = "tenSanPhamTextBox";
-            tenSanPhamTextBox.Size = new Size(150, 31);
+            tenSanPhamTextBox.Size = new Size(206, 31);
             tenSanPhamTextBox.TabIndex = 15;
             // 
             // maSanPhamTextBox
             // 
-            maSanPhamTextBox.Location = new Point(450, 71);
+            maSanPhamTextBox.Font = new Font("Segoe UI", 9F);
+            maSanPhamTextBox.Location = new Point(394, 71);
             maSanPhamTextBox.Name = "maSanPhamTextBox";
-            maSanPhamTextBox.Size = new Size(150, 31);
+            maSanPhamTextBox.Size = new Size(206, 31);
             maSanPhamTextBox.TabIndex = 14;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(248, 295);
             label4.Name = "label4";
-            label4.Size = new Size(89, 25);
+            label4.Size = new Size(95, 25);
             label4.TabIndex = 13;
             label4.Text = "Trạng thái";
             // 
             // trangThaiComboBox
             // 
+            trangThaiComboBox.Font = new Font("Segoe UI", 9F);
             trangThaiComboBox.FormattingEnabled = true;
             trangThaiComboBox.Items.AddRange(new object[] { "Đang bán", "Chờ xử lý", "Hết hàng", "Ngừng kinh doanh" });
-            trangThaiComboBox.Location = new Point(450, 295);
+            trangThaiComboBox.Location = new Point(394, 295);
             trangThaiComboBox.Name = "trangThaiComboBox";
-            trangThaiComboBox.Size = new Size(182, 33);
+            trangThaiComboBox.Size = new Size(238, 33);
             trangThaiComboBox.TabIndex = 12;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(248, 111);
             label3.Name = "label3";
-            label3.Size = new Size(121, 25);
+            label3.Size = new Size(125, 25);
             label3.TabIndex = 11;
             label3.Text = "Tên sản phẩm";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(248, 74);
             label2.Name = "label2";
-            label2.Size = new Size(120, 25);
+            label2.Size = new Size(122, 25);
             label2.TabIndex = 10;
             label2.Text = "Mã sản phẩm";
             // 
@@ -132,6 +148,7 @@
             // 
             // sanPhamPictureBox
             // 
+            sanPhamPictureBox.BorderStyle = BorderStyle.Fixed3D;
             sanPhamPictureBox.Location = new Point(21, 71);
             sanPhamPictureBox.Name = "sanPhamPictureBox";
             sanPhamPictureBox.Size = new Size(150, 150);
@@ -140,35 +157,42 @@
             // 
             // chonAnhButton
             // 
+            chonAnhButton.BackColor = Color.MediumPurple;
+            chonAnhButton.FlatAppearance.BorderSize = 0;
+            chonAnhButton.FlatStyle = FlatStyle.Flat;
+            chonAnhButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             chonAnhButton.Location = new Point(21, 227);
             chonAnhButton.Name = "chonAnhButton";
             chonAnhButton.Size = new Size(150, 34);
             chonAnhButton.TabIndex = 19;
             chonAnhButton.Text = "Chọn ảnh";
-            chonAnhButton.UseVisualStyleBackColor = true;
+            chonAnhButton.UseVisualStyleBackColor = false;
             chonAnhButton.Click += ChonAnhButton_Click;
             // 
             // donViTinhTextBox
             // 
-            donViTinhTextBox.Location = new Point(450, 184);
+            donViTinhTextBox.Font = new Font("Segoe UI", 9F);
+            donViTinhTextBox.Location = new Point(394, 184);
             donViTinhTextBox.Name = "donViTinhTextBox";
-            donViTinhTextBox.Size = new Size(150, 31);
+            donViTinhTextBox.Size = new Size(206, 31);
             donViTinhTextBox.TabIndex = 21;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(248, 187);
             label1.Name = "label1";
-            label1.Size = new Size(99, 25);
+            label1.Size = new Size(104, 25);
             label1.TabIndex = 20;
             label1.Text = "Đơn vị tính";
             // 
             // giaBanTextBox
             // 
-            giaBanTextBox.Location = new Point(450, 221);
+            giaBanTextBox.Font = new Font("Segoe UI", 9F);
+            giaBanTextBox.Location = new Point(394, 221);
             giaBanTextBox.Name = "giaBanTextBox";
-            giaBanTextBox.Size = new Size(150, 31);
+            giaBanTextBox.Size = new Size(206, 31);
             giaBanTextBox.TabIndex = 23;
             giaBanTextBox.Text = "0";
             giaBanTextBox.KeyPress += GiaBanTextBox_KeyPress;
@@ -177,50 +201,56 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(248, 224);
             label5.Name = "label5";
-            label5.Size = new Size(72, 25);
+            label5.Size = new Size(75, 25);
             label5.TabIndex = 22;
             label5.Text = "Giá bán";
             // 
             // soLuongTextBox
             // 
-            soLuongTextBox.Location = new Point(450, 258);
+            soLuongTextBox.Font = new Font("Segoe UI", 9F);
+            soLuongTextBox.Location = new Point(394, 258);
             soLuongTextBox.Name = "soLuongTextBox";
-            soLuongTextBox.Size = new Size(150, 31);
+            soLuongTextBox.Size = new Size(206, 31);
             soLuongTextBox.TabIndex = 25;
             soLuongTextBox.Text = "0";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label6.Location = new Point(248, 261);
             label6.Name = "label6";
-            label6.Size = new Size(85, 25);
+            label6.Size = new Size(87, 25);
             label6.TabIndex = 24;
             label6.Text = "Số lượng";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label7.Location = new Point(248, 145);
             label7.Name = "label7";
-            label7.Size = new Size(127, 25);
+            label7.Size = new Size(130, 25);
             label7.TabIndex = 27;
             label7.Text = "Loại sản phẩm";
             // 
             // loaiSanPhamComboBox
             // 
+            loaiSanPhamComboBox.Font = new Font("Segoe UI", 9F);
             loaiSanPhamComboBox.FormattingEnabled = true;
-            loaiSanPhamComboBox.Location = new Point(450, 145);
+            loaiSanPhamComboBox.Location = new Point(394, 145);
             loaiSanPhamComboBox.Name = "loaiSanPhamComboBox";
-            loaiSanPhamComboBox.Size = new Size(182, 33);
+            loaiSanPhamComboBox.Size = new Size(238, 33);
             loaiSanPhamComboBox.TabIndex = 26;
             // 
             // ChiTietSanPhamForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 243, 252);
             ClientSize = new Size(648, 389);
             Controls.Add(label7);
             Controls.Add(loaiSanPhamComboBox);
@@ -241,6 +271,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(tieuDeFormLabel);
+            Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "ChiTietSanPhamForm";

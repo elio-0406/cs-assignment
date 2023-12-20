@@ -38,18 +38,24 @@
             // 
             // xoaButton
             // 
-            xoaButton.Location = new Point(510, 0);
+            xoaButton.BackColor = Color.IndianRed;
+            xoaButton.FlatAppearance.BorderSize = 0;
+            xoaButton.FlatStyle = FlatStyle.Flat;
+            xoaButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            xoaButton.ForeColor = Color.White;
+            xoaButton.Location = new Point(517, 0);
             xoaButton.Margin = new Padding(0);
             xoaButton.Name = "xoaButton";
-            xoaButton.Size = new Size(50, 85);
+            xoaButton.Size = new Size(43, 85);
             xoaButton.TabIndex = 0;
             xoaButton.Text = "X";
-            xoaButton.UseVisualStyleBackColor = true;
+            xoaButton.UseVisualStyleBackColor = false;
             xoaButton.Click += XoaButton_Click;
             // 
             // tenSanPhamLabel
             // 
             tenSanPhamLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tenSanPhamLabel.ForeColor = Color.White;
             tenSanPhamLabel.Location = new Point(0, 0);
             tenSanPhamLabel.Margin = new Padding(0);
             tenSanPhamLabel.Name = "tenSanPhamLabel";
@@ -74,6 +80,7 @@
             // 
             thanhTienLabel.AutoSize = true;
             thanhTienLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thanhTienLabel.ForeColor = Color.White;
             thanhTienLabel.Location = new Point(277, 43);
             thanhTienLabel.Margin = new Padding(0);
             thanhTienLabel.Name = "thanhTienLabel";
@@ -85,6 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(180, 49);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
@@ -96,6 +104,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SteelBlue;
             Controls.Add(label2);
             Controls.Add(thanhTienLabel);
             Controls.Add(soLuongNumericUpDown);

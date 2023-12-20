@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             nhaCungCapDataGridView = new DataGridView();
+            stt = new DataGridViewTextBoxColumn();
+            maNhaCungCapColumn = new DataGridViewTextBoxColumn();
+            tenNhaCungCapColumn = new DataGridViewTextBoxColumn();
+            trangThaiColumn = new DataGridViewTextBoxColumn();
+            chiTietButtonColumn = new DataGridViewButtonColumn();
+            suaButtonColumn = new DataGridViewButtonColumn();
+            xoaButtonColumn = new DataGridViewButtonColumn();
             panel1 = new Panel();
             label1 = new Label();
             trangThaiComboBox = new ComboBox();
@@ -37,13 +44,6 @@
             lamMoiButton = new Button();
             timKiemButton = new Button();
             timKiemTextBox = new TextBox();
-            stt = new DataGridViewTextBoxColumn();
-            maNhaCungCapColumn = new DataGridViewTextBoxColumn();
-            tenNhaCungCapColumn = new DataGridViewTextBoxColumn();
-            trangThaiColumn = new DataGridViewTextBoxColumn();
-            chiTietButtonColumn = new DataGridViewButtonColumn();
-            suaButtonColumn = new DataGridViewButtonColumn();
-            xoaButtonColumn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)nhaCungCapDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -52,6 +52,7 @@
             // 
             nhaCungCapDataGridView.AllowUserToAddRows = false;
             nhaCungCapDataGridView.AllowUserToDeleteRows = false;
+            nhaCungCapDataGridView.BackgroundColor = SystemColors.ActiveCaption;
             nhaCungCapDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             nhaCungCapDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maNhaCungCapColumn, tenNhaCungCapColumn, trangThaiColumn, chiTietButtonColumn, suaButtonColumn, xoaButtonColumn });
             nhaCungCapDataGridView.Dock = DockStyle.Fill;
@@ -63,95 +64,6 @@
             nhaCungCapDataGridView.Size = new Size(1144, 573);
             nhaCungCapDataGridView.TabIndex = 5;
             nhaCungCapDataGridView.CellContentClick += NhaCungCapDataGridView_CellContentClick;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(trangThaiComboBox);
-            panel1.Controls.Add(themButton);
-            panel1.Controls.Add(xuatExcel);
-            panel1.Controls.Add(lamMoiButton);
-            panel1.Controls.Add(timKiemButton);
-            panel1.Controls.Add(timKiemTextBox);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1144, 87);
-            panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(54, 13);
-            label1.Margin = new Padding(0);
-            label1.Name = "label1";
-            label1.Size = new Size(89, 25);
-            label1.TabIndex = 9;
-            label1.Text = "Trạng thái";
-            // 
-            // trangThaiComboBox
-            // 
-            trangThaiComboBox.FormattingEnabled = true;
-            trangThaiComboBox.Items.AddRange(new object[] { "Đang hợp tác", "Ngừng hợp tác" });
-            trangThaiComboBox.Location = new Point(54, 41);
-            trangThaiComboBox.Margin = new Padding(0);
-            trangThaiComboBox.Name = "trangThaiComboBox";
-            trangThaiComboBox.Size = new Size(182, 33);
-            trangThaiComboBox.TabIndex = 8;
-            trangThaiComboBox.SelectionChangeCommitted += TrangThaiComboBox_SelectionChangeCommitted;
-            // 
-            // themButton
-            // 
-            themButton.Location = new Point(864, 39);
-            themButton.Name = "themButton";
-            themButton.Size = new Size(112, 34);
-            themButton.TabIndex = 4;
-            themButton.Text = "Thêm";
-            themButton.UseVisualStyleBackColor = true;
-            themButton.Click += ThemButton_Click;
-            // 
-            // xuatExcel
-            // 
-            xuatExcel.Location = new Point(979, 39);
-            xuatExcel.Margin = new Padding(0);
-            xuatExcel.Name = "xuatExcel";
-            xuatExcel.Size = new Size(112, 34);
-            xuatExcel.TabIndex = 3;
-            xuatExcel.Text = "Xuất Excel";
-            xuatExcel.UseVisualStyleBackColor = true;
-            xuatExcel.Click += XuatExcel_Click;
-            // 
-            // lamMoiButton
-            // 
-            lamMoiButton.Location = new Point(644, 40);
-            lamMoiButton.Margin = new Padding(0);
-            lamMoiButton.Name = "lamMoiButton";
-            lamMoiButton.Size = new Size(112, 34);
-            lamMoiButton.TabIndex = 2;
-            lamMoiButton.Text = "Làm mới";
-            lamMoiButton.UseVisualStyleBackColor = true;
-            lamMoiButton.Click += LamMoiButton_Click;
-            // 
-            // timKiemButton
-            // 
-            timKiemButton.Location = new Point(532, 41);
-            timKiemButton.Margin = new Padding(0);
-            timKiemButton.Name = "timKiemButton";
-            timKiemButton.Size = new Size(112, 34);
-            timKiemButton.TabIndex = 1;
-            timKiemButton.Text = "Tìm kiếm";
-            timKiemButton.UseVisualStyleBackColor = true;
-            timKiemButton.Click += TimKiemButton_Click;
-            // 
-            // timKiemTextBox
-            // 
-            timKiemTextBox.Location = new Point(252, 43);
-            timKiemTextBox.Margin = new Padding(0);
-            timKiemTextBox.Name = "timKiemTextBox";
-            timKiemTextBox.PlaceholderText = "Tìm kiếm";
-            timKiemTextBox.Size = new Size(280, 31);
-            timKiemTextBox.TabIndex = 0;
-            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
             // 
             // stt
             // 
@@ -167,7 +79,7 @@
             maNhaCungCapColumn.HeaderText = "Mã nhà cung cấp";
             maNhaCungCapColumn.MinimumWidth = 8;
             maNhaCungCapColumn.Name = "maNhaCungCapColumn";
-            maNhaCungCapColumn.Width = 184;
+            maNhaCungCapColumn.Width = 144;
             // 
             // tenNhaCungCapColumn
             // 
@@ -182,7 +94,7 @@
             trangThaiColumn.HeaderText = "Trạng thái";
             trangThaiColumn.MinimumWidth = 8;
             trangThaiColumn.Name = "trangThaiColumn";
-            trangThaiColumn.Width = 125;
+            trangThaiColumn.Width = 116;
             // 
             // chiTietButtonColumn
             // 
@@ -195,7 +107,7 @@
             chiTietButtonColumn.SortMode = DataGridViewColumnSortMode.Automatic;
             chiTietButtonColumn.Text = "Chi tiết";
             chiTietButtonColumn.UseColumnTextForButtonValue = true;
-            chiTietButtonColumn.Width = 103;
+            chiTietButtonColumn.Width = 73;
             // 
             // suaButtonColumn
             // 
@@ -222,6 +134,115 @@
             xoaButtonColumn.Text = "Xóa";
             xoaButtonColumn.UseColumnTextForButtonValue = true;
             xoaButtonColumn.Width = 79;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(223, 243, 252);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(trangThaiComboBox);
+            panel1.Controls.Add(themButton);
+            panel1.Controls.Add(xuatExcel);
+            panel1.Controls.Add(lamMoiButton);
+            panel1.Controls.Add(timKiemButton);
+            panel1.Controls.Add(timKiemTextBox);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1144, 87);
+            panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(54, 13);
+            label1.Margin = new Padding(0);
+            label1.Name = "label1";
+            label1.Size = new Size(95, 25);
+            label1.TabIndex = 9;
+            label1.Text = "Trạng thái";
+            // 
+            // trangThaiComboBox
+            // 
+            trangThaiComboBox.FormattingEnabled = true;
+            trangThaiComboBox.Items.AddRange(new object[] { "Đang hợp tác", "Ngừng hợp tác" });
+            trangThaiComboBox.Location = new Point(54, 41);
+            trangThaiComboBox.Margin = new Padding(0);
+            trangThaiComboBox.Name = "trangThaiComboBox";
+            trangThaiComboBox.Size = new Size(182, 33);
+            trangThaiComboBox.TabIndex = 8;
+            trangThaiComboBox.SelectionChangeCommitted += TrangThaiComboBox_SelectionChangeCommitted;
+            // 
+            // themButton
+            // 
+            themButton.BackColor = Color.Teal;
+            themButton.FlatAppearance.BorderSize = 0;
+            themButton.FlatStyle = FlatStyle.Flat;
+            themButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            themButton.ForeColor = Color.White;
+            themButton.Location = new Point(854, 39);
+            themButton.Name = "themButton";
+            themButton.Size = new Size(112, 34);
+            themButton.TabIndex = 4;
+            themButton.Text = "Thêm";
+            themButton.UseVisualStyleBackColor = false;
+            themButton.Click += ThemButton_Click;
+            // 
+            // xuatExcel
+            // 
+            xuatExcel.BackColor = Color.ForestGreen;
+            xuatExcel.FlatAppearance.BorderSize = 0;
+            xuatExcel.FlatStyle = FlatStyle.Flat;
+            xuatExcel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            xuatExcel.ForeColor = Color.White;
+            xuatExcel.Location = new Point(979, 39);
+            xuatExcel.Margin = new Padding(0);
+            xuatExcel.Name = "xuatExcel";
+            xuatExcel.Size = new Size(112, 34);
+            xuatExcel.TabIndex = 3;
+            xuatExcel.Text = "Xuất Excel";
+            xuatExcel.UseVisualStyleBackColor = false;
+            xuatExcel.Click += XuatExcel_Click;
+            // 
+            // lamMoiButton
+            // 
+            lamMoiButton.BackColor = Color.SkyBlue;
+            lamMoiButton.FlatAppearance.BorderSize = 0;
+            lamMoiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lamMoiButton.Location = new Point(662, 39);
+            lamMoiButton.Margin = new Padding(0);
+            lamMoiButton.Name = "lamMoiButton";
+            lamMoiButton.Size = new Size(112, 34);
+            lamMoiButton.TabIndex = 2;
+            lamMoiButton.Text = "Làm mới";
+            lamMoiButton.UseVisualStyleBackColor = false;
+            lamMoiButton.Click += LamMoiButton_Click;
+            // 
+            // timKiemButton
+            // 
+            timKiemButton.BackColor = Color.Gold;
+            timKiemButton.FlatAppearance.BorderSize = 0;
+            timKiemButton.FlatStyle = FlatStyle.Flat;
+            timKiemButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            timKiemButton.Location = new Point(541, 39);
+            timKiemButton.Margin = new Padding(0);
+            timKiemButton.Name = "timKiemButton";
+            timKiemButton.Size = new Size(112, 34);
+            timKiemButton.TabIndex = 1;
+            timKiemButton.Text = "Tìm kiếm";
+            timKiemButton.UseVisualStyleBackColor = false;
+            timKiemButton.Click += TimKiemButton_Click;
+            // 
+            // timKiemTextBox
+            // 
+            timKiemTextBox.Location = new Point(252, 43);
+            timKiemTextBox.Margin = new Padding(0);
+            timKiemTextBox.Name = "timKiemTextBox";
+            timKiemTextBox.PlaceholderText = "Tìm kiếm";
+            timKiemTextBox.Size = new Size(280, 31);
+            timKiemTextBox.TabIndex = 0;
+            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
             // 
             // NhaCungCapForm
             // 

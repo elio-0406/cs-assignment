@@ -70,6 +70,7 @@
             // 
             // sanPhamFlowLayoutPanel
             // 
+            sanPhamFlowLayoutPanel.BackColor = Color.PowderBlue;
             sanPhamFlowLayoutPanel.Dock = DockStyle.Fill;
             sanPhamFlowLayoutPanel.Location = new Point(0, 120);
             sanPhamFlowLayoutPanel.Margin = new Padding(0);
@@ -90,54 +91,65 @@
             // 
             // lamMoiKhachHangButton
             // 
-            lamMoiKhachHangButton.Location = new Point(16, 45);
+            lamMoiKhachHangButton.BackColor = Color.SkyBlue;
+            lamMoiKhachHangButton.FlatAppearance.BorderSize = 0;
+            lamMoiKhachHangButton.FlatStyle = FlatStyle.Flat;
+            lamMoiKhachHangButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lamMoiKhachHangButton.Location = new Point(16, 48);
             lamMoiKhachHangButton.Margin = new Padding(0);
             lamMoiKhachHangButton.Name = "lamMoiKhachHangButton";
             lamMoiKhachHangButton.Size = new Size(112, 34);
             lamMoiKhachHangButton.TabIndex = 4;
             lamMoiKhachHangButton.Text = "Làm mới";
-            lamMoiKhachHangButton.UseVisualStyleBackColor = true;
+            lamMoiKhachHangButton.UseVisualStyleBackColor = false;
             lamMoiKhachHangButton.Click += LamMoiKhachHangButton_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(219, 45);
             label5.Margin = new Padding(0);
             label5.Name = "label5";
-            label5.Size = new Size(117, 25);
+            label5.Size = new Size(122, 25);
             label5.TabIndex = 2;
             label5.Text = "Số điện thoại";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(220, 6);
             label4.Margin = new Padding(0);
             label4.Name = "label4";
-            label4.Size = new Size(37, 25);
+            label4.Size = new Size(38, 25);
             label4.TabIndex = 1;
             label4.Text = "Mã";
             // 
             // chonKhachHangButton
             // 
             chonKhachHangButton.AutoSize = true;
+            chonKhachHangButton.BackColor = Color.FromArgb(0, 192, 192);
+            chonKhachHangButton.FlatAppearance.BorderSize = 0;
+            chonKhachHangButton.FlatStyle = FlatStyle.Flat;
+            chonKhachHangButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             chonKhachHangButton.Location = new Point(16, 9);
             chonKhachHangButton.Margin = new Padding(0);
             chonKhachHangButton.Name = "chonKhachHangButton";
-            chonKhachHangButton.Size = new Size(175, 35);
+            chonKhachHangButton.Size = new Size(175, 37);
             chonKhachHangButton.TabIndex = 0;
             chonKhachHangButton.Text = "Chọn khách hàng";
-            chonKhachHangButton.UseVisualStyleBackColor = true;
+            chonKhachHangButton.UseVisualStyleBackColor = false;
             chonKhachHangButton.Click += ChonKhachHangButton_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(30, 28);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(127, 25);
+            label3.Size = new Size(130, 25);
             label3.TabIndex = 4;
             label3.Text = "Loại sản phẩm";
             // 
@@ -147,12 +159,13 @@
             loaiSanPhamComboBox.Location = new Point(157, 25);
             loaiSanPhamComboBox.Margin = new Padding(0);
             loaiSanPhamComboBox.Name = "loaiSanPhamComboBox";
-            loaiSanPhamComboBox.Size = new Size(274, 33);
+            loaiSanPhamComboBox.Size = new Size(216, 33);
             loaiSanPhamComboBox.TabIndex = 3;
             loaiSanPhamComboBox.SelectionChangeCommitted += LoaiSanPhamComboBox_SelectionChangeCommitted;
             // 
             // chiTietFlowLayoutPanel
             // 
+            chiTietFlowLayoutPanel.BackColor = Color.PowderBlue;
             chiTietFlowLayoutPanel.Dock = DockStyle.Fill;
             chiTietFlowLayoutPanel.Location = new Point(0, 120);
             chiTietFlowLayoutPanel.Margin = new Padding(0);
@@ -162,13 +175,17 @@
             // 
             // lamMoiSanPhamButton
             // 
+            lamMoiSanPhamButton.BackColor = Color.SkyBlue;
+            lamMoiSanPhamButton.FlatAppearance.BorderSize = 0;
+            lamMoiSanPhamButton.FlatStyle = FlatStyle.Flat;
+            lamMoiSanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lamMoiSanPhamButton.Location = new Point(431, 62);
             lamMoiSanPhamButton.Margin = new Padding(0);
             lamMoiSanPhamButton.Name = "lamMoiSanPhamButton";
             lamMoiSanPhamButton.Size = new Size(112, 34);
             lamMoiSanPhamButton.TabIndex = 2;
             lamMoiSanPhamButton.Text = "Làm mới";
-            lamMoiSanPhamButton.UseVisualStyleBackColor = true;
+            lamMoiSanPhamButton.UseVisualStyleBackColor = false;
             lamMoiSanPhamButton.Click += LamMoiSanPhamButton_Click;
             // 
             // timKiemSanPhamTextBox
@@ -177,7 +194,7 @@
             timKiemSanPhamTextBox.Margin = new Padding(0);
             timKiemSanPhamTextBox.Name = "timKiemSanPhamTextBox";
             timKiemSanPhamTextBox.PlaceholderText = "Tìm kiếm";
-            timKiemSanPhamTextBox.Size = new Size(289, 31);
+            timKiemSanPhamTextBox.Size = new Size(277, 31);
             timKiemSanPhamTextBox.TabIndex = 0;
             timKiemSanPhamTextBox.TextChanged += TimKiemSanPhamTextBox_TextChanged;
             // 
@@ -206,18 +223,23 @@
             // hoanTatButton
             // 
             hoanTatButton.AutoSize = true;
+            hoanTatButton.BackColor = Color.Teal;
+            hoanTatButton.FlatAppearance.BorderSize = 0;
+            hoanTatButton.FlatStyle = FlatStyle.Flat;
             hoanTatButton.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hoanTatButton.ForeColor = Color.White;
             hoanTatButton.Location = new Point(421, 128);
             hoanTatButton.Margin = new Padding(0);
             hoanTatButton.Name = "hoanTatButton";
-            hoanTatButton.Size = new Size(139, 48);
+            hoanTatButton.Size = new Size(141, 50);
             hoanTatButton.TabIndex = 0;
             hoanTatButton.Text = "Hoàn tất";
-            hoanTatButton.UseVisualStyleBackColor = true;
+            hoanTatButton.UseVisualStyleBackColor = false;
             hoanTatButton.Click += HoanTatButton_Click;
             // 
             // panel5
             // 
+            panel5.BackColor = Color.FromArgb(223, 243, 252);
             panel5.Controls.Add(lamMoiKhuyenMaiButton);
             panel5.Controls.Add(tenKhuyenMaiLabel);
             panel5.Controls.Add(label2);
@@ -241,12 +263,15 @@
             // 
             // lamMoiKhuyenMaiButton
             // 
-            lamMoiKhuyenMaiButton.Location = new Point(445, 36);
+            lamMoiKhuyenMaiButton.BackColor = Color.SkyBlue;
+            lamMoiKhuyenMaiButton.FlatAppearance.BorderSize = 0;
+            lamMoiKhuyenMaiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiKhuyenMaiButton.Location = new Point(447, 36);
             lamMoiKhuyenMaiButton.Name = "lamMoiKhuyenMaiButton";
             lamMoiKhuyenMaiButton.Size = new Size(112, 34);
             lamMoiKhuyenMaiButton.TabIndex = 13;
             lamMoiKhuyenMaiButton.Text = "Làm mới";
-            lamMoiKhuyenMaiButton.UseVisualStyleBackColor = true;
+            lamMoiKhuyenMaiButton.UseVisualStyleBackColor = false;
             lamMoiKhuyenMaiButton.Click += LamMoiKhuyenMaiButton_Click;
             // 
             // tenKhuyenMaiLabel
@@ -352,17 +377,21 @@
             // chonKhuyenMaiButton
             // 
             chonKhuyenMaiButton.AutoSize = true;
+            chonKhuyenMaiButton.BackColor = Color.FromArgb(0, 192, 192);
+            chonKhuyenMaiButton.FlatAppearance.BorderSize = 0;
+            chonKhuyenMaiButton.FlatStyle = FlatStyle.Flat;
             chonKhuyenMaiButton.Location = new Point(282, 36);
             chonKhuyenMaiButton.Margin = new Padding(0);
             chonKhuyenMaiButton.Name = "chonKhuyenMaiButton";
-            chonKhuyenMaiButton.Size = new Size(160, 35);
+            chonKhuyenMaiButton.Size = new Size(162, 35);
             chonKhuyenMaiButton.TabIndex = 3;
             chonKhuyenMaiButton.Text = "Chọn khuyến mãi";
-            chonKhuyenMaiButton.UseVisualStyleBackColor = true;
+            chonKhuyenMaiButton.UseVisualStyleBackColor = false;
             chonKhuyenMaiButton.Click += ChonKhuyenMaiButton_Click;
             // 
             // panel4
             // 
+            panel4.BackColor = Color.FromArgb(223, 243, 252);
             panel4.Controls.Add(khuyenMaiThanhVienCheckBox);
             panel4.Controls.Add(soDienThoaiLabel);
             panel4.Controls.Add(maKhachHangLabel);
@@ -380,10 +409,11 @@
             // khuyenMaiThanhVienCheckBox
             // 
             khuyenMaiThanhVienCheckBox.AutoSize = true;
+            khuyenMaiThanhVienCheckBox.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             khuyenMaiThanhVienCheckBox.Location = new Point(16, 82);
             khuyenMaiThanhVienCheckBox.Margin = new Padding(0);
             khuyenMaiThanhVienCheckBox.Name = "khuyenMaiThanhVienCheckBox";
-            khuyenMaiThanhVienCheckBox.Size = new Size(291, 29);
+            khuyenMaiThanhVienCheckBox.Size = new Size(302, 29);
             khuyenMaiThanhVienCheckBox.TabIndex = 7;
             khuyenMaiThanhVienCheckBox.Text = "Áp dụng khuyến mãi thành viên";
             khuyenMaiThanhVienCheckBox.UseVisualStyleBackColor = true;
@@ -402,6 +432,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.FromArgb(223, 243, 252);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(loaiSanPhamComboBox);
             panel3.Controls.Add(lamMoiSanPhamButton);
@@ -416,13 +447,17 @@
             // 
             // timKiemSanPhamButton
             // 
-            timKiemSanPhamButton.Location = new Point(319, 62);
+            timKiemSanPhamButton.BackColor = Color.Gold;
+            timKiemSanPhamButton.FlatAppearance.BorderSize = 0;
+            timKiemSanPhamButton.FlatStyle = FlatStyle.Flat;
+            timKiemSanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            timKiemSanPhamButton.Location = new Point(307, 62);
             timKiemSanPhamButton.Margin = new Padding(0);
             timKiemSanPhamButton.Name = "timKiemSanPhamButton";
             timKiemSanPhamButton.Size = new Size(112, 34);
             timKiemSanPhamButton.TabIndex = 1;
             timKiemSanPhamButton.Text = "Tìm kiếm";
-            timKiemSanPhamButton.UseVisualStyleBackColor = true;
+            timKiemSanPhamButton.UseVisualStyleBackColor = false;
             timKiemSanPhamButton.Click += TimKiemSanPhamButton_Click;
             // 
             // panel2

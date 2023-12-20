@@ -56,18 +56,20 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label9.Location = new Point(22, 233);
             label9.Name = "label9";
-            label9.Size = new Size(141, 25);
+            label9.Size = new Size(148, 25);
             label9.TabIndex = 73;
             label9.Text = "Điểm thành viên";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label7.Location = new Point(22, 191);
             label7.Name = "label7";
-            label7.Size = new Size(142, 25);
+            label7.Size = new Size(148, 25);
             label7.TabIndex = 72;
             label7.Text = "Hạng thành viên";
             // 
@@ -82,37 +84,48 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(22, 157);
             label1.Name = "label1";
-            label1.Size = new Size(120, 25);
+            label1.Size = new Size(125, 25);
             label1.TabIndex = 65;
             label1.Text = "Số điện Thoại";
             // 
             // luuButton
             // 
+            luuButton.BackColor = Color.FromArgb(0, 192, 0);
+            luuButton.FlatAppearance.BorderSize = 0;
+            luuButton.FlatStyle = FlatStyle.Flat;
+            luuButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            luuButton.ForeColor = Color.White;
             luuButton.Location = new Point(294, 310);
             luuButton.Name = "luuButton";
             luuButton.Size = new Size(112, 34);
             luuButton.TabIndex = 64;
             luuButton.Text = "Lưu";
-            luuButton.UseVisualStyleBackColor = true;
+            luuButton.UseVisualStyleBackColor = false;
             luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
+            huyBoButton.BackColor = Color.Red;
+            huyBoButton.FlatAppearance.BorderSize = 0;
+            huyBoButton.FlatStyle = FlatStyle.Flat;
+            huyBoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            huyBoButton.ForeColor = Color.White;
             huyBoButton.Location = new Point(166, 310);
             huyBoButton.Name = "huyBoButton";
             huyBoButton.Size = new Size(112, 34);
             huyBoButton.TabIndex = 63;
             huyBoButton.Text = "Hủy bỏ";
-            huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.UseVisualStyleBackColor = false;
             huyBoButton.Click += HuyBoButton_Click;
             // 
             // hoTenTextBox
             // 
             hoTenTextBox.Location = new Point(224, 117);
             hoTenTextBox.Name = "hoTenTextBox";
-            hoTenTextBox.Size = new Size(150, 31);
+            hoTenTextBox.Size = new Size(182, 31);
             hoTenTextBox.TabIndex = 62;
             // 
             // maKhachHangTextBox
@@ -125,9 +138,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(22, 271);
             label4.Name = "label4";
-            label4.Size = new Size(89, 25);
+            label4.Size = new Size(95, 25);
             label4.TabIndex = 60;
             label4.Text = "Trạng thái";
             // 
@@ -143,18 +157,20 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(22, 120);
             label3.Name = "label3";
-            label3.Size = new Size(134, 25);
+            label3.Size = new Size(138, 25);
             label3.TabIndex = 58;
             label3.Text = "Tên khách hàng";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(22, 83);
             label2.Name = "label2";
-            label2.Size = new Size(133, 25);
+            label2.Size = new Size(135, 25);
             label2.TabIndex = 57;
             label2.Text = "Mã khách hàng";
             // 
@@ -180,6 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 243, 252);
             ClientSize = new Size(428, 364);
             Controls.Add(hangThanhVienTextBox);
             Controls.Add(diemThanhVienTextBox);

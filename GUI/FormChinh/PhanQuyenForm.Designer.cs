@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            xuatExcel = new Button();
+            lamMoiButton = new Button();
+            timKiemButton = new Button();
+            timKiemTextBox = new TextBox();
             phanQuyenDataGridView = new DataGridView();
             stt = new DataGridViewTextBoxColumn();
             maPhanQuyenColumn = new DataGridViewTextBoxColumn();
             tenPhanQuyenColumn = new DataGridViewTextBoxColumn();
-            timKiemTextBox = new TextBox();
-            timKiemButton = new Button();
-            lamMoiButton = new Button();
-            xuatExcel = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)phanQuyenDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(223, 243, 252);
             panel1.Controls.Add(xuatExcel);
             panel1.Controls.Add(lamMoiButton);
             panel1.Controls.Add(timKiemButton);
@@ -53,16 +56,93 @@
             panel1.Size = new Size(1144, 87);
             panel1.TabIndex = 0;
             // 
+            // xuatExcel
+            // 
+            xuatExcel.BackColor = Color.ForestGreen;
+            xuatExcel.FlatAppearance.BorderSize = 0;
+            xuatExcel.FlatStyle = FlatStyle.Flat;
+            xuatExcel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            xuatExcel.ForeColor = Color.White;
+            xuatExcel.Location = new Point(959, 29);
+            xuatExcel.Margin = new Padding(0);
+            xuatExcel.Name = "xuatExcel";
+            xuatExcel.Size = new Size(112, 34);
+            xuatExcel.TabIndex = 3;
+            xuatExcel.Text = "Xuất Excel";
+            xuatExcel.UseVisualStyleBackColor = false;
+            xuatExcel.Click += XuatExcel_Click;
+            // 
+            // lamMoiButton
+            // 
+            lamMoiButton.BackColor = Color.SkyBlue;
+            lamMoiButton.FlatAppearance.BorderSize = 0;
+            lamMoiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lamMoiButton.ForeColor = Color.Black;
+            lamMoiButton.Location = new Point(803, 29);
+            lamMoiButton.Margin = new Padding(0);
+            lamMoiButton.Name = "lamMoiButton";
+            lamMoiButton.Size = new Size(112, 34);
+            lamMoiButton.TabIndex = 2;
+            lamMoiButton.Text = "Làm mới";
+            lamMoiButton.UseVisualStyleBackColor = false;
+            lamMoiButton.Click += LamMoiButton_Click;
+            // 
+            // timKiemButton
+            // 
+            timKiemButton.BackColor = Color.Gold;
+            timKiemButton.FlatAppearance.BorderSize = 0;
+            timKiemButton.FlatStyle = FlatStyle.Flat;
+            timKiemButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            timKiemButton.Location = new Point(679, 29);
+            timKiemButton.Margin = new Padding(0);
+            timKiemButton.Name = "timKiemButton";
+            timKiemButton.Size = new Size(112, 34);
+            timKiemButton.TabIndex = 1;
+            timKiemButton.Text = "Tìm kiếm";
+            timKiemButton.UseVisualStyleBackColor = false;
+            timKiemButton.Click += TimKiemButton_Click;
+            // 
+            // timKiemTextBox
+            // 
+            timKiemTextBox.BackColor = Color.White;
+            timKiemTextBox.Location = new Point(54, 29);
+            timKiemTextBox.Margin = new Padding(0);
+            timKiemTextBox.Multiline = true;
+            timKiemTextBox.Name = "timKiemTextBox";
+            timKiemTextBox.PlaceholderText = "Tìm kiếm";
+            timKiemTextBox.Size = new Size(606, 34);
+            timKiemTextBox.TabIndex = 0;
+            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
+            // 
             // phanQuyenDataGridView
             // 
             phanQuyenDataGridView.AllowUserToAddRows = false;
             phanQuyenDataGridView.AllowUserToDeleteRows = false;
+            phanQuyenDataGridView.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.LightBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(30, 110, 142);
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            phanQuyenDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             phanQuyenDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             phanQuyenDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maPhanQuyenColumn, tenPhanQuyenColumn });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(227, 248, 251);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            phanQuyenDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             phanQuyenDataGridView.Dock = DockStyle.Fill;
             phanQuyenDataGridView.Location = new Point(0, 87);
             phanQuyenDataGridView.Margin = new Padding(0);
             phanQuyenDataGridView.Name = "phanQuyenDataGridView";
+            phanQuyenDataGridView.ReadOnly = true;
             phanQuyenDataGridView.RowHeadersVisible = false;
             phanQuyenDataGridView.RowHeadersWidth = 62;
             phanQuyenDataGridView.Size = new Size(1144, 573);
@@ -74,6 +154,7 @@
             stt.HeaderText = "STT";
             stt.MinimumWidth = 8;
             stt.Name = "stt";
+            stt.ReadOnly = true;
             stt.Width = 76;
             // 
             // maPhanQuyenColumn
@@ -82,6 +163,7 @@
             maPhanQuyenColumn.HeaderText = "Mã phân quyền";
             maPhanQuyenColumn.MinimumWidth = 8;
             maPhanQuyenColumn.Name = "maPhanQuyenColumn";
+            maPhanQuyenColumn.ReadOnly = true;
             // 
             // tenPhanQuyenColumn
             // 
@@ -89,49 +171,7 @@
             tenPhanQuyenColumn.HeaderText = "Tên phân quyền";
             tenPhanQuyenColumn.MinimumWidth = 8;
             tenPhanQuyenColumn.Name = "tenPhanQuyenColumn";
-            // 
-            // timKiemTextBox
-            // 
-            timKiemTextBox.Location = new Point(54, 29);
-            timKiemTextBox.Margin = new Padding(0);
-            timKiemTextBox.Name = "timKiemTextBox";
-            timKiemTextBox.PlaceholderText = "Tìm kiếm";
-            timKiemTextBox.Size = new Size(280, 31);
-            timKiemTextBox.TabIndex = 0;
-            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
-            // 
-            // timKiemButton
-            // 
-            timKiemButton.Location = new Point(340, 29);
-            timKiemButton.Margin = new Padding(0);
-            timKiemButton.Name = "timKiemButton";
-            timKiemButton.Size = new Size(112, 34);
-            timKiemButton.TabIndex = 1;
-            timKiemButton.Text = "Tìm kiếm";
-            timKiemButton.UseVisualStyleBackColor = true;
-            timKiemButton.Click += TimKiemButton_Click;
-            // 
-            // lamMoiButton
-            // 
-            lamMoiButton.Location = new Point(479, 29);
-            lamMoiButton.Margin = new Padding(0);
-            lamMoiButton.Name = "lamMoiButton";
-            lamMoiButton.Size = new Size(112, 34);
-            lamMoiButton.TabIndex = 2;
-            lamMoiButton.Text = "Làm mới";
-            lamMoiButton.UseVisualStyleBackColor = true;
-            lamMoiButton.Click += LamMoiButton_Click;
-            // 
-            // xuatExcel
-            // 
-            xuatExcel.Location = new Point(663, 29);
-            xuatExcel.Margin = new Padding(0);
-            xuatExcel.Name = "xuatExcel";
-            xuatExcel.Size = new Size(112, 34);
-            xuatExcel.TabIndex = 3;
-            xuatExcel.Text = "Xuất Excel";
-            xuatExcel.UseVisualStyleBackColor = true;
-            xuatExcel.Click += XuatExcel_Click;
+            tenPhanQuyenColumn.ReadOnly = true;
             // 
             // PhanQuyenForm
             // 

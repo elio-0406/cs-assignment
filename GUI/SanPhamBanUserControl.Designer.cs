@@ -37,13 +37,18 @@
             // 
             // chonButton
             // 
+            chonButton.BackColor = Color.RoyalBlue;
+            chonButton.FlatAppearance.BorderSize = 0;
+            chonButton.FlatStyle = FlatStyle.Flat;
+            chonButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chonButton.ForeColor = Color.White;
             chonButton.Location = new Point(5, 142);
             chonButton.Margin = new Padding(0);
             chonButton.Name = "chonButton";
             chonButton.Size = new Size(174, 34);
             chonButton.TabIndex = 6;
             chonButton.Text = "Chọn";
-            chonButton.UseVisualStyleBackColor = true;
+            chonButton.UseVisualStyleBackColor = false;
             chonButton.Click += ChonButton_Click;
             // 
             // tenSanPhamLabel
@@ -80,6 +85,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(giaBanLabel);
             Controls.Add(chonButton);
             Controls.Add(tenSanPhamLabel);

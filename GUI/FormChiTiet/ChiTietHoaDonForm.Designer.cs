@@ -64,6 +64,7 @@
             // 
             chiTietHoaDonDataGridView.AllowUserToAddRows = false;
             chiTietHoaDonDataGridView.AllowUserToDeleteRows = false;
+            chiTietHoaDonDataGridView.BackgroundColor = SystemColors.ActiveCaption;
             chiTietHoaDonDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             chiTietHoaDonDataGridView.Columns.AddRange(new DataGridViewColumn[] { maSanPhamColumn, donGiaColumn, soLuongColumn, thanhTienColumn });
             chiTietHoaDonDataGridView.Dock = DockStyle.Bottom;
@@ -107,9 +108,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(78, 14);
             label1.Name = "label1";
-            label1.Size = new Size(109, 25);
+            label1.Size = new Size(111, 25);
             label1.TabIndex = 23;
             label1.Text = "Mã hóa đơn";
             // 
@@ -123,9 +125,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(78, 138);
             label4.Name = "label4";
-            label4.Size = new Size(116, 25);
+            label4.Size = new Size(121, 25);
             label4.TabIndex = 29;
             label4.Text = "Thời gian tạo";
             // 
@@ -139,9 +142,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(392, 76);
             label5.Name = "label5";
-            label5.Size = new Size(134, 25);
+            label5.Size = new Size(141, 25);
             label5.TabIndex = 31;
             label5.Text = "Tên khuyến mãi";
             // 
@@ -155,9 +159,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label6.Location = new Point(392, 14);
             label6.Name = "label6";
-            label6.Size = new Size(133, 25);
+            label6.Size = new Size(138, 25);
             label6.TabIndex = 33;
             label6.Text = "Mã khuyến mãi";
             // 
@@ -171,9 +176,10 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label7.Location = new Point(78, 200);
             label7.Name = "label7";
-            label7.Size = new Size(133, 25);
+            label7.Size = new Size(135, 25);
             label7.TabIndex = 35;
             label7.Text = "Mã khách hàng";
             // 
@@ -187,9 +193,10 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label9.Location = new Point(392, 200);
             label9.Name = "label9";
-            label9.Size = new Size(94, 25);
+            label9.Size = new Size(100, 25);
             label9.TabIndex = 39;
             label9.Text = "Thành tiền";
             // 
@@ -203,9 +210,10 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label10.Location = new Point(78, 76);
             label10.Name = "label10";
-            label10.Size = new Size(118, 25);
+            label10.Size = new Size(124, 25);
             label10.TabIndex = 41;
             label10.Text = "Mã nhân viên";
             // 
@@ -219,9 +227,10 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label11.Location = new Point(650, 138);
             label11.Name = "label11";
-            label11.Size = new Size(87, 25);
+            label11.Size = new Size(93, 25);
             label11.TabIndex = 46;
             label11.Text = "Tổng tiền";
             // 
@@ -235,9 +244,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(650, 76);
             label3.Name = "label3";
-            label3.Size = new Size(85, 25);
+            label3.Size = new Size(90, 25);
             label3.TabIndex = 48;
             label3.Text = "Tiền thừa";
             // 
@@ -251,9 +261,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(392, 138);
             label2.Name = "label2";
-            label2.Size = new Size(82, 25);
+            label2.Size = new Size(85, 25);
             label2.TabIndex = 50;
             label2.Text = "Giảm giá";
             // 
@@ -267,9 +278,10 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label12.Location = new Point(650, 14);
             label12.Name = "label12";
-            label12.Size = new Size(88, 25);
+            label12.Size = new Size(94, 25);
             label12.TabIndex = 52;
             label12.Text = "Tiền nhận";
             // 
@@ -282,6 +294,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(223, 243, 252);
             panel1.Controls.Add(tienNhanTextBox);
             panel1.Controls.Add(label12);
             panel1.Controls.Add(giamGiaTextBox);

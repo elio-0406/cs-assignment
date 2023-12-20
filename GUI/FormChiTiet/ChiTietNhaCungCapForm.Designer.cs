@@ -49,15 +49,16 @@
             // 
             diaChiTextBox.Location = new Point(219, 221);
             diaChiTextBox.Name = "diaChiTextBox";
-            diaChiTextBox.Size = new Size(150, 31);
+            diaChiTextBox.Size = new Size(247, 31);
             diaChiTextBox.TabIndex = 44;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label6.Location = new Point(17, 224);
             label6.Name = "label6";
-            label6.Size = new Size(65, 25);
+            label6.Size = new Size(67, 25);
             label6.TabIndex = 43;
             label6.Text = "Địa chỉ";
             // 
@@ -65,16 +66,17 @@
             // 
             emailTextBox.Location = new Point(219, 184);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(150, 31);
+            emailTextBox.Size = new Size(247, 31);
             emailTextBox.TabIndex = 42;
             emailTextBox.KeyPress += EmailTextBox_KeyPress;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(17, 187);
             label5.Name = "label5";
-            label5.Size = new Size(54, 25);
+            label5.Size = new Size(56, 25);
             label5.TabIndex = 41;
             label5.Text = "Email";
             // 
@@ -89,45 +91,57 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(17, 150);
             label1.Name = "label1";
-            label1.Size = new Size(117, 25);
+            label1.Size = new Size(122, 25);
             label1.TabIndex = 39;
             label1.Text = "Số điện thoại";
             // 
             // luuButton
             // 
-            luuButton.Location = new Point(289, 297);
+            luuButton.BackColor = Color.FromArgb(0, 192, 0);
+            luuButton.FlatAppearance.BorderSize = 0;
+            luuButton.FlatStyle = FlatStyle.Flat;
+            luuButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            luuButton.ForeColor = Color.White;
+            luuButton.Location = new Point(354, 298);
             luuButton.Name = "luuButton";
             luuButton.Size = new Size(112, 34);
             luuButton.TabIndex = 36;
             luuButton.Text = "Lưu";
-            luuButton.UseVisualStyleBackColor = true;
+            luuButton.UseVisualStyleBackColor = false;
             luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
-            huyBoButton.Location = new Point(161, 297);
+            huyBoButton.BackColor = Color.Red;
+            huyBoButton.FlatAppearance.BorderSize = 0;
+            huyBoButton.FlatStyle = FlatStyle.Flat;
+            huyBoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            huyBoButton.ForeColor = Color.White;
+            huyBoButton.Location = new Point(226, 298);
             huyBoButton.Name = "huyBoButton";
             huyBoButton.Size = new Size(112, 34);
             huyBoButton.TabIndex = 35;
             huyBoButton.Text = "Hủy bỏ";
-            huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.UseVisualStyleBackColor = false;
             huyBoButton.Click += HuyBoButton_Click;
             // 
             // tenNhaCungCapTextBox
             // 
             tenNhaCungCapTextBox.Location = new Point(219, 110);
             tenNhaCungCapTextBox.Name = "tenNhaCungCapTextBox";
-            tenNhaCungCapTextBox.Size = new Size(150, 31);
+            tenNhaCungCapTextBox.Size = new Size(247, 31);
             tenNhaCungCapTextBox.TabIndex = 34;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(17, 258);
             label4.Name = "label4";
-            label4.Size = new Size(89, 25);
+            label4.Size = new Size(95, 25);
             label4.TabIndex = 32;
             label4.Text = "Trạng thái";
             // 
@@ -143,18 +157,20 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(17, 113);
             label3.Name = "label3";
-            label3.Size = new Size(149, 25);
+            label3.Size = new Size(155, 25);
             label3.TabIndex = 30;
             label3.Text = "Tên nhà cung cấp";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(17, 76);
             label2.Name = "label2";
-            label2.Size = new Size(148, 25);
+            label2.Size = new Size(152, 25);
             label2.TabIndex = 29;
             label2.Text = "Mã nhà cung cấp";
             // 
@@ -179,7 +195,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(418, 344);
+            BackColor = Color.FromArgb(223, 243, 252);
+            ClientSize = new Size(486, 344);
             Controls.Add(diaChiTextBox);
             Controls.Add(label6);
             Controls.Add(emailTextBox);

@@ -42,6 +42,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(164, 54);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
@@ -53,6 +54,7 @@
             // 
             thanhTienLabel.AutoSize = true;
             thanhTienLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thanhTienLabel.ForeColor = Color.White;
             thanhTienLabel.Location = new Point(258, 48);
             thanhTienLabel.Margin = new Padding(0);
             thanhTienLabel.Name = "thanhTienLabel";
@@ -75,6 +77,7 @@
             // tenSanPhamLabel
             // 
             tenSanPhamLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tenSanPhamLabel.ForeColor = Color.White;
             tenSanPhamLabel.Location = new Point(0, 0);
             tenSanPhamLabel.Margin = new Padding(0);
             tenSanPhamLabel.Name = "tenSanPhamLabel";
@@ -85,21 +88,28 @@
             // 
             // xoaButton
             // 
-            xoaButton.Location = new Point(510, 0);
+            xoaButton.BackColor = Color.IndianRed;
+            xoaButton.FlatAppearance.BorderSize = 0;
+            xoaButton.FlatStyle = FlatStyle.Flat;
+            xoaButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            xoaButton.ForeColor = Color.White;
+            xoaButton.Location = new Point(517, 0);
             xoaButton.Margin = new Padding(0);
             xoaButton.Name = "xoaButton";
-            xoaButton.Size = new Size(50, 85);
+            xoaButton.Size = new Size(43, 85);
             xoaButton.TabIndex = 5;
             xoaButton.Text = "X";
-            xoaButton.UseVisualStyleBackColor = true;
+            xoaButton.UseVisualStyleBackColor = false;
             xoaButton.Click += XoaButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(267, 7);
             label1.Name = "label1";
-            label1.Size = new Size(82, 25);
+            label1.Size = new Size(85, 25);
             label1.TabIndex = 10;
             label1.Text = "Giá nhập";
             // 
@@ -118,6 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SteelBlue;
             Controls.Add(giaNhapTextBox);
             Controls.Add(label1);
             Controls.Add(label2);

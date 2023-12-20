@@ -31,12 +31,6 @@
             label2 = new Label();
             tuyChonThoiGianComboBox = new ComboBox();
             hoaDonDataGridView = new DataGridView();
-            thoiGianTaoDateTimePicker = new DateTimePicker();
-            xuatExcel = new Button();
-            lamMoiButton = new Button();
-            timKiemButton = new Button();
-            timKiemTextBox = new TextBox();
-            panel1 = new Panel();
             stt = new DataGridViewTextBoxColumn();
             maHoaDonColumn = new DataGridViewTextBoxColumn();
             maNguoiTaoColumn = new DataGridViewTextBoxColumn();
@@ -45,6 +39,12 @@
             giamGiaColumn = new DataGridViewTextBoxColumn();
             tongTienColumn = new DataGridViewTextBoxColumn();
             chiTietButtonColumn = new DataGridViewButtonColumn();
+            thoiGianTaoDateTimePicker = new DateTimePicker();
+            xuatExcel = new Button();
+            lamMoiButton = new Button();
+            timKiemButton = new Button();
+            timKiemTextBox = new TextBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)hoaDonDataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -52,9 +52,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(72, 34);
             label2.Name = "label2";
-            label2.Size = new Size(188, 25);
+            label2.Size = new Size(197, 25);
             label2.TabIndex = 10;
             label2.Text = "Tìm theo thời gian tạo";
             // 
@@ -72,6 +73,7 @@
             // 
             hoaDonDataGridView.AllowUserToAddRows = false;
             hoaDonDataGridView.AllowUserToDeleteRows = false;
+            hoaDonDataGridView.BackgroundColor = SystemColors.ActiveCaption;
             hoaDonDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             hoaDonDataGridView.Columns.AddRange(new DataGridViewColumn[] { stt, maHoaDonColumn, maNguoiTaoColumn, thoiGianTaoColumn, thanhTienColumn, giamGiaColumn, tongTienColumn, chiTietButtonColumn });
             hoaDonDataGridView.Dock = DockStyle.Fill;
@@ -83,74 +85,6 @@
             hoaDonDataGridView.Size = new Size(1144, 490);
             hoaDonDataGridView.TabIndex = 7;
             hoaDonDataGridView.CellContentClick += HoaDonDataGridView_CellContentClick;
-            // 
-            // thoiGianTaoDateTimePicker
-            // 
-            thoiGianTaoDateTimePicker.Checked = false;
-            thoiGianTaoDateTimePicker.Location = new Point(257, 62);
-            thoiGianTaoDateTimePicker.Name = "thoiGianTaoDateTimePicker";
-            thoiGianTaoDateTimePicker.ShowCheckBox = true;
-            thoiGianTaoDateTimePicker.Size = new Size(324, 31);
-            thoiGianTaoDateTimePicker.TabIndex = 8;
-            thoiGianTaoDateTimePicker.ValueChanged += ThoiGianTaoDateTimePicker_ValueChanged;
-            // 
-            // xuatExcel
-            // 
-            xuatExcel.Location = new Point(963, 106);
-            xuatExcel.Margin = new Padding(0);
-            xuatExcel.Name = "xuatExcel";
-            xuatExcel.Size = new Size(112, 34);
-            xuatExcel.TabIndex = 3;
-            xuatExcel.Text = "Xuất Excel";
-            xuatExcel.UseVisualStyleBackColor = true;
-            xuatExcel.Click += XuatExcel_Click;
-            // 
-            // lamMoiButton
-            // 
-            lamMoiButton.Location = new Point(739, 106);
-            lamMoiButton.Margin = new Padding(0);
-            lamMoiButton.Name = "lamMoiButton";
-            lamMoiButton.Size = new Size(112, 34);
-            lamMoiButton.TabIndex = 2;
-            lamMoiButton.Text = "Làm mới";
-            lamMoiButton.UseVisualStyleBackColor = true;
-            lamMoiButton.Click += LamMoiButton_Click;
-            // 
-            // timKiemButton
-            // 
-            timKiemButton.Location = new Point(627, 106);
-            timKiemButton.Margin = new Padding(0);
-            timKiemButton.Name = "timKiemButton";
-            timKiemButton.Size = new Size(112, 34);
-            timKiemButton.TabIndex = 1;
-            timKiemButton.Text = "Tìm kiếm";
-            timKiemButton.UseVisualStyleBackColor = true;
-            timKiemButton.Click += TimKiemButton_Click;
-            // 
-            // timKiemTextBox
-            // 
-            timKiemTextBox.Location = new Point(69, 106);
-            timKiemTextBox.Margin = new Padding(0);
-            timKiemTextBox.Name = "timKiemTextBox";
-            timKiemTextBox.PlaceholderText = "Tìm kiếm";
-            timKiemTextBox.Size = new Size(558, 31);
-            timKiemTextBox.TabIndex = 0;
-            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(tuyChonThoiGianComboBox);
-            panel1.Controls.Add(thoiGianTaoDateTimePicker);
-            panel1.Controls.Add(xuatExcel);
-            panel1.Controls.Add(lamMoiButton);
-            panel1.Controls.Add(timKiemButton);
-            panel1.Controls.Add(timKiemTextBox);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1144, 170);
-            panel1.TabIndex = 6;
             // 
             // stt
             // 
@@ -215,6 +149,88 @@
             chiTietButtonColumn.Text = "Chi tiết";
             chiTietButtonColumn.UseColumnTextForButtonValue = true;
             chiTietButtonColumn.Width = 73;
+            // 
+            // thoiGianTaoDateTimePicker
+            // 
+            thoiGianTaoDateTimePicker.Checked = false;
+            thoiGianTaoDateTimePicker.Location = new Point(257, 62);
+            thoiGianTaoDateTimePicker.Name = "thoiGianTaoDateTimePicker";
+            thoiGianTaoDateTimePicker.ShowCheckBox = true;
+            thoiGianTaoDateTimePicker.Size = new Size(324, 31);
+            thoiGianTaoDateTimePicker.TabIndex = 8;
+            thoiGianTaoDateTimePicker.ValueChanged += ThoiGianTaoDateTimePicker_ValueChanged;
+            // 
+            // xuatExcel
+            // 
+            xuatExcel.BackColor = Color.ForestGreen;
+            xuatExcel.FlatAppearance.BorderSize = 0;
+            xuatExcel.FlatStyle = FlatStyle.Flat;
+            xuatExcel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            xuatExcel.ForeColor = Color.White;
+            xuatExcel.Location = new Point(963, 106);
+            xuatExcel.Margin = new Padding(0);
+            xuatExcel.Name = "xuatExcel";
+            xuatExcel.Size = new Size(112, 34);
+            xuatExcel.TabIndex = 3;
+            xuatExcel.Text = "Xuất Excel";
+            xuatExcel.UseVisualStyleBackColor = false;
+            xuatExcel.Click += XuatExcel_Click;
+            // 
+            // lamMoiButton
+            // 
+            lamMoiButton.BackColor = Color.SkyBlue;
+            lamMoiButton.FlatAppearance.BorderSize = 0;
+            lamMoiButton.FlatStyle = FlatStyle.Flat;
+            lamMoiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lamMoiButton.Location = new Point(713, 107);
+            lamMoiButton.Margin = new Padding(0);
+            lamMoiButton.Name = "lamMoiButton";
+            lamMoiButton.Size = new Size(112, 34);
+            lamMoiButton.TabIndex = 2;
+            lamMoiButton.Text = "Làm mới";
+            lamMoiButton.UseVisualStyleBackColor = false;
+            lamMoiButton.Click += LamMoiButton_Click;
+            // 
+            // timKiemButton
+            // 
+            timKiemButton.BackColor = Color.Gold;
+            timKiemButton.FlatAppearance.BorderSize = 0;
+            timKiemButton.FlatStyle = FlatStyle.Flat;
+            timKiemButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            timKiemButton.Location = new Point(590, 107);
+            timKiemButton.Margin = new Padding(0);
+            timKiemButton.Name = "timKiemButton";
+            timKiemButton.Size = new Size(112, 34);
+            timKiemButton.TabIndex = 1;
+            timKiemButton.Text = "Tìm kiếm";
+            timKiemButton.UseVisualStyleBackColor = false;
+            timKiemButton.Click += TimKiemButton_Click;
+            // 
+            // timKiemTextBox
+            // 
+            timKiemTextBox.Location = new Point(72, 109);
+            timKiemTextBox.Margin = new Padding(0);
+            timKiemTextBox.Name = "timKiemTextBox";
+            timKiemTextBox.PlaceholderText = "Tìm kiếm";
+            timKiemTextBox.Size = new Size(509, 31);
+            timKiemTextBox.TabIndex = 0;
+            timKiemTextBox.TextChanged += TimKiemTextBox_TextChanged;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(223, 243, 252);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(tuyChonThoiGianComboBox);
+            panel1.Controls.Add(thoiGianTaoDateTimePicker);
+            panel1.Controls.Add(xuatExcel);
+            panel1.Controls.Add(lamMoiButton);
+            panel1.Controls.Add(timKiemButton);
+            panel1.Controls.Add(timKiemTextBox);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1144, 170);
+            panel1.TabIndex = 6;
             // 
             // HoaDonForm
             // 

@@ -37,17 +37,17 @@
             // 
             // tenDangNhapTextBox
             // 
-            tenDangNhapTextBox.Location = new Point(232, 63);
+            tenDangNhapTextBox.Location = new Point(193, 46);
             tenDangNhapTextBox.Name = "tenDangNhapTextBox";
-            tenDangNhapTextBox.Size = new Size(150, 31);
+            tenDangNhapTextBox.Size = new Size(182, 31);
             tenDangNhapTextBox.TabIndex = 0;
             tenDangNhapTextBox.KeyPress += TenDangNhapTextBox_KeyPress;
             // 
             // matKhauTextBox
             // 
-            matKhauTextBox.Location = new Point(232, 101);
+            matKhauTextBox.Location = new Point(193, 84);
             matKhauTextBox.Name = "matKhauTextBox";
-            matKhauTextBox.Size = new Size(150, 31);
+            matKhauTextBox.Size = new Size(182, 31);
             matKhauTextBox.TabIndex = 1;
             matKhauTextBox.UseSystemPasswordChar = true;
             matKhauTextBox.KeyPress += MatKhauTextBox_KeyPress;
@@ -56,18 +56,23 @@
             // 
             // dangNhapButton
             // 
-            dangNhapButton.Location = new Point(173, 149);
+            dangNhapButton.BackColor = Color.FromArgb(0, 71, 107);
+            dangNhapButton.FlatAppearance.BorderSize = 0;
+            dangNhapButton.FlatStyle = FlatStyle.Flat;
+            dangNhapButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dangNhapButton.ForeColor = Color.White;
+            dangNhapButton.Location = new Point(39, 148);
             dangNhapButton.Name = "dangNhapButton";
-            dangNhapButton.Size = new Size(112, 34);
+            dangNhapButton.Size = new Size(336, 43);
             dangNhapButton.TabIndex = 2;
             dangNhapButton.Text = "Đăng nhập";
-            dangNhapButton.UseVisualStyleBackColor = true;
+            dangNhapButton.UseVisualStyleBackColor = false;
             dangNhapButton.Click += DangNhapButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(77, 63);
+            label1.Location = new Point(39, 46);
             label1.Name = "label1";
             label1.Size = new Size(129, 25);
             label1.TabIndex = 3;
@@ -76,7 +81,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(77, 107);
+            label2.Location = new Point(39, 87);
             label2.Name = "label2";
             label2.Size = new Size(86, 25);
             label2.TabIndex = 4;
@@ -86,7 +91,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(459, 247);
+            BackColor = Color.FromArgb(223, 243, 252);
+            ClientSize = new Size(415, 220);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dangNhapButton);

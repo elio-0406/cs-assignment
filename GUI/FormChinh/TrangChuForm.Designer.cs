@@ -72,6 +72,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = Color.FromArgb(223, 243, 252);
             flowLayoutPanel1.Controls.Add(phanQuyenButton);
             flowLayoutPanel1.Controls.Add(nguoiDungButton);
             flowLayoutPanel1.Controls.Add(banHangButton);
@@ -94,154 +95,198 @@
             // phanQuyenButton
             // 
             phanQuyenButton.AutoSize = true;
+            phanQuyenButton.BackColor = Color.FromArgb(0, 79, 111);
+            phanQuyenButton.FlatAppearance.BorderSize = 0;
+            phanQuyenButton.FlatStyle = FlatStyle.Flat;
             phanQuyenButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            phanQuyenButton.Location = new Point(0, 20);
-            phanQuyenButton.Margin = new Padding(0, 20, 0, 0);
+            phanQuyenButton.ForeColor = Color.White;
+            phanQuyenButton.Location = new Point(0, 0);
+            phanQuyenButton.Margin = new Padding(0);
             phanQuyenButton.Name = "phanQuyenButton";
-            phanQuyenButton.Size = new Size(200, 35);
+            phanQuyenButton.Size = new Size(200, 50);
             phanQuyenButton.TabIndex = 0;
             phanQuyenButton.Text = "Phân quyền";
-            phanQuyenButton.UseVisualStyleBackColor = true;
+            phanQuyenButton.UseVisualStyleBackColor = false;
             phanQuyenButton.Visible = false;
             phanQuyenButton.Click += PhanQuyenButton_Click;
             // 
             // nguoiDungButton
             // 
             nguoiDungButton.AutoSize = true;
+            nguoiDungButton.BackColor = Color.FromArgb(0, 79, 111);
+            nguoiDungButton.FlatAppearance.BorderSize = 0;
+            nguoiDungButton.FlatStyle = FlatStyle.Flat;
             nguoiDungButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            nguoiDungButton.Location = new Point(0, 55);
+            nguoiDungButton.ForeColor = Color.White;
+            nguoiDungButton.Location = new Point(0, 50);
             nguoiDungButton.Margin = new Padding(0);
             nguoiDungButton.Name = "nguoiDungButton";
-            nguoiDungButton.Size = new Size(200, 35);
+            nguoiDungButton.Size = new Size(200, 50);
             nguoiDungButton.TabIndex = 1;
             nguoiDungButton.Text = "Người dùng";
-            nguoiDungButton.UseVisualStyleBackColor = true;
+            nguoiDungButton.UseVisualStyleBackColor = false;
             nguoiDungButton.Visible = false;
             nguoiDungButton.Click += NguoiDungButton_Click;
             // 
             // banHangButton
             // 
             banHangButton.AutoSize = true;
+            banHangButton.BackColor = Color.FromArgb(0, 79, 111);
+            banHangButton.FlatAppearance.BorderSize = 0;
+            banHangButton.FlatStyle = FlatStyle.Flat;
             banHangButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            banHangButton.Location = new Point(0, 90);
+            banHangButton.ForeColor = Color.White;
+            banHangButton.Location = new Point(0, 100);
             banHangButton.Margin = new Padding(0);
             banHangButton.Name = "banHangButton";
-            banHangButton.Size = new Size(200, 35);
+            banHangButton.Size = new Size(200, 50);
             banHangButton.TabIndex = 8;
             banHangButton.Text = "Bán hàng";
-            banHangButton.UseVisualStyleBackColor = true;
+            banHangButton.UseVisualStyleBackColor = false;
             banHangButton.Visible = false;
             banHangButton.Click += BanHangButton_Click;
             // 
             // taoPhieuNhapButton
             // 
             taoPhieuNhapButton.AutoSize = true;
+            taoPhieuNhapButton.BackColor = Color.FromArgb(0, 79, 111);
+            taoPhieuNhapButton.FlatAppearance.BorderSize = 0;
+            taoPhieuNhapButton.FlatStyle = FlatStyle.Flat;
             taoPhieuNhapButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            taoPhieuNhapButton.Location = new Point(0, 125);
+            taoPhieuNhapButton.ForeColor = Color.White;
+            taoPhieuNhapButton.Location = new Point(0, 150);
             taoPhieuNhapButton.Margin = new Padding(0);
             taoPhieuNhapButton.Name = "taoPhieuNhapButton";
-            taoPhieuNhapButton.Size = new Size(200, 35);
+            taoPhieuNhapButton.Size = new Size(200, 50);
             taoPhieuNhapButton.TabIndex = 9;
             taoPhieuNhapButton.Text = "Tạo phiếu nhập";
-            taoPhieuNhapButton.UseVisualStyleBackColor = true;
+            taoPhieuNhapButton.UseVisualStyleBackColor = false;
             taoPhieuNhapButton.Visible = false;
             taoPhieuNhapButton.Click += TaoPhieuNhapButton_Click;
             // 
             // sanPhamButton
             // 
             sanPhamButton.AutoSize = true;
+            sanPhamButton.BackColor = Color.FromArgb(0, 79, 111);
+            sanPhamButton.FlatAppearance.BorderSize = 0;
+            sanPhamButton.FlatStyle = FlatStyle.Flat;
             sanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            sanPhamButton.Location = new Point(0, 160);
+            sanPhamButton.ForeColor = Color.White;
+            sanPhamButton.Location = new Point(0, 200);
             sanPhamButton.Margin = new Padding(0);
             sanPhamButton.Name = "sanPhamButton";
-            sanPhamButton.Size = new Size(200, 35);
+            sanPhamButton.Size = new Size(200, 50);
             sanPhamButton.TabIndex = 3;
             sanPhamButton.Text = "Sản phẩm";
-            sanPhamButton.UseVisualStyleBackColor = true;
+            sanPhamButton.UseVisualStyleBackColor = false;
             sanPhamButton.Visible = false;
             sanPhamButton.Click += SanPhamButton_Click;
             // 
             // loaiSanPhamButton
             // 
             loaiSanPhamButton.AutoSize = true;
+            loaiSanPhamButton.BackColor = Color.FromArgb(0, 79, 111);
+            loaiSanPhamButton.FlatAppearance.BorderSize = 0;
+            loaiSanPhamButton.FlatStyle = FlatStyle.Flat;
             loaiSanPhamButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            loaiSanPhamButton.Location = new Point(0, 195);
+            loaiSanPhamButton.ForeColor = Color.White;
+            loaiSanPhamButton.Location = new Point(0, 250);
             loaiSanPhamButton.Margin = new Padding(0);
             loaiSanPhamButton.Name = "loaiSanPhamButton";
-            loaiSanPhamButton.Size = new Size(200, 35);
+            loaiSanPhamButton.Size = new Size(200, 50);
             loaiSanPhamButton.TabIndex = 2;
             loaiSanPhamButton.Text = "Loại sản phẩm";
-            loaiSanPhamButton.UseVisualStyleBackColor = true;
+            loaiSanPhamButton.UseVisualStyleBackColor = false;
             loaiSanPhamButton.Visible = false;
             loaiSanPhamButton.Click += LoaiSanPhamButton_Click;
             // 
             // khachHangButton
             // 
             khachHangButton.AutoSize = true;
+            khachHangButton.BackColor = Color.FromArgb(0, 79, 111);
+            khachHangButton.FlatAppearance.BorderSize = 0;
+            khachHangButton.FlatStyle = FlatStyle.Flat;
             khachHangButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            khachHangButton.Location = new Point(0, 230);
+            khachHangButton.ForeColor = Color.White;
+            khachHangButton.Location = new Point(0, 300);
             khachHangButton.Margin = new Padding(0);
             khachHangButton.Name = "khachHangButton";
-            khachHangButton.Size = new Size(200, 35);
+            khachHangButton.Size = new Size(200, 50);
             khachHangButton.TabIndex = 6;
             khachHangButton.Text = "Khách hàng";
-            khachHangButton.UseVisualStyleBackColor = true;
+            khachHangButton.UseVisualStyleBackColor = false;
             khachHangButton.Visible = false;
             khachHangButton.Click += KhachHangButton_Click;
             // 
             // khuyenMaiButton
             // 
             khuyenMaiButton.AutoSize = true;
+            khuyenMaiButton.BackColor = Color.FromArgb(0, 79, 111);
+            khuyenMaiButton.FlatAppearance.BorderSize = 0;
+            khuyenMaiButton.FlatStyle = FlatStyle.Flat;
             khuyenMaiButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            khuyenMaiButton.Location = new Point(0, 265);
+            khuyenMaiButton.ForeColor = Color.White;
+            khuyenMaiButton.Location = new Point(0, 350);
             khuyenMaiButton.Margin = new Padding(0);
             khuyenMaiButton.Name = "khuyenMaiButton";
-            khuyenMaiButton.Size = new Size(200, 35);
+            khuyenMaiButton.Size = new Size(200, 50);
             khuyenMaiButton.TabIndex = 7;
             khuyenMaiButton.Text = "Khuyến mãi";
-            khuyenMaiButton.UseVisualStyleBackColor = true;
+            khuyenMaiButton.UseVisualStyleBackColor = false;
             khuyenMaiButton.Visible = false;
             khuyenMaiButton.Click += KhuyenMaiButton_Click;
             // 
             // nhaCungCapButton
             // 
             nhaCungCapButton.AutoSize = true;
+            nhaCungCapButton.BackColor = Color.FromArgb(0, 79, 111);
+            nhaCungCapButton.FlatAppearance.BorderSize = 0;
+            nhaCungCapButton.FlatStyle = FlatStyle.Flat;
             nhaCungCapButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            nhaCungCapButton.Location = new Point(0, 300);
+            nhaCungCapButton.ForeColor = Color.White;
+            nhaCungCapButton.Location = new Point(0, 400);
             nhaCungCapButton.Margin = new Padding(0);
             nhaCungCapButton.Name = "nhaCungCapButton";
-            nhaCungCapButton.Size = new Size(200, 35);
+            nhaCungCapButton.Size = new Size(200, 50);
             nhaCungCapButton.TabIndex = 4;
             nhaCungCapButton.Text = "Nhà cung cấp";
-            nhaCungCapButton.UseVisualStyleBackColor = true;
+            nhaCungCapButton.UseVisualStyleBackColor = false;
             nhaCungCapButton.Visible = false;
             nhaCungCapButton.Click += NhaCungCapButton_Click;
             // 
             // hoaDonButton
             // 
             hoaDonButton.AutoSize = true;
+            hoaDonButton.BackColor = Color.FromArgb(0, 79, 111);
+            hoaDonButton.FlatAppearance.BorderSize = 0;
+            hoaDonButton.FlatStyle = FlatStyle.Flat;
             hoaDonButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            hoaDonButton.Location = new Point(0, 335);
+            hoaDonButton.ForeColor = Color.White;
+            hoaDonButton.Location = new Point(0, 450);
             hoaDonButton.Margin = new Padding(0);
             hoaDonButton.Name = "hoaDonButton";
-            hoaDonButton.Size = new Size(200, 35);
+            hoaDonButton.Size = new Size(200, 50);
             hoaDonButton.TabIndex = 10;
             hoaDonButton.Text = "Hóa đơn";
-            hoaDonButton.UseVisualStyleBackColor = true;
+            hoaDonButton.UseVisualStyleBackColor = false;
             hoaDonButton.Visible = false;
             hoaDonButton.Click += HoaDonButton_Click;
             // 
             // phieuNhapButton
             // 
             phieuNhapButton.AutoSize = true;
+            phieuNhapButton.BackColor = Color.FromArgb(0, 79, 111);
+            phieuNhapButton.FlatAppearance.BorderSize = 0;
+            phieuNhapButton.FlatStyle = FlatStyle.Flat;
             phieuNhapButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            phieuNhapButton.Location = new Point(0, 370);
+            phieuNhapButton.ForeColor = Color.White;
+            phieuNhapButton.Location = new Point(0, 500);
             phieuNhapButton.Margin = new Padding(0);
             phieuNhapButton.Name = "phieuNhapButton";
-            phieuNhapButton.Size = new Size(200, 35);
+            phieuNhapButton.Size = new Size(200, 55);
             phieuNhapButton.TabIndex = 5;
             phieuNhapButton.Text = "Phiếu nhập";
-            phieuNhapButton.UseVisualStyleBackColor = true;
+            phieuNhapButton.UseVisualStyleBackColor = false;
             phieuNhapButton.Visible = false;
             phieuNhapButton.Click += PhieuNhapButton_Click;
             // 
@@ -257,7 +302,10 @@
             // 
             // dangXuatButton
             // 
+            dangXuatButton.BackColor = Color.Red;
             dangXuatButton.Dock = DockStyle.Fill;
+            dangXuatButton.FlatAppearance.BorderSize = 0;
+            dangXuatButton.FlatStyle = FlatStyle.Flat;
             dangXuatButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             dangXuatButton.Location = new Point(0, 0);
             dangXuatButton.Margin = new Padding(0);
@@ -265,7 +313,7 @@
             dangXuatButton.Size = new Size(200, 57);
             dangXuatButton.TabIndex = 0;
             dangXuatButton.Text = "Đăng xuất";
-            dangXuatButton.UseVisualStyleBackColor = true;
+            dangXuatButton.UseVisualStyleBackColor = false;
             dangXuatButton.Click += DangXuatButton_Click;
             // 
             // panel4
@@ -281,8 +329,10 @@
             // 
             // phanQuyenLabel
             // 
+            phanQuyenLabel.BackColor = Color.FromArgb(0, 50, 90);
             phanQuyenLabel.Dock = DockStyle.Bottom;
             phanQuyenLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            phanQuyenLabel.ForeColor = Color.White;
             phanQuyenLabel.Location = new Point(0, 67);
             phanQuyenLabel.Margin = new Padding(0);
             phanQuyenLabel.Name = "phanQuyenLabel";
@@ -292,14 +342,17 @@
             // 
             // tenNguoiDungLabel
             // 
+            tenNguoiDungLabel.BackColor = Color.FromArgb(0, 50, 90);
             tenNguoiDungLabel.Dock = DockStyle.Top;
             tenNguoiDungLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tenNguoiDungLabel.ForeColor = Color.White;
             tenNguoiDungLabel.Location = new Point(0, 0);
             tenNguoiDungLabel.Margin = new Padding(0);
             tenNguoiDungLabel.Name = "tenNguoiDungLabel";
             tenNguoiDungLabel.Size = new Size(200, 67);
             tenNguoiDungLabel.TabIndex = 0;
             tenNguoiDungLabel.Text = "Tên người dùng";
+            tenNguoiDungLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -314,6 +367,7 @@
             // 
             // childFormPanel
             // 
+            childFormPanel.BackColor = Color.FromArgb(223, 243, 252);
             childFormPanel.Dock = DockStyle.Fill;
             childFormPanel.Location = new Point(0, 52);
             childFormPanel.Margin = new Padding(0);
@@ -333,8 +387,10 @@
             // 
             // tieuDeFormLabel
             // 
+            tieuDeFormLabel.BackColor = Color.FromArgb(0, 50, 90);
             tieuDeFormLabel.Dock = DockStyle.Fill;
             tieuDeFormLabel.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tieuDeFormLabel.ForeColor = Color.White;
             tieuDeFormLabel.Location = new Point(0, 0);
             tieuDeFormLabel.Margin = new Padding(0);
             tieuDeFormLabel.Name = "tieuDeFormLabel";

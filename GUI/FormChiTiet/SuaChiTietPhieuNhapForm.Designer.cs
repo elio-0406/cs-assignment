@@ -43,22 +43,32 @@
             // 
             // luuButton
             // 
+            luuButton.BackColor = Color.FromArgb(0, 192, 0);
+            luuButton.FlatAppearance.BorderSize = 0;
+            luuButton.FlatStyle = FlatStyle.Flat;
+            luuButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            luuButton.ForeColor = Color.White;
             luuButton.Location = new Point(268, 186);
             luuButton.Name = "luuButton";
             luuButton.Size = new Size(112, 34);
             luuButton.TabIndex = 17;
             luuButton.Text = "Lưu";
-            luuButton.UseVisualStyleBackColor = true;
+            luuButton.UseVisualStyleBackColor = false;
             luuButton.Click += LuuButton_Click;
             // 
             // huyBoButton
             // 
+            huyBoButton.BackColor = Color.Red;
+            huyBoButton.FlatAppearance.BorderSize = 0;
+            huyBoButton.FlatStyle = FlatStyle.Flat;
+            huyBoButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            huyBoButton.ForeColor = Color.White;
             huyBoButton.Location = new Point(150, 186);
             huyBoButton.Name = "huyBoButton";
             huyBoButton.Size = new Size(112, 34);
             huyBoButton.TabIndex = 16;
             huyBoButton.Text = "Hủy bỏ";
-            huyBoButton.UseVisualStyleBackColor = true;
+            huyBoButton.UseVisualStyleBackColor = false;
             huyBoButton.Click += HuyBoButton_Click;
             // 
             // donGiaTextBox
@@ -82,36 +92,40 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(28, 69);
             label3.Name = "label3";
-            label3.Size = new Size(75, 25);
+            label3.Size = new Size(77, 25);
             label3.TabIndex = 11;
             label3.Text = "Đơn giá";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(28, 28);
             label2.Name = "label2";
-            label2.Size = new Size(120, 25);
+            label2.Size = new Size(122, 25);
             label2.TabIndex = 10;
             label2.Text = "Mã sản phẩm";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(28, 106);
             label1.Name = "label1";
-            label1.Size = new Size(85, 25);
+            label1.Size = new Size(87, 25);
             label1.TabIndex = 18;
             label1.Text = "Số lượng";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(28, 143);
             label4.Name = "label4";
-            label4.Size = new Size(94, 25);
+            label4.Size = new Size(100, 25);
             label4.TabIndex = 20;
             label4.Text = "Thành tiền";
             // 
@@ -139,6 +153,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 243, 252);
             ClientSize = new Size(408, 244);
             Controls.Add(soLuongNumericUpDown);
             Controls.Add(thanhTienLabel);
