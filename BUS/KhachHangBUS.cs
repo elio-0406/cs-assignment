@@ -100,11 +100,11 @@ namespace BUS
             decimal giamGia;
 
             if (khachHang.HangThanhVien.Equals("Đồng"))
-                giamGia = thanhTien * 2 / 100;
+                giamGia = thanhTien * 1 / 100;
             else if (khachHang.HangThanhVien.Equals("Bạc"))
-                giamGia = thanhTien * 5 / 100;
+                giamGia = thanhTien * 3 / 100;
             else
-                giamGia = thanhTien * 7 / 100;
+                giamGia = thanhTien * 5 / 100;
 
             return giamGia;
         }
