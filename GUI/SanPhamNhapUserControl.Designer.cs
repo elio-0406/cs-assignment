@@ -41,6 +41,7 @@
             sanPhamPictureBox.Margin = new Padding(0);
             sanPhamPictureBox.Name = "sanPhamPictureBox";
             sanPhamPictureBox.Size = new Size(100, 100);
+            sanPhamPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             sanPhamPictureBox.TabIndex = 0;
             sanPhamPictureBox.TabStop = false;
             // 

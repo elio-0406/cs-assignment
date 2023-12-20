@@ -70,13 +70,14 @@ namespace GUI.FormChinh
             if (khuyenMai == null && khachHang != null && !giamGiaLabel.Text.Equals("0 đ"))
                 giamGia = new KhachHangBUS().GiamGiaThanhVien(khachHang.MaKhachHang, thanhTien);
             decimal tongTien = 0;
+            decimal tienThua = 0;
             decimal tienNhan = 0;
             if (!tienNhanTextBox.Text.Equals("0"))
                 tienNhan = decimal.Parse((tienNhanTextBox.Text.Replace(" đ", "")));
-            decimal tienThua = decimal.Parse((tienThuaLabel.Text.Replace(" đ", "")));
+            tienThua = decimal.Parse((tienThuaLabel.Text.Replace(" đ", "")));
 
             tongTien = thanhTien - giamGia;
-            tienThua = tienNhan - thanhTien;
+            tienThua = tienNhan - tongTien;
 
             tongTienLabel.Text = tongTien.ToString("0") + " đ";
             tienThuaLabel.Text = tienThua.ToString("0") + " đ";

@@ -70,6 +70,7 @@
             // 
             // sanPhamFlowLayoutPanel
             // 
+            sanPhamFlowLayoutPanel.AutoScroll = true;
             sanPhamFlowLayoutPanel.BackColor = Color.PowderBlue;
             sanPhamFlowLayoutPanel.Dock = DockStyle.Fill;
             sanPhamFlowLayoutPanel.Location = new Point(0, 120);
@@ -165,6 +166,7 @@
             // 
             // chiTietFlowLayoutPanel
             // 
+            chiTietFlowLayoutPanel.AutoScroll = true;
             chiTietFlowLayoutPanel.BackColor = Color.PowderBlue;
             chiTietFlowLayoutPanel.Dock = DockStyle.Fill;
             chiTietFlowLayoutPanel.Location = new Point(0, 120);

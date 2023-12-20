@@ -197,7 +197,7 @@ namespace DAO
                 new SqlParameter("@diemThanhVien", SqlDbType.Int) { Value = khachHang.DiemThanhVien },
             ];
 
-            XuLyDatabase.ExecuteNonQuery(query);
+            XuLyDatabase.ExecuteNonQuery(query, parameters);
 
             return diemTichLuy;
         }

@@ -68,6 +68,7 @@
             sanPhamPictureBox.Margin = new Padding(0);
             sanPhamPictureBox.Name = "sanPhamPictureBox";
             sanPhamPictureBox.Size = new Size(100, 100);
+            sanPhamPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             sanPhamPictureBox.TabIndex = 4;
             sanPhamPictureBox.TabStop = false;
             // 
@@ -90,6 +91,7 @@
             Controls.Add(chonButton);
             Controls.Add(tenSanPhamLabel);
             Controls.Add(sanPhamPictureBox);
+            Margin = new Padding(0);
             Name = "SanPhamBanUserControl";
             Size = new Size(185, 186);
             Load += SanPhamBanUserControl_Load;
