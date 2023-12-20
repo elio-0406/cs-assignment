@@ -53,6 +53,9 @@ namespace BUS
             if (khuyenMai.GiaTri <= 0)
                 return "Giá trị phải lớn hơn 0!";
 
+            if (khuyenMai.LoaiGiaTri.Equals("Phần trăm") && khuyenMai.GiaTri >= 100)
+                return "Giá trị phải nhỏ hơn 100%";
+
             if (khuyenMaiDAO.ThemKhuyenMai(khuyenMai))
                 return "Thêm khuyến mãi thành công!";
             else
