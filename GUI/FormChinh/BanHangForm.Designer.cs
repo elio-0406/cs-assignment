@@ -157,7 +157,7 @@
             // loaiSanPhamComboBox
             // 
             loaiSanPhamComboBox.FormattingEnabled = true;
-            loaiSanPhamComboBox.Location = new Point(157, 25);
+            loaiSanPhamComboBox.Location = new Point(160, 25);
             loaiSanPhamComboBox.Margin = new Padding(0);
             loaiSanPhamComboBox.Name = "loaiSanPhamComboBox";
             loaiSanPhamComboBox.Size = new Size(216, 33);

@@ -65,6 +65,11 @@ namespace GUI.FormChiTiet
                 chiTietPhieuNhapDataGridView.Columns.Remove("suaButtonColumn");
             }
 
+            if (!phieuNhap.TrangThai.Equals("Chờ duyệt"))
+            {
+                chiTietPhieuNhapDataGridView.Columns.Remove("suaButtonColumn");
+            }
+
             if (phieuNhap.TrangThai.Equals("Đã duyệt"))
             {
                 duyetButton.Visible = false;
